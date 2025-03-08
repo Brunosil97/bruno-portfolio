@@ -1,26 +1,14 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
+import Navbar from './components/layout/NavBar.vue';
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-        <button class="btn btn-primary">One</button>
-<button class="btn btn-secondary">Two</button>
-<button class="btn btn-accent btn-outline">Three</button>
-      </nav>
-    </div>
-  </header>
-
-  <RouterView />
+  <!-- A simple container with a neutral background -->
+  <div class="bg-base-200 min-h-screen">
+    <Navbar />
+    <!-- Where child pages (LandingPage, DocsPage, etc.) will appear -->
+    <router-view />
+  </div>
 </template>
 
 <style scoped>

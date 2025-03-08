@@ -1,21 +1,37 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import LandingPage from '../views/LandingPage.vue';
+import DocsPage from '../views/DocsPage.vue';
+import AboutMe from '../components/sections/AboutMe.vue';
+import Contact from '../components/sections/Contact.vue';
+import WorkExperience from '../components/sections/WorkExperience.vue';
+import Skills from '../components/sections/Skills.vue';
+import Projects from '../components/sections/Projects.vue';
+import Blogs from '../components/sections/Blogs.vue';
+import FAQs from '../components/sections/FAQs.vue';
+import CV from '../components/sections/CV.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',
-      name: 'home',
-      component: HomeView,
+      name: 'landing',
+      component: LandingPage,
     },
     {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import('../views/AboutView.vue'),
+      path: '/docs',
+      name: 'documentation',
+      component: DocsPage,
+      children: [
+        { path: 'about', name: 'AboutMe', component: AboutMe },
+        { path: 'contact', name: 'Contact', component: Contact },
+        { path: 'work', name: 'WorkExperience', component: WorkExperience },
+        { path: 'skills', name: 'Skills', component: Skills },
+        { path: 'projects', name: 'Projects', component: Projects },
+        { path: 'blogs', name: 'Blogs', component: Blogs },
+        { path: 'faqs', name: 'FAQs', component: FAQs },
+        { path: 'cv', name: 'CV', component: CV },
+      ],
     },
   ],
 })
