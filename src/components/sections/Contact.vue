@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import { MailPlus, MessageCircleMore } from 'lucide-vue-next';
+</script>
+
 <template>
   <div class="container mx-auto p-4">
     <div class="prose lg:prose-xl">
@@ -9,7 +13,7 @@
             class="btn btn-primary"
           >
             Email Me
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail-plus"><path d="M22 13V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v12c0 1.1.9 2 2 2h8"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/><path d="M19 16v6"/><path d="M16 19h6"/></svg>
+            <MailPlus :size="16" />
           </a>
           <a 
             href="https://wa.me/447792951314?text=Hi%20Bruno,%20I%20would%20like%20to%20message%20you."
@@ -17,7 +21,7 @@
             class="btn btn-secondary"
           >
             Message Me
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-circle-more"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/><path d="M8 12h.01"/><path d="M12 12h.01"/><path d="M16 12h.01"/></svg>
+            <MessageCircleMore :size="16" />
           </a>
         </div>
       </div>

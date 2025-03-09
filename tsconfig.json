@@ -7,5 +7,16 @@
     {
       "path": "./tsconfig.app.json"
     }
-  ]
+  ],
+  "compilerOptions": {
+    "target": "ESNext",
+    "jsx": "preserve",
+    "lib": ["DOM", "ESNext", "ES2015"],
+    "baseUrl": ".",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  }
 }
