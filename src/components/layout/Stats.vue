@@ -24,6 +24,7 @@ const lastYearContributions = ref<number>(0);
 
 // Hardcoded token (for demo purposes only—ensure to secure this in production)
 const token = import.meta.env.VITE_GITHUB_TOKEN;
+const CACHE_DURATION = 2 * 60 * 60 * 1000;
 
 const difference = computed(() => Math.abs(currentYearContributions.value - lastYearContributions.value));
 const percentageChange = computed(() => {
@@ -126,8 +127,53 @@ const fetchContributions = async() => {
     loadingContributions.value = false;
   }
 }
+
+// Load stored data from localStorage, return true if data is fresh
+const loadStoredData = (): boolean => {
+  const storedTimestamp = localStorage.getItem('githubDataTimestamp');
+  if (storedTimestamp) {
+    const timestamp = parseInt(storedTimestamp, 10);
+    // Check if data is less than CACHE_DURATION old
+    if (Date.now() - timestamp < CACHE_DURATION) {
+      const storedGithubData = localStorage.getItem('githubData');
+      const storedCurrentYear = localStorage.getItem('currentYearContributions');
+      const storedLastYear = localStorage.getItem('lastYearContributions');
+      const storedAllTime = localStorage.getItem('allTimeContributions');
+
+      if (storedGithubData && storedCurrentYear && storedLastYear && storedAllTime) {
+        githubData.value = JSON.parse(storedGithubData);
+        currentYearContributions.value = Number(storedCurrentYear);
+        lastYearContributions.value = Number(storedLastYear);
+        allTimeContributions.value = Number(storedAllTime);
+        return true;
+      }
+    }
+  }
+  return false;
+};
+
 onMounted(async () => {
-  await Promise.all([fetchPublicStats()]);
+  // Only call APIs if no stored data is found
+  const dataLoadedFromStorage = loadStoredData();
+  if (!dataLoadedFromStorage) {
+    console.warn("hitting api data");
+    await Promise.all([fetchPublicStats(), fetchContributions()]);
+    // After API calls, store data in localStorage
+    localStorage.setItem('githubData', JSON.stringify(githubData.value));
+    localStorage.setItem(
+      'currentYearContributions',
+      currentYearContributions.value.toString()
+    );
+    localStorage.setItem(
+      'lastYearContributions',
+      lastYearContributions.value.toString()
+    );
+    localStorage.setItem(
+      'allTimeContributions',
+      allTimeContributions.value.toString()
+    );
+    localStorage.setItem('githubDataTimestamp', Date.now().toString());
+  }
 });
 </script>
 
@@ -153,7 +199,7 @@ onMounted(async () => {
         <div class="stat-desc">Oct 5th 2019 - Now</div>
       </div>
       <div class="stat">
-        <div class="stat-title">Current Year</div>
+        <div class="stat-title">In Last Year</div>
         <div class="stat-value text-primary">{{ currentYearContributions }}</div>
         <div class="stat-desc flex items-center space-x-2">
           <TrendingUp class="mr-2" v-if="percentageChange > 0" :size="16" color="#00FF00" />

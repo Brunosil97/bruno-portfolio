@@ -14,7 +14,7 @@ import { ArrowRight } from 'lucide-vue-next';
       <div class="text-center">
         <h1 class="mb-5 text-5xl font-bold">Bruno Silva</h1>
         <p class="mb-5">
-          Unleashing Bruno: the dynamic tech companion that powers modern web development with precision and style.
+          The dynamic tech companion that powers modern web development with precision and style.
         </p>
         <router-link to="/docs/about" class="btn btn-neutral mt-4">
           Get Started
