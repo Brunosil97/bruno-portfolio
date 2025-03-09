@@ -1,12 +1,13 @@
 <script setup lang="ts">
 import { ref, onMounted, computed } from 'vue';
+import { GithubStats } from './_types/stats';
 import { TrendingDown, TrendingUp } from 'lucide-vue-next';
 import { Octokit } from '@octokit/rest';
 import { graphql } from '@octokit/graphql';
 
-const loading = ref(true);
-const error = ref('');
-const githubData = ref({
+const githubLoading = ref<boolean>(true);
+const githubError = ref('');
+const githubData = ref<GithubStats>({
   publicRepos: 0,
   followers: 0,
   following: 0,
@@ -15,11 +16,11 @@ const githubData = ref({
   name: '',
   bio: '',
 });
-const currentYearContributions = ref(0);
-const allTimeContributions = ref(0);
-const loadingContributions = ref(false);
-const errorContributions = ref('');
-const lastYearContributions = ref(0);
+const currentYearContributions = ref<number>(0);
+const allTimeContributions = ref<number>(0);
+const loadingContributions = ref<boolean>(false);
+const errorContributions = ref<string>('');
+const lastYearContributions = ref<number>(0);
 
 // Hardcoded token (for demo purposes only—ensure to secure this in production)
 const token = import.meta.env.VITE_GITHUB_TOKEN;
@@ -33,13 +34,15 @@ const percentageChange = computed(() => {
 });
 
 // Fetch public stats from GitHub's REST API (public endpoint)
-async function fetchPublicStats() {
+const fetchPublicStats = async() => {
   try {
+    githubLoading.value = true;
+
     const octokit = new Octokit();
     const { data } = await octokit.request('GET /users/{username}', {
       username: 'Brunosil97',
     });
-    console.warn(data)
+
     githubData.value = {
       publicRepos: data.public_repos,
       followers: data.followers,
@@ -49,14 +52,16 @@ async function fetchPublicStats() {
       name: data.name,
       bio: data.bio,
     };
-  } catch (err: any) {
-    error.value = 'Error fetching public stats';
-    console.error(err);
+  } catch (error: any) {
+    githubError.value = error;
+    console.error(error);
+  } finally {
+    githubLoading.value = false;
   }
 }
 
 // New helper: fetch contributions for a given period defined by start and end ISO dates
-async function fetchContributionsForPeriod(start: string, end: string): Promise<number> {
+const fetchContributionsForPeriod = async(start: string, end: string): Promise<number> => {
   const query = `
     query($start: DateTime!, $end: DateTime!) {
       user(login: "Brunosil97") {
@@ -77,25 +82,25 @@ async function fetchContributionsForPeriod(start: string, end: string): Promise<
 }
 
 // Fetch contributions for a specific calendar year
-async function fetchContributionsForYear(year: number): Promise<number> {
+const fetchContributionsForYear = async(year: number): Promise<number> => {
   const start = new Date(year, 0, 1).toISOString();    // January 1st
   const end = new Date(year, 11, 31).toISOString();      // December 31st
   return await fetchContributionsForPeriod(start, end);
 }
 
 // Fetch contributions for a rolling 365-day period ending today
-async function fetchRollingYearContributions(): Promise<number> {
+const fetchRollingYearContributions = async(): Promise<number> => {
   const now = new Date();
   const oneYearAgo = new Date(now.getTime() - 365 * 24 * 60 * 60 * 1000);
   return await fetchContributionsForPeriod(oneYearAgo.toISOString(), now.toISOString());
 }
 
-async function fetchContributions() {
+const fetchContributions = async() => {
   try {
     if (!token) {
       throw new Error('GitHub token not set');
     }
-
+    loadingContributions.value = true;
     // Fetch contributions for the rolling 365-day period (current year contributions)
     currentYearContributions.value = await fetchRollingYearContributions();
 
@@ -114,16 +119,15 @@ async function fetchContributions() {
       years.map(year => fetchContributionsForYear(year))
     );
     allTimeContributions.value = contributionsPerYear.reduce((sum, count) => sum + count, 0);
-  } catch (err: any) {
-    console.error(err);
-    errorContributions.value = 'Error fetching contributions';
+  } catch (error: any) {
+    console.error(error);
+    errorContributions.value = error;
   } finally {
     loadingContributions.value = false;
   }
 }
 onMounted(async () => {
   await Promise.all([fetchPublicStats()]);
-  loading.value = false;
 });
 </script>
 

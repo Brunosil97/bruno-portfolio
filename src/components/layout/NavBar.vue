@@ -5,7 +5,7 @@ import { Github, Linkedin, Book } from 'lucide-vue-next';
 <template>
   <div class="navbar bg-base-100">
     <div class="flex-1">
-      <a class="btn btn-ghost text-xl">Bruno Silva</a>
+      <router-link class="btn btn-ghost text-xl" to="/">Bruno Silva</router-link>
     </div>
     <div class="flex-none">
       <ul class="menu menu-horizontal px-1">
