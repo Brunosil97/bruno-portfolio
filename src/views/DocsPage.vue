@@ -123,7 +123,7 @@ async function fetchContributions() {
   }
 }
 onMounted(async () => {
-  await Promise.all([fetchPublicStats(), fetchContributions()]);
+  await Promise.all([fetchPublicStats()]);
   loading.value = false;
 });
 
