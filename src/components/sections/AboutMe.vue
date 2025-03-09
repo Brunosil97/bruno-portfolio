@@ -72,7 +72,7 @@
           <strong>Cloud Services:</strong> Deploying scalable and secure applications using Microsoft Azure and Terraform.
         </li>
         <li>
-          <strong>Testing & Documentation:</strong> Utilizing tools like Vitest and Storybook/Chromatic to maintain high code quality and clear developer guidelines.
+          <strong>Testing & Documentation:</strong> Utilising tools like Vitest and Storybook/Chromatic to maintain high code quality and clear developer guidelines.
         </li>
       </ul>
       <br>

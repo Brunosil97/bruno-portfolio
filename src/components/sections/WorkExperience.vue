@@ -11,7 +11,7 @@
         <ul class="list-disc pl-6 mt-2">
           <li>Oversees the full product lifecycle—from stakeholder engagement to deployment.</li>
           <li>Develops responsive, scalable user interfaces using Vue.js, TypeScript, and Vite.</li>
-          <li>Utilizes Microsoft Azure and Terraform for cloud infrastructure and secure deployments.</li>
+          <li>Utilises Microsoft Azure and Terraform for cloud infrastructure and secure deployments.</li>
           <li>Coordinates with cross-functional teams and external consultants to deliver revenue-enhancing applications.</li>
           <li>Conducts technical demos and presentations, translating complex tech into actionable insights.</li>
         </ul>
@@ -39,7 +39,7 @@
         <ul class="list-disc pl-6 mt-2">
           <li>Led the development of single-page applications using Vue.js.</li>
           <li>Conducted code reviews and managed merge requests to ensure code quality.</li>
-          <li>Implemented CI/CD pipelines, integrated unit testing, and utilized SonarCloud for quality assurance.</li>
+          <li>Implemented CI/CD pipelines, integrated unit testing, and utilised SonarCloud for quality assurance.</li>
         </ul>
       </div>
 
