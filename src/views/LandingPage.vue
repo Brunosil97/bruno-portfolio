@@ -9,11 +9,10 @@ import { ArrowRight } from 'lucide-vue-next';
       <source src="../assets/background.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video> -->
-
     <div class="relative">
       <div class="text-center">
-        <h1 class="mb-5 text-5xl font-bold">Bruno Silva</h1>
-        <p class="mb-5">
+        <h1 class="mb-5 text-5xl font-bold text-primary">Bruno Silva</h1>
+        <p class="mb-5 text-primary font-bold">
           The dynamic tech companion that powers modern web development with precision and style.
         </p>
         <router-link to="/docs/about" class="btn btn-neutral mt-4">
