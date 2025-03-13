@@ -37,7 +37,7 @@ const RAW_RUNTIME_STATE =
           ["@vue/eslint-config-prettier", "virtual:166df8b627b427b22e25f9dc0f55a35f85449f84734faac7774b2a2a2cdfc0b25f79a9dba1f7f0756c502956bc6be23ae170f490c09a0ee2493dab2d0b44a870#npm:10.2.0"],\
           ["@vue/eslint-config-typescript", "virtual:166df8b627b427b22e25f9dc0f55a35f85449f84734faac7774b2a2a2cdfc0b25f79a9dba1f7f0756c502956bc6be23ae170f490c09a0ee2493dab2d0b44a870#npm:14.5.0"],\
           ["@vue/tsconfig", "virtual:166df8b627b427b22e25f9dc0f55a35f85449f84734faac7774b2a2a2cdfc0b25f79a9dba1f7f0756c502956bc6be23ae170f490c09a0ee2493dab2d0b44a870#npm:0.7.0"],\
-          ["daisyui", "npm:5.0.0"],\
+          ["daisyui", "npm:5.0.3"],\
           ["eslint", "virtual:166df8b627b427b22e25f9dc0f55a35f85449f84734faac7774b2a2a2cdfc0b25f79a9dba1f7f0756c502956bc6be23ae170f490c09a0ee2493dab2d0b44a870#npm:9.22.0"],\
           ["eslint-plugin-oxlint", "npm:0.15.13"],\
           ["eslint-plugin-vue", "virtual:166df8b627b427b22e25f9dc0f55a35f85449f84734faac7774b2a2a2cdfc0b25f79a9dba1f7f0756c502956bc6be23ae170f490c09a0ee2493dab2d0b44a870#npm:9.33.0"],\
@@ -2611,7 +2611,7 @@ const RAW_RUNTIME_STATE =
           ["@vue/eslint-config-prettier", "virtual:166df8b627b427b22e25f9dc0f55a35f85449f84734faac7774b2a2a2cdfc0b25f79a9dba1f7f0756c502956bc6be23ae170f490c09a0ee2493dab2d0b44a870#npm:10.2.0"],\
           ["@vue/eslint-config-typescript", "virtual:166df8b627b427b22e25f9dc0f55a35f85449f84734faac7774b2a2a2cdfc0b25f79a9dba1f7f0756c502956bc6be23ae170f490c09a0ee2493dab2d0b44a870#npm:14.5.0"],\
           ["@vue/tsconfig", "virtual:166df8b627b427b22e25f9dc0f55a35f85449f84734faac7774b2a2a2cdfc0b25f79a9dba1f7f0756c502956bc6be23ae170f490c09a0ee2493dab2d0b44a870#npm:0.7.0"],\
-          ["daisyui", "npm:5.0.0"],\
+          ["daisyui", "npm:5.0.3"],\
           ["eslint", "virtual:166df8b627b427b22e25f9dc0f55a35f85449f84734faac7774b2a2a2cdfc0b25f79a9dba1f7f0756c502956bc6be23ae170f490c09a0ee2493dab2d0b44a870#npm:9.22.0"],\
           ["eslint-plugin-oxlint", "npm:0.15.13"],\
           ["eslint-plugin-vue", "virtual:166df8b627b427b22e25f9dc0f55a35f85449f84734faac7774b2a2a2cdfc0b25f79a9dba1f7f0756c502956bc6be23ae170f490c09a0ee2493dab2d0b44a870#npm:9.33.0"],\
@@ -2779,10 +2779,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["daisyui", [\
-      ["npm:5.0.0", {\
-        "packageLocation": "../../../.yarn/berry/cache/daisyui-npm-5.0.0-6a499c1ae4-10c0.zip/node_modules/daisyui/",\
+      ["npm:5.0.3", {\
+        "packageLocation": "../../../.yarn/berry/cache/daisyui-npm-5.0.3-58fad7c7c0-10c0.zip/node_modules/daisyui/",\
         "packageDependencies": [\
-          ["daisyui", "npm:5.0.0"]\
+          ["daisyui", "npm:5.0.3"]\
         ],\
         "linkType": "HARD"\
       }]\
