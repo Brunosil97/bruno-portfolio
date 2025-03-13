@@ -3,6 +3,14 @@ import { ref } from 'vue';
 import { ExternalLink } from 'lucide-vue-next';
 
 const blogs = ref([
+{
+    title: "Why Move from Vuex to Pinia for State Management?",
+    subtitle: "State management is at the heart of any non-trivial Vue application...",
+    date: "Mar 13, 2025",
+    src: "https://medium.com/brunosilvinosilva/why-move-from-vuex-to-pinia-for-state-management-cffeb35528c6",
+    image: "https://miro.medium.com/v2/resize:fit:1400/format:webp/0*0AOZYiXskCvFgcmF.jpg",
+    published: true,
+  },
   {
     title: "Storybook & Chromatic: Empowering UI Excellence",
     subtitle: "Cultivating a UI-First development culture",
