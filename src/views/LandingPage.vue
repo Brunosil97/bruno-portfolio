@@ -24,7 +24,7 @@ import { ArrowRight } from 'lucide-vue-next';
       <!-- Cards Container -->
       <div class="flex flex-col md:flex-row justify-center gap-4 mt-8">
         <!-- Approachable Card -->
-        <div class="card bg-base-100 w-96 shadow-sm">
+        <div class="card bg-base-100 w-96 shadow-sm transition-transform duration-300 hover:scale-105 focus:scale-105">
           <div class="card-body">
             <h2 class="card-title">Approachable</h2>
             <p>
@@ -40,7 +40,7 @@ import { ArrowRight } from 'lucide-vue-next';
           </div>
         </div>
         <!-- Performant Card -->
-        <div class="card bg-base-100 w-96 shadow-sm">
+        <div class="card bg-base-100 w-96 shadow-sm transition-transform duration-300 hover:scale-105 focus:scale-105">
           <div class="card-body">
             <h2 class="card-title">Performant</h2>
             <p>
@@ -56,7 +56,7 @@ import { ArrowRight } from 'lucide-vue-next';
           </div>
         </div>
         <!-- Versatile Card -->
-        <div class="card bg-base-100 w-96 shadow-sm">
+        <div class="card bg-base-100 w-96 shadow-sm transition-transform duration-300 hover:scale-105 focus:scale-105">
           <div class="card-body">
             <h2 class="card-title">Versatile</h2>
             <p>
