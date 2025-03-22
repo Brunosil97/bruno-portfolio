@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref, watch, onMounted } from 'vue';
 import { Github, Linkedin, Book, ChevronDown } from 'lucide-vue-next';
+import { motion } from "motion-v";
 
 const themes = ref([
   "light",
@@ -38,7 +39,19 @@ const themes = ref([
   "abyss",
   "silk",
 ]);
+
 const selectedTheme = ref('cupcake');
+const dotVariants = {
+  jump: {
+    y: -30,
+    transition: {
+      duration: 0.8,
+      repeat: Infinity,
+      repeatType: "mirror",
+      ease: "easeInOut",
+    },
+  },
+}
 
 onMounted(() => {
   const storedTheme = localStorage.getItem('theme');
@@ -58,7 +71,18 @@ watch(selectedTheme, (newTheme) => {
 <template>
   <div class="navbar bg-base-100">
     <div class="flex-1">
-      <router-link class="btn btn-ghost text-xl" to="/">Bruno Silva</router-link>
+      <div class="flex items-center">
+        <router-link class="btn btn-ghost text-xl" to="/">Bruno Silva</router-link>
+        <motion.div
+          class="container ml-2 mt-5"
+          animate="jump"
+          :transition="{ staggerChildren: -0.2, staggerDirection: -1 }"
+        >
+          <motion.div class="dot" :variants="dotVariants" />
+          <motion.div class="dot" :variants="dotVariants" />
+          <motion.div class="dot" :variants="dotVariants" />
+        </motion.div>
+      </div>
     </div>
     <div class="flex-none">
       <div class="dropdown">
@@ -99,3 +123,13 @@ watch(selectedTheme, (newTheme) => {
     </div>
   </div>
 </template>
+
+<style>
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ff0088;
+  will-change: transform;
+}
+</style>
