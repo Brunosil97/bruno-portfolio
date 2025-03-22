@@ -27,6 +27,7 @@ const RAW_RUNTIME_STATE =
       [null, {\
         "packageLocation": "./",\
         "packageDependencies": [\
+          ["@babel/types", "npm:7.26.10"],\
           ["@octokit/graphql", "npm:8.2.1"],\
           ["@octokit/rest", "npm:21.1.1"],\
           ["@tailwindcss/vite", "virtual:166df8b627b427b22e25f9dc0f55a35f85449f84734faac7774b2a2a2cdfc0b25f79a9dba1f7f0756c502956bc6be23ae170f490c09a0ee2493dab2d0b44a870#npm:4.0.12"],\
@@ -536,6 +537,15 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@babel/types", [\
+      ["npm:7.26.10", {\
+        "packageLocation": "../../../.yarn/berry/cache/@babel-types-npm-7.26.10-1df6b33135-10c0.zip/node_modules/@babel/types/",\
+        "packageDependencies": [\
+          ["@babel/types", "npm:7.26.10"],\
+          ["@babel/helper-string-parser", "npm:7.25.9"],\
+          ["@babel/helper-validator-identifier", "npm:7.25.9"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
       ["npm:7.26.9", {\
         "packageLocation": "../../../.yarn/berry/cache/@babel-types-npm-7.26.9-ef3f43c2d5-10c0.zip/node_modules/@babel/types/",\
         "packageDependencies": [\
@@ -2601,6 +2611,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./",\
         "packageDependencies": [\
           ["bruno-portfolio", "workspace:."],\
+          ["@babel/types", "npm:7.26.10"],\
           ["@octokit/graphql", "npm:8.2.1"],\
           ["@octokit/rest", "npm:21.1.1"],\
           ["@tailwindcss/vite", "virtual:166df8b627b427b22e25f9dc0f55a35f85449f84734faac7774b2a2a2cdfc0b25f79a9dba1f7f0756c502956bc6be23ae170f490c09a0ee2493dab2d0b44a870#npm:4.0.12"],\

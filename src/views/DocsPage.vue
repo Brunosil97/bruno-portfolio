@@ -18,11 +18,11 @@ const docRoutes = [
 
 // Create a dictionary to map each path to its index
 const docRoutesMap: Record<string, number> = docRoutes.reduce(
-  (acc, route, idx) => {
+  (acc: Record<string, number>, route, idx) => {
     acc[route.path] = idx;
     return acc;
   },
-  {}
+  {} as Record<string, number>
 );
 
 

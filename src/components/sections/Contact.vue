@@ -8,14 +8,14 @@ import { MailPlus, MessageCircleMore } from 'lucide-vue-next';
       <div class="flex items-center">
         <h1 class="text-4xl font-bold mb-2 mr-4">Installation Guide: Contact Bruno Silva</h1>
         <div class="space-x-2">
-          <a 
+          <a
             href="mailto:brunosilvinosilva@gmail.com?subject=Bruno Silva: Portfolio inquery"
             class="btn btn-primary"
           >
             Email Me
             <MailPlus :size="16" />
           </a>
-          <a 
+          <a
             href="https://wa.me/447792951314?text=Hi%20Bruno,%20I%20would%20like%20to%20message%20you."
             target="_blank"
             class="btn btn-secondary"
@@ -25,7 +25,7 @@ import { MailPlus, MessageCircleMore } from 'lucide-vue-next';
           </a>
         </div>
       </div>
-      
+
       <p class="mb-4">
         Follow these steps to properly "install" my contact details into your project.
       </p>
@@ -36,22 +36,22 @@ import { MailPlus, MessageCircleMore } from 'lucide-vue-next';
       </p>
       <div class="tabs tabs-lift tabs-sm sm:tabs-md w-full mb-2">
         <!-- NPM Tab (default checked) -->
-        <input 
-          type="radio" 
-          name="install[packagemanager]" 
-          class="tab checked:text-neutral-content! text-neutral [--tab-bg:var(--color-neutral)] [--tab-border-color:var(--color-neutral)]" 
-          aria-label="NPM" 
-          checked="checked"
+        <input
+          type="radio"
+          name="install[packagemanager]"
+          class="tab checked:text-neutral-content! text-neutral [--tab-bg:var(--color-neutral)] [--tab-border-color:var(--color-neutral)]"
+          aria-label="NPM"
+          checked
         />
         <div class="bg-neutral text-neutral-content tab-content relative p-4 text-left shadow-lg">
           <pre data-prefix="$"><code>npm install contact-bruno</code></pre>
         </div>
 
         <!-- PNPM Tab -->
-        <input 
-          type="radio" 
-          name="install[packagemanager]" 
-          class="tab checked:text-neutral-content! text-neutral [--tab-bg:var(--color-neutral)] [--tab-border-color:var(--color-neutral)]" 
+        <input
+          type="radio"
+          name="install[packagemanager]"
+          class="tab checked:text-neutral-content! text-neutral [--tab-bg:var(--color-neutral)] [--tab-border-color:var(--color-neutral)]"
           aria-label="PNPM"
         />
         <div class="bg-neutral text-neutral-content tab-content relative p-4 text-left shadow-lg">
@@ -59,10 +59,10 @@ import { MailPlus, MessageCircleMore } from 'lucide-vue-next';
         </div>
 
         <!-- Yarn Tab -->
-        <input 
-          type="radio" 
-          name="install[packagemanager]" 
-          class="tab checked:text-neutral-content! text-neutral [--tab-bg:var(--color-neutral)] [--tab-border-color:var(--color-neutral)]" 
+        <input
+          type="radio"
+          name="install[packagemanager]"
+          class="tab checked:text-neutral-content! text-neutral [--tab-bg:var(--color-neutral)] [--tab-border-color:var(--color-neutral)]"
           aria-label="Yarn"
         />
         <div class="bg-neutral text-neutral-content tab-content relative p-4 text-left shadow-lg">
@@ -70,10 +70,10 @@ import { MailPlus, MessageCircleMore } from 'lucide-vue-next';
         </div>
 
         <!-- Bun Tab -->
-        <input 
-          type="radio" 
-          name="install[packagemanager]" 
-          class="tab checked:text-neutral-content! text-neutral [--tab-bg:var(--color-neutral)] [--tab-border-color:var(--color-neutral)]" 
+        <input
+          type="radio"
+          name="install[packagemanager]"
+          class="tab checked:text-neutral-content! text-neutral [--tab-bg:var(--color-neutral)] [--tab-border-color:var(--color-neutral)]"
           aria-label="Bun"
         />
         <div class="bg-neutral text-neutral-content tab-content relative p-4 text-left shadow-lg">
@@ -81,10 +81,10 @@ import { MailPlus, MessageCircleMore } from 'lucide-vue-next';
         </div>
 
         <!-- Deno Tab -->
-        <input 
-          type="radio" 
-          name="install[packagemanager]" 
-          class="tab checked:text-neutral-content! text-neutral [--tab-bg:var(--color-neutral)] [--tab-border-color:var(--color-neutral)]" 
+        <input
+          type="radio"
+          name="install[packagemanager]"
+          class="tab checked:text-neutral-content! text-neutral [--tab-bg:var(--color-neutral)] [--tab-border-color:var(--color-neutral)]"
           aria-label="Deno"
         />
         <div class="bg-neutral text-neutral-content tab-content relative p-4 text-left shadow-lg">

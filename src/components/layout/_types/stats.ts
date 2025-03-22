@@ -4,8 +4,18 @@ interface GithubStats {
   following: number;
   publicGists: number;
   avatar: string;
-  name: string;
-  bio: string;
+  name: null | string;
+  bio: null | string;
 }
 
-export type { GithubStats };
+interface ContributionsResult {
+  user: {
+    contributionsCollection: {
+      contributionCalendar: {
+        totalContributions: number;
+      };
+    };
+  };
+}
+
+export type { GithubStats, ContributionsResult };

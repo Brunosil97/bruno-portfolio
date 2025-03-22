@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref, onMounted, computed } from 'vue';
-import { GithubStats } from './_types/stats';
+import { GithubStats, ContributionsResult } from './_types/stats';
 import { TrendingDown, TrendingUp } from 'lucide-vue-next';
 import { Octokit } from '@octokit/rest';
 import { graphql } from '@octokit/graphql';
@@ -74,7 +74,7 @@ const fetchContributionsForPeriod = async(start: string, end: string): Promise<n
       }
     }
   `;
-  const result = await graphql(query, {
+  const result = await graphql<ContributionsResult>(query, {
     headers: { authorization: `token ${token}` },
     start,
     end,
