@@ -30,9 +30,9 @@
       </p>
     </section>
 
-    <!-- The Progressive Mindset Section -->
+    <!-- Progressive Mindset Section -->
     <section class="mt-8">
-      <h2 class="text-3xl font-semibold mb-3">The Progressive Mindset</h2>
+      <h2 class="text-3xl font-semibold mb-3">Progressive Mindset</h2>
       <p>
         In today's rapidly evolving tech landscape, Bruno embraces a progressive mindset by continuously exploring emerging tools and frameworks.
         He is committed to identifying and adopting the best solutions for each unique project—whether that means modernising legacy systems or integrating cutting-edge CI/CD practices.
