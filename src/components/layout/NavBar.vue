@@ -58,13 +58,14 @@ watch(selectedTheme, (newTheme: string) => {
 </script>
 <template>
   <div class="navbar bg-base-100">
-    <div class="flex-1">
+    <!-- Left section: hide on mobile -->
+    <div class="flex-1 hidden sm:flex">
       <div class="flex items-center">
         <router-link class="btn btn-ghost text-xl" to="/">Bruno Silva</router-link>
       </div>
     </div>
-    <div class="flex-none">
-      <div class="dropdown">
+    <div class="flex-none flex items-center justify-between w-full sm:w-auto">
+      <div class="dropdown order-1">
         <div tabindex="0" role="button" class="btn m-1">
           Theme
           <ChevronDown />
@@ -82,7 +83,7 @@ watch(selectedTheme, (newTheme: string) => {
           </li>
         </ul>
       </div>
-      <ul class="menu menu-horizontal px-1">
+      <ul class="menu menu-horizontal px-1 order-2">
         <div class="tooltip tooltip-bottom" data-tip="GitHub">
           <a class="btn btn-neutral" href="https://github.com/Brunosil97" target="_blank">
             <Github :size="16" />
