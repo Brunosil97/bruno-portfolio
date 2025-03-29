@@ -71,14 +71,134 @@ const languages = ref<Skill[]>([
     title: "Ruby",
     src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/ruby/ruby-original.svg",
     usedProffessionally: false,
-    value: 30,
+    value: 25,
   },
 ]);
+
+const designStyling = ref<Skill[]>([
+  {
+    title: "Vuetify",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuetify/vuetify-original.svg",
+    usedProffessionally: true,
+    value: 100,
+  },
+  {
+    title: "CSS",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg",
+    usedProffessionally: true,
+    value: 100,
+  },
+  {
+    title: "Tailwind CSS",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
+    usedProffessionally: true,
+    value: 75,
+  },
+  {
+    title: "Bootstrap",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg",
+    usedProffessionally: true,
+    value: 75,
+  }
+]);
+
+const testingAndDocumentation = ref<Skill[]>([
+  {
+    title: "Vitest",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitest/vitest-original.svg",
+    usedProffessionally: true,
+    value: 100,
+  },
+  {
+    title: "Storybook",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/storybook/storybook-original.svg",
+    usedProfessionally: true,
+    value: 100,
+  },
+  {
+    title: "Confluence",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/confluence/confluence-original.svg",
+    usedProffessionally: true,
+    value: 100,
+  }
+]);
+
+const toolChains = ref<Skill[]>([
+  {
+    title: "Vite",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg",
+    usedProffessionally: true,
+    value: 100,
+  },
+  {
+    title: "Bun",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bun/bun-original.svg",
+    usedProffessionally: false,
+    value: 25,
+  },
+  {
+    title: "Node.js",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg",
+    usedProffessionally: true,
+    value: 75,
+  },
+  {
+    title: "Deno",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/denojs/denojs-original.svg",
+    usedProffessionally: false,
+    value: 25,
+  },
+  {
+    title: "Yarn",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/yarn/yarn-original.svg",
+    usedProffessionally: true,
+    value: 100,
+  },
+  {
+    title: "NPM",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/npm/npm-original-wordmark.svg",
+    usedProffessionally: true,
+    value: 75,
+  },
+  {
+    title: "ESLint",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/eslint/eslint-original.svg",
+    usedProffessionally: true,
+    value: 100,
+  },
+  {
+    title: "SonarQube",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sonarqube/sonarqube-original.svg",
+    usedProffessionally: true,
+    value: 50,
+  },
+]);
+
+const cloudAndInfra = ref<Skill[]>([
+  {
+    title: "Azure",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg",
+    usedProffessionally: true,
+    value: 100,
+  },
+  {
+    title: "Cloudflare",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cloudflare/cloudflare-original.svg",
+    usedProffessionally: true,
+    value: 50,
+  },
+  {
+    title: "Terraform",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/terraform/terraform-original.svg",
+    usedProffessionally: true,
+    value: 50,
+  },
+])
 
 </script>
 <template>
   <div class="container mx-auto p-6">
-    <h1 class="text-4xl font-bold ml-4 mb-4">Frameworks:</h1>
+    <h1 class="text font-bold ml-4 mb-4">Frameworks:</h1>
     <div v-for="framework in frameworks" :key="framework.title" class="stats bg-base-100 border border-base-400 ml-4 mb-4">
       <div class="stat">
         <div class="stat-title font-bold">{{ framework.title }}</div>
@@ -118,7 +238,7 @@ const languages = ref<Skill[]>([
       </div>
     </div>
 
-    <h1 class="text-4xl font-bold ml-4 mb-4">Languages:</h1>
+    <h1 class="text font-bold ml-4 mb-4">Languages:</h1>
     <div v-for="language in languages" :key="language.title" class="stats bg-base-100 border border-base-400 ml-4 mb-4">
       <div class="stat">
         <div class="stat-title font-bold">{{ language.title }}</div>
@@ -139,6 +259,166 @@ const languages = ref<Skill[]>([
         <div class="stat-value">
           <div class="w-full w-56">
             <input type="range" min="0" max="100" :value="language.value" class="range range-sm range-success pointer-events-none" step="25" />
+            <div class="flex justify-between px-2.5 mt-2 text-xs">
+              <span>|</span>
+              <span>|</span>
+              <span>|</span>
+              <span>|</span>
+              <span>|</span>
+            </div>
+            <div class="flex justify-between px-2.5 mt-2 text-xs">
+              <span>1</span>
+              <span>2</span>
+              <span>3</span>
+              <span>4</span>
+              <span>5</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h1 class="text font-bold ml-4 mb-4">Design & Styling:</h1>
+    <div v-for="style in designStyling" :key="style.title" class="stats bg-base-100 border border-base-400 ml-4 mb-4">
+      <div class="stat">
+        <div class="stat-title font-bold">{{ style.title }}</div>
+        <div class="stat-value"><img width="100px" :src="style.src" /></div>
+        <div class="stat-actions">
+          <div class="badge badge-sm" :class="style.usedProffessionally ? 'badge-success' : 'badge-error'">
+            Pro
+            <Check v-if="style.usedProffessionally" :size="16" />
+            <X v-else :size="16" />
+          </div>
+        </div>
+      </div>
+
+      <div class="stat">
+        <div class="stat-title font-bold">
+          Profficency
+        </div>
+        <div class="stat-value">
+          <div class="w-full w-56">
+            <input type="range" min="0" max="100" :value="style.value" class="range range-sm range-success pointer-events-none" step="25" />
+            <div class="flex justify-between px-2.5 mt-2 text-xs">
+              <span>|</span>
+              <span>|</span>
+              <span>|</span>
+              <span>|</span>
+              <span>|</span>
+            </div>
+            <div class="flex justify-between px-2.5 mt-2 text-xs">
+              <span>1</span>
+              <span>2</span>
+              <span>3</span>
+              <span>4</span>
+              <span>5</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h1 class="font-bold ml-4 mb-4">Development Toolchain:</h1>
+    <div v-for="tool in toolChains" :key="tool.title" class="stats bg-base-100 border border-base-400 ml-4 mb-4">
+      <div class="stat">
+        <div class="stat-title font-bold">{{ tool.title }}</div>
+        <div class="stat-value"><img width="100px" :src="tool.src" /></div>
+        <div class="stat-actions">
+          <div class="badge badge-sm" :class="tool.usedProffessionally ? 'badge-success' : 'badge-error'">
+            Pro
+            <Check v-if="tool.usedProffessionally" :size="16" />
+            <X v-else :size="16" />
+          </div>
+        </div>
+      </div>
+
+      <div class="stat">
+        <div class="stat-title font-bold">
+          Profficency
+        </div>
+        <div class="stat-value">
+          <div class="w-full w-56">
+            <input type="range" min="0" max="100" :value="tool.value" class="range range-sm range-success pointer-events-none" step="25" />
+            <div class="flex justify-between px-2.5 mt-2 text-xs">
+              <span>|</span>
+              <span>|</span>
+              <span>|</span>
+              <span>|</span>
+              <span>|</span>
+            </div>
+            <div class="flex justify-between px-2.5 mt-2 text-xs">
+              <span>1</span>
+              <span>2</span>
+              <span>3</span>
+              <span>4</span>
+              <span>5</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h1 class="text font-bold ml-4 mb-4">Testing & Documentation:</h1>
+    <div v-for="tool in testingAndDocumentation" :key="tool.title" class="stats bg-base-100 border border-base-400 ml-4 mb-4">
+      <div class="stat">
+        <div class="stat-title font-bold">{{ tool.title }}</div>
+        <div class="stat-value"><img width="100px" :src="tool.src" /></div>
+        <div class="stat-actions">
+          <div class="badge badge-sm" :class="tool.usedProffessionally ? 'badge-success' : 'badge-error'">
+            Pro
+            <Check v-if="tool.usedProffessionally" :size="16" />
+            <X v-else :size="16" />
+          </div>
+        </div>
+      </div>
+
+      <div class="stat">
+        <div class="stat-title font-bold">
+          Profficency
+        </div>
+        <div class="stat-value">
+          <div class="w-full w-56">
+            <input type="range" min="0" max="100" :value="tool.value" class="range range-sm range-success pointer-events-none" step="25" />
+            <div class="flex justify-between px-2.5 mt-2 text-xs">
+              <span>|</span>
+              <span>|</span>
+              <span>|</span>
+              <span>|</span>
+              <span>|</span>
+            </div>
+            <div class="flex justify-between px-2.5 mt-2 text-xs">
+              <span>1</span>
+              <span>2</span>
+              <span>3</span>
+              <span>4</span>
+              <span>5</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h1 class="text font-bold ml-4 mb-4">Cloud & Infrastructure:</h1>
+    <div v-for="tool in cloudAndInfra" :key="tool.title" class="stats bg-base-100 border border-base-400 ml-4 mb-4">
+      <div class="stat">
+        <div class="stat-title font-bold">{{ tool.title }}</div>
+        <div class="stat-value"><img width="100px" :src="tool.src" /></div>
+        <div class="stat-actions">
+          <div class="badge badge-sm" :class="tool.usedProffessionally ? 'badge-success' : 'badge-error'">
+            Pro
+            <Check v-if="tool.usedProffessionally" :size="16" />
+            <X v-else :size="16" />
+          </div>
+        </div>
+      </div>
+
+      <div class="stat">
+        <div class="stat-title font-bold">
+          Profficency
+        </div>
+        <div class="stat-value">
+          <div class="w-full w-56">
+            <input type="range" min="0" max="100" :value="tool.value" class="range range-sm range-success pointer-events-none" step="25" />
             <div class="flex justify-between px-2.5 mt-2 text-xs">
               <span>|</span>
               <span>|</span>
