@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue';
-import Stats from '../components/layout/Stats.vue';
+import GithubStats from '../components/layout/GithubStats.vue';
 import { useRouter, useRoute } from 'vue-router';
 import { ArrowLeft, ArrowRight } from 'lucide-vue-next';
 
@@ -121,9 +121,8 @@ function goNext() {
     <!-- Main Content Area: Child routes render here -->
     <main class="flex-1 p-4">
       <router-view />
-
-            <!-- Navigation buttons underneath router-view -->
-            <div class="flex justify-between mt-8">
+      <!-- Navigation buttons underneath router-view -->
+      <div class="flex justify-between mt-8">
         <!-- Previous Button -->
         <button
           v-if="prevRoute"
@@ -136,7 +135,6 @@ function goNext() {
             {{ prevRoute.label }}
           </div>
         </button>
-
         <!-- Next Button -->
         <button
           v-if="nextRoute"
@@ -152,6 +150,6 @@ function goNext() {
       </div>
     </main>
     <!-- Right Hand side panel -->
-    <stats />
+    <github-stats />
   </div>
 </template>

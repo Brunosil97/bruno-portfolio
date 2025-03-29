@@ -6,7 +6,7 @@ import Contact from '../components/sections/Contact.vue';
 import WorkExperience from '../components/sections/WorkExperience.vue';
 import Skills from '../components/sections/Skills.vue';
 import Projects from '../components/sections/Projects.vue';
-import Blogs from '../components/sections/Blogs.vue';
+import BlogPosts from '../components/sections/BlogPosts.vue';
 import FAQs from '../components/sections/FAQs.vue';
 import CV from '../components/sections/CV.vue';
 
@@ -28,7 +28,7 @@ const router = createRouter({
         { path: 'work', name: 'WorkExperience', component: WorkExperience },
         { path: 'skills', name: 'Skills', component: Skills },
         { path: 'projects', name: 'Projects', component: Projects },
-        { path: 'blogs', name: 'Blogs', component: Blogs },
+        { path: 'blogs', name: 'Blogs', component: BlogPosts },
         { path: 'faqs', name: 'FAQs', component: FAQs },
         { path: 'cv', name: 'CV', component: CV },
       ],
