@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { ref, watch, onMounted } from 'vue';
 import { Github, Linkedin, Book, ChevronDown } from 'lucide-vue-next';
-import { motion } from "motion-v";
 
 const themes = ref([
   "light",
@@ -41,17 +40,6 @@ const themes = ref([
 ]);
 
 const selectedTheme = ref('cupcake');
-const dotVariants = {
-  jump: {
-    y: -30,
-    transition: {
-      duration: 0.8,
-      repeat: Infinity,
-      repeatType: "mirror",
-      ease: "easeInOut",
-    },
-  },
-}
 
 onMounted(() => {
   const storedTheme = localStorage.getItem('theme');
@@ -63,7 +51,7 @@ onMounted(() => {
   }
 });
 
-watch(selectedTheme, (newTheme) => {
+watch(selectedTheme, (newTheme: string) => {
   localStorage.setItem('theme', JSON.stringify(newTheme));
   document.documentElement.setAttribute('data-theme', newTheme);
 });
@@ -73,15 +61,6 @@ watch(selectedTheme, (newTheme) => {
     <div class="flex-1">
       <div class="flex items-center">
         <router-link class="btn btn-ghost text-xl" to="/">Bruno Silva</router-link>
-        <motion.div
-          class="container ml-2 mt-5"
-          animate="jump"
-          :transition="{ staggerChildren: -0.2, staggerDirection: -1 }"
-        >
-          <motion.div class="dot" :variants="dotVariants" />
-          <motion.div class="dot" :variants="dotVariants" />
-          <motion.div class="dot" :variants="dotVariants" />
-        </motion.div>
       </div>
     </div>
     <div class="flex-none">

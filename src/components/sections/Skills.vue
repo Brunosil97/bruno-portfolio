@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref, computed } from "vue";
 import { Check, X } from "lucide-vue-next";
 
 interface Skill {
@@ -9,6 +9,7 @@ interface Skill {
   value: number;
 }
 
+// Skills Data Arrays
 const frameworks = ref<Skill[]>([
   {
     title: "Vue.js",
@@ -26,7 +27,7 @@ const frameworks = ref<Skill[]>([
     title: "Express",
     src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg",
     usedProffessionally: true,
-    value: 75
+    value: 75,
   },
   {
     title: "Zend",
@@ -36,10 +37,10 @@ const frameworks = ref<Skill[]>([
   },
   {
     title: "Rails",
-    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rails/rails-plain.svg" ,
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rails/rails-plain.svg",
     usedProffessionally: false,
     value: 25,
-  }
+  },
 ]);
 
 const languages = ref<Skill[]>([
@@ -99,7 +100,7 @@ const designStyling = ref<Skill[]>([
     src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg",
     usedProffessionally: true,
     value: 75,
-  }
+  },
 ]);
 
 const testingAndDocumentation = ref<Skill[]>([
@@ -112,7 +113,7 @@ const testingAndDocumentation = ref<Skill[]>([
   {
     title: "Storybook",
     src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/storybook/storybook-original.svg",
-    usedProfessionally: true,
+    usedProffessionally: true,
     value: 100,
   },
   {
@@ -120,7 +121,7 @@ const testingAndDocumentation = ref<Skill[]>([
     src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/confluence/confluence-original.svg",
     usedProffessionally: true,
     value: 100,
-  }
+  },
 ]);
 
 const toolChains = ref<Skill[]>([
@@ -193,32 +194,148 @@ const cloudAndInfra = ref<Skill[]>([
     usedProffessionally: true,
     value: 50,
   },
-])
+]);
 
+// Filter option: default is empty string (shows all)
+const filterOption = ref<string>("");
+
+// Computed filtering for each category
+const filteredFrameworks = computed(() => {
+  if (filterOption.value === "Intermediate") {
+    return frameworks.value.filter(skill => skill.value <= 50);
+  } else if (filterOption.value === "Proficient") {
+    return frameworks.value.filter(skill => skill.value > 50);
+  } else if (filterOption.value === "WorkPlace") {
+    return frameworks.value.filter(skill => skill.usedProffessionally);
+  }
+  return frameworks.value;
+});
+
+const filteredLanguages = computed(() => {
+  if (filterOption.value === "Intermediate") {
+    return languages.value.filter(skill => skill.value <= 50);
+  } else if (filterOption.value === "Proficient") {
+    return languages.value.filter(skill => skill.value > 50);
+  } else if (filterOption.value === "WorkPlace") {
+    return languages.value.filter(skill => skill.usedProffessionally);
+  }
+  return languages.value;
+});
+
+const filteredDesignStyling = computed(() => {
+  if (filterOption.value === "Intermediate") {
+    return designStyling.value.filter(skill => skill.value <= 50);
+  } else if (filterOption.value === "Proficient") {
+    return designStyling.value.filter(skill => skill.value > 50);
+  } else if (filterOption.value === "WorkPlace") {
+    return designStyling.value.filter(skill => skill.usedProffessionally);
+  }
+  return designStyling.value;
+});
+
+const filteredToolChains = computed(() => {
+  if (filterOption.value === "Intermediate") {
+    return toolChains.value.filter(skill => skill.value <= 50);
+  } else if (filterOption.value === "Proficient") {
+    return toolChains.value.filter(skill => skill.value > 50);
+  } else if (filterOption.value === "WorkPlace") {
+    return toolChains.value.filter(skill => skill.usedProffessionally);
+  }
+  return toolChains.value;
+});
+
+const filteredTestingAndDocumentation = computed(() => {
+  if (filterOption.value === "Intermediate") {
+    return testingAndDocumentation.value.filter(skill => skill.value <= 50);
+  } else if (filterOption.value === "Proficient") {
+    return testingAndDocumentation.value.filter(skill => skill.value > 50);
+  } else if (filterOption.value === "WorkPlace") {
+    return testingAndDocumentation.value.filter(skill => skill.usedProffessionally);
+  }
+  return testingAndDocumentation.value;
+});
+
+const filteredCloudAndInfra = computed(() => {
+  if (filterOption.value === "Intermediate") {
+    return cloudAndInfra.value.filter(skill => skill.value <= 50);
+  } else if (filterOption.value === "Proficient") {
+    return cloudAndInfra.value.filter(skill => skill.value > 50);
+  } else if (filterOption.value === "WorkPlace") {
+    return cloudAndInfra.value.filter(skill => skill.usedProffessionally);
+  }
+  return cloudAndInfra.value;
+});
 </script>
+
 <template>
   <div class="container mx-auto p-6">
+    <!-- DaisyUI Filter Buttons -->
+    <div class="join ml-4 mb-6">
+      <button
+        class="btn btn-soft btn-primary"
+        :class="{ 'btn-active': filterOption === '' }"
+        @click="filterOption = ''"
+      >
+        All
+      </button>
+      <button
+        class="btn btn-soft btn-primary"
+        :class="{ 'btn-active': filterOption === 'Intermediate' }"
+        @click="filterOption = 'Intermediate'"
+      >
+        Intermediate
+      </button>
+      <button
+        class="btn btn-soft btn-primary"
+        :class="{ 'btn-active': filterOption === 'Proficient' }"
+        @click="filterOption = 'Proficient'"
+      >
+        Proficient
+      </button>
+      <button
+        class="btn btn-soft btn-primary"
+        :class="{ 'btn-active': filterOption === 'WorkPlace' }"
+        @click="filterOption = 'WorkPlace'"
+      >
+        Work Place
+      </button>
+    </div>
+
+    <!-- Frameworks -->
     <h1 class="text font-bold ml-4 mb-4">Frameworks:</h1>
-    <div v-for="framework in frameworks" :key="framework.title" class="stats bg-base-100 border border-base-400 ml-4 mb-4">
+    <div
+      v-for="framework in filteredFrameworks"
+      :key="framework.title"
+      class="stats bg-base-100 border border-base-400 ml-4 mb-4"
+    >
       <div class="stat">
         <div class="stat-title font-bold">{{ framework.title }}</div>
-        <div class="stat-value"><img width="100px" :src="framework.src" /></div>
+        <div class="stat-value">
+          <img width="100px" :src="framework.src" alt="" />
+        </div>
         <div class="stat-actions">
-          <div class="badge badge-sm" :class="framework.usedProffessionally ? 'badge-success' : 'badge-error'">
+          <div
+            class="badge badge-sm"
+            :class="framework.usedProffessionally ? 'badge-success' : 'badge-error'"
+          >
             Pro
             <Check v-if="framework.usedProffessionally" :size="16" />
             <X v-else :size="16" />
           </div>
         </div>
       </div>
-
       <div class="stat">
-        <div class="stat-title font-bold">
-          Profficency
-        </div>
+        <div class="stat-title font-bold">Proficiency</div>
         <div class="stat-value">
           <div class="w-full w-56">
-            <input type="range" min="0" max="100" :value="framework.value" class="range range-sm range-success pointer-events-none" step="25" />
+            <input
+              type="range"
+              min="0"
+              max="100"
+              :value="framework.value"
+              class="range range-sm range-success pointer-events-none"
+              step="25"
+            />
             <div class="flex justify-between px-2.5 mt-2 text-xs">
               <span>|</span>
               <span>|</span>
@@ -238,27 +355,41 @@ const cloudAndInfra = ref<Skill[]>([
       </div>
     </div>
 
+    <!-- Languages -->
     <h1 class="text font-bold ml-4 mb-4">Languages:</h1>
-    <div v-for="language in languages" :key="language.title" class="stats bg-base-100 border border-base-400 ml-4 mb-4">
+    <div
+      v-for="language in filteredLanguages"
+      :key="language.title"
+      class="stats bg-base-100 border border-base-400 ml-4 mb-4"
+    >
       <div class="stat">
         <div class="stat-title font-bold">{{ language.title }}</div>
-        <div class="stat-value"><img width="100px" :src="language.src" /></div>
+        <div class="stat-value">
+          <img width="100px" :src="language.src" alt="" />
+        </div>
         <div class="stat-actions">
-          <div class="badge badge-sm" :class="language.usedProffessionally ? 'badge-success' : 'badge-error'">
+          <div
+            class="badge badge-sm"
+            :class="language.usedProffessionally ? 'badge-success' : 'badge-error'"
+          >
             Pro
             <Check v-if="language.usedProffessionally" :size="16" />
             <X v-else :size="16" />
           </div>
         </div>
       </div>
-
       <div class="stat">
-        <div class="stat-title font-bold">
-          Profficency
-        </div>
+        <div class="stat-title font-bold">Proficiency</div>
         <div class="stat-value">
           <div class="w-full w-56">
-            <input type="range" min="0" max="100" :value="language.value" class="range range-sm range-success pointer-events-none" step="25" />
+            <input
+              type="range"
+              min="0"
+              max="100"
+              :value="language.value"
+              class="range range-sm range-success pointer-events-none"
+              step="25"
+            />
             <div class="flex justify-between px-2.5 mt-2 text-xs">
               <span>|</span>
               <span>|</span>
@@ -278,27 +409,41 @@ const cloudAndInfra = ref<Skill[]>([
       </div>
     </div>
 
+    <!-- Design & Styling -->
     <h1 class="text font-bold ml-4 mb-4">Design & Styling:</h1>
-    <div v-for="style in designStyling" :key="style.title" class="stats bg-base-100 border border-base-400 ml-4 mb-4">
+    <div
+      v-for="style in filteredDesignStyling"
+      :key="style.title"
+      class="stats bg-base-100 border border-base-400 ml-4 mb-4"
+    >
       <div class="stat">
         <div class="stat-title font-bold">{{ style.title }}</div>
-        <div class="stat-value"><img width="100px" :src="style.src" /></div>
+        <div class="stat-value">
+          <img width="100px" :src="style.src" alt="" />
+        </div>
         <div class="stat-actions">
-          <div class="badge badge-sm" :class="style.usedProffessionally ? 'badge-success' : 'badge-error'">
+          <div
+            class="badge badge-sm"
+            :class="style.usedProffessionally ? 'badge-success' : 'badge-error'"
+          >
             Pro
             <Check v-if="style.usedProffessionally" :size="16" />
             <X v-else :size="16" />
           </div>
         </div>
       </div>
-
       <div class="stat">
-        <div class="stat-title font-bold">
-          Profficency
-        </div>
+        <div class="stat-title font-bold">Proficiency</div>
         <div class="stat-value">
           <div class="w-full w-56">
-            <input type="range" min="0" max="100" :value="style.value" class="range range-sm range-success pointer-events-none" step="25" />
+            <input
+              type="range"
+              min="0"
+              max="100"
+              :value="style.value"
+              class="range range-sm range-success pointer-events-none"
+              step="25"
+            />
             <div class="flex justify-between px-2.5 mt-2 text-xs">
               <span>|</span>
               <span>|</span>
@@ -318,27 +463,41 @@ const cloudAndInfra = ref<Skill[]>([
       </div>
     </div>
 
-    <h1 class="font-bold ml-4 mb-4">Development Toolchain:</h1>
-    <div v-for="tool in toolChains" :key="tool.title" class="stats bg-base-100 border border-base-400 ml-4 mb-4">
+    <!-- Development Toolchain -->
+    <h1 class="text font-bold ml-4 mb-4">Development Toolchain:</h1>
+    <div
+      v-for="tool in filteredToolChains"
+      :key="tool.title"
+      class="stats bg-base-100 border border-base-400 ml-4 mb-4"
+    >
       <div class="stat">
         <div class="stat-title font-bold">{{ tool.title }}</div>
-        <div class="stat-value"><img width="100px" :src="tool.src" /></div>
+        <div class="stat-value">
+          <img width="100px" :src="tool.src" alt="" />
+        </div>
         <div class="stat-actions">
-          <div class="badge badge-sm" :class="tool.usedProffessionally ? 'badge-success' : 'badge-error'">
+          <div
+            class="badge badge-sm"
+            :class="tool.usedProffessionally ? 'badge-success' : 'badge-error'"
+          >
             Pro
             <Check v-if="tool.usedProffessionally" :size="16" />
             <X v-else :size="16" />
           </div>
         </div>
       </div>
-
       <div class="stat">
-        <div class="stat-title font-bold">
-          Profficency
-        </div>
+        <div class="stat-title font-bold">Proficiency</div>
         <div class="stat-value">
           <div class="w-full w-56">
-            <input type="range" min="0" max="100" :value="tool.value" class="range range-sm range-success pointer-events-none" step="25" />
+            <input
+              type="range"
+              min="0"
+              max="100"
+              :value="tool.value"
+              class="range range-sm range-success pointer-events-none"
+              step="25"
+            />
             <div class="flex justify-between px-2.5 mt-2 text-xs">
               <span>|</span>
               <span>|</span>
@@ -358,27 +517,41 @@ const cloudAndInfra = ref<Skill[]>([
       </div>
     </div>
 
+    <!-- Testing & Documentation -->
     <h1 class="text font-bold ml-4 mb-4">Testing & Documentation:</h1>
-    <div v-for="tool in testingAndDocumentation" :key="tool.title" class="stats bg-base-100 border border-base-400 ml-4 mb-4">
+    <div
+      v-for="tool in filteredTestingAndDocumentation"
+      :key="tool.title"
+      class="stats bg-base-100 border border-base-400 ml-4 mb-4"
+    >
       <div class="stat">
         <div class="stat-title font-bold">{{ tool.title }}</div>
-        <div class="stat-value"><img width="100px" :src="tool.src" /></div>
+        <div class="stat-value">
+          <img width="100px" :src="tool.src" alt="" />
+        </div>
         <div class="stat-actions">
-          <div class="badge badge-sm" :class="tool.usedProffessionally ? 'badge-success' : 'badge-error'">
+          <div
+            class="badge badge-sm"
+            :class="tool.usedProffessionally ? 'badge-success' : 'badge-error'"
+          >
             Pro
             <Check v-if="tool.usedProffessionally" :size="16" />
             <X v-else :size="16" />
           </div>
         </div>
       </div>
-
       <div class="stat">
-        <div class="stat-title font-bold">
-          Profficency
-        </div>
+        <div class="stat-title font-bold">Proficiency</div>
         <div class="stat-value">
           <div class="w-full w-56">
-            <input type="range" min="0" max="100" :value="tool.value" class="range range-sm range-success pointer-events-none" step="25" />
+            <input
+              type="range"
+              min="0"
+              max="100"
+              :value="tool.value"
+              class="range range-sm range-success pointer-events-none"
+              step="25"
+            />
             <div class="flex justify-between px-2.5 mt-2 text-xs">
               <span>|</span>
               <span>|</span>
@@ -398,27 +571,41 @@ const cloudAndInfra = ref<Skill[]>([
       </div>
     </div>
 
+    <!-- Cloud & Infrastructure -->
     <h1 class="text font-bold ml-4 mb-4">Cloud & Infrastructure:</h1>
-    <div v-for="tool in cloudAndInfra" :key="tool.title" class="stats bg-base-100 border border-base-400 ml-4 mb-4">
+    <div
+      v-for="tool in filteredCloudAndInfra"
+      :key="tool.title"
+      class="stats bg-base-100 border border-base-400 ml-4 mb-4"
+    >
       <div class="stat">
         <div class="stat-title font-bold">{{ tool.title }}</div>
-        <div class="stat-value"><img width="100px" :src="tool.src" /></div>
+        <div class="stat-value">
+          <img width="100px" :src="tool.src" alt="" />
+        </div>
         <div class="stat-actions">
-          <div class="badge badge-sm" :class="tool.usedProffessionally ? 'badge-success' : 'badge-error'">
+          <div
+            class="badge badge-sm"
+            :class="tool.usedProffessionally ? 'badge-success' : 'badge-error'"
+          >
             Pro
             <Check v-if="tool.usedProffessionally" :size="16" />
             <X v-else :size="16" />
           </div>
         </div>
       </div>
-
       <div class="stat">
-        <div class="stat-title font-bold">
-          Profficency
-        </div>
+        <div class="stat-title font-bold">Proficiency</div>
         <div class="stat-value">
           <div class="w-full w-56">
-            <input type="range" min="0" max="100" :value="tool.value" class="range range-sm range-success pointer-events-none" step="25" />
+            <input
+              type="range"
+              min="0"
+              max="100"
+              :value="tool.value"
+              class="range range-sm range-success pointer-events-none"
+              step="25"
+            />
             <div class="flex justify-between px-2.5 mt-2 text-xs">
               <span>|</span>
               <span>|</span>
