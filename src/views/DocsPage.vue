@@ -69,7 +69,7 @@ function goNext() {
 <template>
   <div class="flex h-full">
     <!-- Left-hand navigation panel styled with DaisyUI menu -->
-    <aside class="w-64 bg-base-200 p-4">
+    <aside class="w-64 bg-base-200 p-4 hidden sm:flex">
       <ul class="menu bg-base-200 rounded-box w-56">
         <li>
           <h2 class="menu-title">Getting Started</h2>
@@ -150,6 +150,8 @@ function goNext() {
       </div>
     </main>
     <!-- Right Hand side panel -->
-    <github-stats />
+    <div class="hidden sm:flex">
+      <github-stats  />
+    </div>
   </div>
 </template>

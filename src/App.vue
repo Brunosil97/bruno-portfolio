@@ -1,13 +1,18 @@
 <script setup lang="ts">
-import Navbar from './components/layout/NavBar.vue';
+import NavBar from './components/layout/NavBar.vue';
+import MobileFooterNav from './components/layout/MobileFooterNav.vue';
 </script>
 
 <template>
-  <!-- A simple container with a neutral background -->
-  <div class="bg-base-200 min-h-screen">
-    <Navbar />
-    <!-- Where child pages (LandingPage, DocsPage, etc.) will appear -->
+  <!-- The container now has pb-16 to ensure content doesn't hide behind the footer -->
+  <div class="bg-base-200 min-h-screen pb-16">
+    <!-- Top Nav -->
+    <nav-bar />
+    <!-- Main App Body -->
     <router-view />
+    <!-- Mobile Footer Nav -->
+    <mobile-footer-nav />
+
   </div>
 </template>
 
