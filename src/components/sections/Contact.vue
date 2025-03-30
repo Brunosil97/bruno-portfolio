@@ -3,30 +3,31 @@ import { MailPlus, MessageCircleMore } from 'lucide-vue-next';
 </script>
 
 <template>
-  <div class="container mx-auto p-4">
-    <div class="prose lg:prose-xl">
+  <div class="container mx-auto p-4 max-w-full sm:max-w-md md:max-w-lg lg:max-w-3xl xl:max-w-5xl">
+    <div class="prose max-w-none lg:prose-xl">
       <div class="flex items-center">
-        <h1 class="text-4xl font-bold mb-2 mr-4">Installation Guide: Contact Bruno Silva</h1>
-        <div class="space-x-2">
+        <h1 class="text-4xl font-bold mb-2 mr-4 hidden sm:block">Installation Guide: Contact Bruno Silva</h1>
+        <h1 class="text-2xl font-bold mb-2 mr-4 sm:hidden">Installation Guide</h1>
+        <div class="space-x-2 flex sm:block">
           <a
             href="mailto:brunosilvinosilva@gmail.com?subject=Bruno Silva: Portfolio inquery"
-            class="btn btn-primary"
+            class="btn btn-primary btn-sm"
           >
-            Email Me
+            <span class="hidden sm:block">Email Me</span>
             <MailPlus :size="16" />
           </a>
           <a
             href="https://wa.me/447792951314?text=Hi%20Bruno,%20I%20would%20like%20to%20message%20you."
             target="_blank"
-            class="btn btn-secondary"
+            class="btn btn-secondary btn-sm"
           >
-            Message Me
+          <span class="hidden sm:block">Message Me</span>
             <MessageCircleMore :size="16" />
           </a>
         </div>
       </div>
 
-      <p class="mb-4">
+      <p class="mb-4 mt-3 md:mt-0">
         Follow these steps to properly "install" my contact details into your project.
       </p>
 
@@ -87,7 +88,7 @@ import { MailPlus, MessageCircleMore } from 'lucide-vue-next';
           class="tab checked:text-neutral-content! text-neutral [--tab-bg:var(--color-neutral)] [--tab-border-color:var(--color-neutral)]"
           aria-label="Deno"
         />
-        <div class="bg-neutral text-neutral-content tab-content relative p-4 text-left shadow-lg">
+        <div class="bg-neutral text-neutral-content tab-content relative p-4 text-left shadow-lg overflow-w-x-hidden overflow-x-auto">
           <pre data-prefix="$"><code>deno install -A -n contact-bruno https://deno.land/x/contact-bruno</code></pre>
         </div>
       </div>

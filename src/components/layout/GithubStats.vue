@@ -156,7 +156,6 @@ onMounted(async () => {
   // Only call APIs if no stored data is found
   const dataLoadedFromStorage = loadStoredData();
   if (!dataLoadedFromStorage) {
-    console.warn("hitting api data");
     await Promise.all([fetchPublicStats(), fetchContributions()]);
     // After API calls, store data in localStorage
     localStorage.setItem('githubData', JSON.stringify(githubData.value));

@@ -56,13 +56,17 @@ const nextRoute = computed(() => {
 // Methods to navigate
 function goPrev() {
   if (prevRoute.value) {
-    router.push(prevRoute.value.path);
+    router.push(prevRoute.value.path).then(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth'});
+    });
   }
 }
 
 function goNext() {
   if (nextRoute.value) {
-    router.push(nextRoute.value.path);
+    router.push(nextRoute.value.path).then(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth'});
+    });
   }
 }
 </script>
@@ -74,7 +78,8 @@ function goNext() {
       <nav-menu />
     </aside>
     <!-- Main Content Area: Child routes render here -->
-    <main class="flex-1 p-4">
+    <main class="flex-1 p-4 relative max-w-[100vw] px-6 pb-16 xl:pe-2">
+      <!-- Routed content or other page content goes here -->
       <router-view />
       <!-- Navigation buttons underneath router-view -->
       <div class="flex justify-between mt-8">
@@ -86,7 +91,7 @@ function goNext() {
         >
           <ArrowLeft />
           <div>
-            Previous:
+            <span class="hidden sm:inline">Previous:</span>
             {{ prevRoute.label }}
           </div>
         </button>
@@ -97,7 +102,7 @@ function goNext() {
           @click="goNext"
         >
           <div>
-            Next:
+            <span class="hidden sm:inline">Next:</span>
             {{ nextRoute.label }}
           </div>
           <ArrowRight />

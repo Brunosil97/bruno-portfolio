@@ -12,6 +12,9 @@ import CV from '../components/sections/CV.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
+  scrollBehavior(_to, _from, _savedPosition) {
+    return { left: 0, top: 0 };
+  },
   routes: [
     {
       path: '/',
