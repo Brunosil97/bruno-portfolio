@@ -1,18 +1,12 @@
 <script setup lang="ts">
-import NavBar from './components/layout/NavBar.vue';
-import MobileFooterNav from './components/layout/MobileFooterNav.vue';
+import AppBody from './components/layout/AppBody.vue';
 </script>
 
 <template>
   <!-- The container now has pb-16 to ensure content doesn't hide behind the footer -->
   <div class="bg-base-200 min-h-screen pb-16">
-    <!-- Top Nav -->
-    <nav-bar />
-    <!-- Main App Body -->
-    <router-view />
-    <!-- Mobile Footer Nav -->
-    <mobile-footer-nav />
-
+    <!-- Nav Bar & Router View -->
+    <app-body />
   </div>
 </template>
 
