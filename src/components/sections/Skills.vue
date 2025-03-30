@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref, computed } from "vue";
 import { Check, X } from "lucide-vue-next";
+import SkillLevel from "../html/SkillLevel.vue";
 
 interface Skill {
   title: string;
@@ -303,326 +304,297 @@ const filteredCloudAndInfra = computed(() => {
 
     <!-- Frameworks -->
     <h1 class="text font-bold ml-4 mb-4">Frameworks:</h1>
-    <div
-      v-for="framework in filteredFrameworks"
-      :key="framework.title"
-      class="stats bg-base-100 border border-base-400 ml-4 mb-4"
+    <transition-group
+      name="fade"
+      tag="div"
+      class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 ml-4 mb-4"
     >
-      <div class="stat">
-        <div class="stat-title font-bold">{{ framework.title }}</div>
-        <div class="stat-value">
-          <img width="100px" :src="framework.src" alt="" />
-        </div>
-        <div class="stat-actions">
-          <div
-            class="badge badge-sm"
-            :class="framework.usedProffessionally ? 'badge-success' : 'badge-error'"
-          >
-            Pro
-            <Check v-if="framework.usedProffessionally" :size="16" />
-            <X v-else :size="16" />
+      <div
+        v-for="framework in filteredFrameworks"
+        :key="framework.title"
+        class="stats bg-base-100 border border-base-400 ml-4 mb-4"
+      >
+        <div class="stat">
+          <div class="stat-title font-bold">{{ framework.title }}</div>
+          <div class="stat-value">
+            <img width="100px" :src="framework.src" alt="" />
+          </div>
+          <div class="stat-actions">
+            <div
+              class="badge badge-sm"
+              :class="framework.usedProffessionally ? 'badge-success' : 'badge-error'"
+            >
+              Pro
+              <Check v-if="framework.usedProffessionally" :size="16" />
+              <X v-else :size="16" />
+            </div>
           </div>
         </div>
-      </div>
-      <div class="stat">
-        <div class="stat-title font-bold">Proficiency</div>
-        <div class="stat-value">
-          <div class="w-full w-56">
-            <input
-              type="range"
-              min="0"
-              max="100"
-              :value="framework.value"
-              class="range range-sm range-success pointer-events-none"
-              step="25"
-            />
-            <div class="flex justify-between px-2.5 mt-2 text-xs">
-              <span>|</span>
-              <span>|</span>
-              <span>|</span>
-              <span>|</span>
-              <span>|</span>
-            </div>
-            <div class="flex justify-between px-2.5 mt-2 text-xs">
-              <span>1</span>
-              <span>2</span>
-              <span>3</span>
-              <span>4</span>
-              <span>5</span>
+        <div class="stat">
+          <div class="stat-title font-bold">Proficiency</div>
+          <div class="stat-value">
+            <div class="w-full w-56">
+              <input
+                type="range"
+                min="0"
+                max="100"
+                :value="framework.value"
+                class="range range-sm range-success pointer-events-none"
+                step="25"
+              />
+              <skill-level />
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </transition-group>
 
     <!-- Languages -->
     <h1 class="text font-bold ml-4 mb-4">Languages:</h1>
-    <div
-      v-for="language in filteredLanguages"
-      :key="language.title"
-      class="stats bg-base-100 border border-base-400 ml-4 mb-4"
+    <transition-group
+      name="fade"
+      tag="div"
+      class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 ml-4 mb-4"
     >
-      <div class="stat">
-        <div class="stat-title font-bold">{{ language.title }}</div>
-        <div class="stat-value">
-          <img width="100px" :src="language.src" alt="" />
-        </div>
-        <div class="stat-actions">
-          <div
-            class="badge badge-sm"
-            :class="language.usedProffessionally ? 'badge-success' : 'badge-error'"
-          >
-            Pro
-            <Check v-if="language.usedProffessionally" :size="16" />
-            <X v-else :size="16" />
+      <div
+        v-for="language in filteredLanguages"
+        :key="language.title"
+        class="stats bg-base-100 border border-base-400 ml-4 mb-4"
+      >
+        <div class="stat">
+          <div class="stat-title font-bold">{{ language.title }}</div>
+          <div class="stat-value">
+            <img width="100px" :src="language.src" alt="" />
+          </div>
+          <div class="stat-actions">
+            <div
+              class="badge badge-sm"
+              :class="language.usedProffessionally ? 'badge-success' : 'badge-error'"
+            >
+              Pro
+              <Check v-if="language.usedProffessionally" :size="16" />
+              <X v-else :size="16" />
+            </div>
           </div>
         </div>
-      </div>
-      <div class="stat">
-        <div class="stat-title font-bold">Proficiency</div>
-        <div class="stat-value">
-          <div class="w-full w-56">
-            <input
-              type="range"
-              min="0"
-              max="100"
-              :value="language.value"
-              class="range range-sm range-success pointer-events-none"
-              step="25"
-            />
-            <div class="flex justify-between px-2.5 mt-2 text-xs">
-              <span>|</span>
-              <span>|</span>
-              <span>|</span>
-              <span>|</span>
-              <span>|</span>
-            </div>
-            <div class="flex justify-between px-2.5 mt-2 text-xs">
-              <span>1</span>
-              <span>2</span>
-              <span>3</span>
-              <span>4</span>
-              <span>5</span>
+        <div class="stat">
+          <div class="stat-title font-bold">Proficiency</div>
+          <div class="stat-value">
+            <div class="w-full w-56">
+              <input
+                type="range"
+                min="0"
+                max="100"
+                :value="language.value"
+                class="range range-sm range-success pointer-events-none"
+                step="25"
+              />
+              <skill-level />
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </transition-group>
 
     <!-- Design & Styling -->
     <h1 class="text font-bold ml-4 mb-4">Design & Styling:</h1>
-    <div
-      v-for="style in filteredDesignStyling"
-      :key="style.title"
-      class="stats bg-base-100 border border-base-400 ml-4 mb-4"
+    <transition-group
+      name="fade"
+      tag="div"
+      class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 ml-4 mb-4"
     >
-      <div class="stat">
-        <div class="stat-title font-bold">{{ style.title }}</div>
-        <div class="stat-value">
-          <img width="100px" :src="style.src" alt="" />
-        </div>
-        <div class="stat-actions">
-          <div
-            class="badge badge-sm"
-            :class="style.usedProffessionally ? 'badge-success' : 'badge-error'"
-          >
-            Pro
-            <Check v-if="style.usedProffessionally" :size="16" />
-            <X v-else :size="16" />
+      <div
+        v-for="style in filteredDesignStyling"
+        :key="style.title"
+        class="stats bg-base-100 border border-base-400 ml-4 mb-4"
+      >
+        <div class="stat">
+          <div class="stat-title font-bold">{{ style.title }}</div>
+          <div class="stat-value">
+            <img width="100px" :src="style.src" alt="" />
+          </div>
+          <div class="stat-actions">
+            <div
+              class="badge badge-sm"
+              :class="style.usedProffessionally ? 'badge-success' : 'badge-error'"
+            >
+              Pro
+              <Check v-if="style.usedProffessionally" :size="16" />
+              <X v-else :size="16" />
+            </div>
           </div>
         </div>
-      </div>
-      <div class="stat">
-        <div class="stat-title font-bold">Proficiency</div>
-        <div class="stat-value">
-          <div class="w-full w-56">
-            <input
-              type="range"
-              min="0"
-              max="100"
-              :value="style.value"
-              class="range range-sm range-success pointer-events-none"
-              step="25"
-            />
-            <div class="flex justify-between px-2.5 mt-2 text-xs">
-              <span>|</span>
-              <span>|</span>
-              <span>|</span>
-              <span>|</span>
-              <span>|</span>
-            </div>
-            <div class="flex justify-between px-2.5 mt-2 text-xs">
-              <span>1</span>
-              <span>2</span>
-              <span>3</span>
-              <span>4</span>
-              <span>5</span>
+        <div class="stat">
+          <div class="stat-title font-bold">Proficiency</div>
+          <div class="stat-value">
+            <div class="w-full w-56">
+              <input
+                type="range"
+                min="0"
+                max="100"
+                :value="style.value"
+                class="range range-sm range-success pointer-events-none"
+                step="25"
+              />
+              <skill-level />
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </transition-group>
 
     <!-- Development Toolchain -->
     <h1 class="text font-bold ml-4 mb-4">Development Toolchain:</h1>
-    <div
-      v-for="tool in filteredToolChains"
-      :key="tool.title"
-      class="stats bg-base-100 border border-base-400 ml-4 mb-4"
+    <transition-group
+      name="fade"
+      tag="div"
+      class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 ml-4 mb-4"
     >
-      <div class="stat">
-        <div class="stat-title font-bold">{{ tool.title }}</div>
-        <div class="stat-value">
-          <img width="100px" :src="tool.src" alt="" />
-        </div>
-        <div class="stat-actions">
-          <div
-            class="badge badge-sm"
-            :class="tool.usedProffessionally ? 'badge-success' : 'badge-error'"
-          >
-            Pro
-            <Check v-if="tool.usedProffessionally" :size="16" />
-            <X v-else :size="16" />
+      <div
+        v-for="tool in filteredToolChains"
+        :key="tool.title"
+        class="stats bg-base-100 border border-base-400 ml-4 mb-4"
+      >
+        <div class="stat">
+          <div class="stat-title font-bold">{{ tool.title }}</div>
+          <div class="stat-value">
+            <img width="100px" :src="tool.src" alt="" />
+          </div>
+          <div class="stat-actions">
+            <div
+              class="badge badge-sm"
+              :class="tool.usedProffessionally ? 'badge-success' : 'badge-error'"
+            >
+              Pro
+              <Check v-if="tool.usedProffessionally" :size="16" />
+              <X v-else :size="16" />
+            </div>
           </div>
         </div>
-      </div>
-      <div class="stat">
-        <div class="stat-title font-bold">Proficiency</div>
-        <div class="stat-value">
-          <div class="w-full w-56">
-            <input
-              type="range"
-              min="0"
-              max="100"
-              :value="tool.value"
-              class="range range-sm range-success pointer-events-none"
-              step="25"
-            />
-            <div class="flex justify-between px-2.5 mt-2 text-xs">
-              <span>|</span>
-              <span>|</span>
-              <span>|</span>
-              <span>|</span>
-              <span>|</span>
-            </div>
-            <div class="flex justify-between px-2.5 mt-2 text-xs">
-              <span>1</span>
-              <span>2</span>
-              <span>3</span>
-              <span>4</span>
-              <span>5</span>
+        <div class="stat">
+          <div class="stat-title font-bold">Proficiency</div>
+          <div class="stat-value">
+            <div class="w-full w-56">
+              <input
+                type="range"
+                min="0"
+                max="100"
+                :value="tool.value"
+                class="range range-sm range-success pointer-events-none"
+                step="25"
+              />
+              <skill-level />
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </transition-group>
 
     <!-- Testing & Documentation -->
     <h1 class="text font-bold ml-4 mb-4">Testing & Documentation:</h1>
-    <div
-      v-for="tool in filteredTestingAndDocumentation"
-      :key="tool.title"
-      class="stats bg-base-100 border border-base-400 ml-4 mb-4"
+    <transition-group
+      name="fade"
+      tag="div"
+      class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 ml-4 mb-4"
     >
-      <div class="stat">
-        <div class="stat-title font-bold">{{ tool.title }}</div>
-        <div class="stat-value">
-          <img width="100px" :src="tool.src" alt="" />
-        </div>
-        <div class="stat-actions">
-          <div
-            class="badge badge-sm"
-            :class="tool.usedProffessionally ? 'badge-success' : 'badge-error'"
-          >
-            Pro
-            <Check v-if="tool.usedProffessionally" :size="16" />
-            <X v-else :size="16" />
+      <div
+        v-for="tool in filteredTestingAndDocumentation"
+        :key="tool.title"
+        class="stats bg-base-100 border border-base-400 ml-4 mb-4"
+      >
+        <div class="stat">
+          <div class="stat-title font-bold">{{ tool.title }}</div>
+          <div class="stat-value">
+            <img width="100px" :src="tool.src" alt="" />
+          </div>
+          <div class="stat-actions">
+            <div
+              class="badge badge-sm"
+              :class="tool.usedProffessionally ? 'badge-success' : 'badge-error'"
+            >
+              Pro
+              <Check v-if="tool.usedProffessionally" :size="16" />
+              <X v-else :size="16" />
+            </div>
           </div>
         </div>
-      </div>
-      <div class="stat">
-        <div class="stat-title font-bold">Proficiency</div>
-        <div class="stat-value">
-          <div class="w-full w-56">
-            <input
-              type="range"
-              min="0"
-              max="100"
-              :value="tool.value"
-              class="range range-sm range-success pointer-events-none"
-              step="25"
-            />
-            <div class="flex justify-between px-2.5 mt-2 text-xs">
-              <span>|</span>
-              <span>|</span>
-              <span>|</span>
-              <span>|</span>
-              <span>|</span>
-            </div>
-            <div class="flex justify-between px-2.5 mt-2 text-xs">
-              <span>1</span>
-              <span>2</span>
-              <span>3</span>
-              <span>4</span>
-              <span>5</span>
+        <div class="stat">
+          <div class="stat-title font-bold">Proficiency</div>
+          <div class="stat-value">
+            <div class="w-full w-56">
+              <input
+                type="range"
+                min="0"
+                max="100"
+                :value="tool.value"
+                class="range range-sm range-success pointer-events-none"
+                step="25"
+              />
+              <skill-level />
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </transition-group>
 
     <!-- Cloud & Infrastructure -->
     <h1 class="text font-bold ml-4 mb-4">Cloud & Infrastructure:</h1>
-    <div
-      v-for="tool in filteredCloudAndInfra"
-      :key="tool.title"
-      class="stats bg-base-100 border border-base-400 ml-4 mb-4"
+    <transition-group
+      name="fade"
+      tag="div"
+      class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 ml-4 mb-4"
     >
-      <div class="stat">
-        <div class="stat-title font-bold">{{ tool.title }}</div>
-        <div class="stat-value">
-          <img width="100px" :src="tool.src" alt="" />
-        </div>
-        <div class="stat-actions">
-          <div
-            class="badge badge-sm"
-            :class="tool.usedProffessionally ? 'badge-success' : 'badge-error'"
-          >
-            Pro
-            <Check v-if="tool.usedProffessionally" :size="16" />
-            <X v-else :size="16" />
+      <div
+        v-for="tool in filteredCloudAndInfra"
+        :key="tool.title"
+        class="stats bg-base-100 border border-base-400 ml-4 mb-4"
+      >
+        <div class="stat">
+          <div class="stat-title font-bold">{{ tool.title }}</div>
+          <div class="stat-value">
+            <img width="100px" :src="tool.src" alt="" />
+          </div>
+          <div class="stat-actions">
+            <div
+              class="badge badge-sm"
+              :class="tool.usedProffessionally ? 'badge-success' : 'badge-error'"
+            >
+              Pro
+              <Check v-if="tool.usedProffessionally" :size="16" />
+              <X v-else :size="16" />
+            </div>
           </div>
         </div>
-      </div>
-      <div class="stat">
-        <div class="stat-title font-bold">Proficiency</div>
-        <div class="stat-value">
-          <div class="w-full w-56">
-            <input
-              type="range"
-              min="0"
-              max="100"
-              :value="tool.value"
-              class="range range-sm range-success pointer-events-none"
-              step="25"
-            />
-            <div class="flex justify-between px-2.5 mt-2 text-xs">
-              <span>|</span>
-              <span>|</span>
-              <span>|</span>
-              <span>|</span>
-              <span>|</span>
-            </div>
-            <div class="flex justify-between px-2.5 mt-2 text-xs">
-              <span>1</span>
-              <span>2</span>
-              <span>3</span>
-              <span>4</span>
-              <span>5</span>
+        <div class="stat">
+          <div class="stat-title font-bold">Proficiency</div>
+          <div class="stat-value">
+            <div class="w-full w-56">
+              <input
+                type="range"
+                min="0"
+                max="100"
+                :value="tool.value"
+                class="range range-sm range-success pointer-events-none"
+                step="25"
+              />
+              <skill-level />
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </transition-group>
   </div>
 </template>
+
+<style scoped>
+/* Transition for fade-in/out of elements */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s, transform 0.5s;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+  transform: translateY(20px);
+}
+</style>
