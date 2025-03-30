@@ -1,21 +1,22 @@
 <script setup lang="ts">
 import { ArrowRight } from 'lucide-vue-next';
+
 </script>
 
 <template>
   <div class="relative hero min-h-screen overflow-hidden">
     <!-- Video Background -->
-    <!-- <video autoplay loop muted playsinline class="absolute top-0 left-0 w-full h-full object-cover">
+    <video autoplay loop muted playsinline class="absolute top-0 left-0 w-full h-full object-cover">
       <source src="../assets/background.mp4" type="video/mp4" />
       Your browser does not support the video tag.
-    </video> -->
+    </video>
     <div class="relative">
       <div class="text-center">
-        <h1 class="mb-5 text-5xl font-bold text-primary">Bruno Silva</h1>
-        <p class="mb-5 text-primary font-bold">
+        <h1 class="mb-5 text-5xl font-bold text-white">Bruno Silva</h1>
+        <p class="mb-5 text-white font-bold">
           The dynamic tech companion that powers modern web development with precision and style.
         </p>
-        <router-link to="/docs/about" class="btn btn-neutral mt-4">
+        <router-link to="/docs/about" class="btn btn-success mt-4">
           Get Started
           <ArrowRight />
         </router-link>
