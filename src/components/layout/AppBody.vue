@@ -113,18 +113,33 @@ const showVideo = computed(() => route.path !== "/");
                 </ul>
               </div>
               <div class="tooltip tooltip-bottom" data-tip="GitHub">
-                <a class="btn btn-neutral btn-sm sm:btn sm:btn-neutral" href="https://github.com/Brunosil97" target="_blank">
-                  <Github :size="16" />
+                <a
+                  class="btn btn-sm sm:btn"
+                  style="background-color: black;"
+                  href="https://github.com/Brunosil97"
+                  target="_blank"
+                >
+                  <Github :size="16" color="white" />
                 </a>
               </div>
               <div class="tooltip tooltip-bottom ml-2" data-tip="LinkedIn">
-                <a class="btn btn-secondary btn-sm sm:btn" href="https://www.linkedin.com/in/bruno-silvino-silva/" target="_blank">
-                  <Linkedin :size="16" />
+                <a
+                  class="btn btn-sm sm:btn"
+                  style="background-color: #0077B5;"
+                  href="https://www.linkedin.com/in/bruno-silvino-silva/"
+                  target="_blank"
+                >
+                  <Linkedin :size="16" color="white" />
                 </a>
               </div>
               <div class="tooltip tooltip-bottom ml-2" data-tip="Medium">
-                <a class="btn btn-accent btn-sm sm:btn" href="https://medium.com/@brunosilvinosilva" target="_blank">
-                  <Book :size="16" />
+                <a
+                  class="btn btn-sm sm:btn"
+                  style="background-color: oklch(60% 0.118 184.704)"
+                  href="https://medium.com/@brunosilvinosilva"
+                  target="_blank"
+                >
+                  <Book :size="16" color="white" />
                 </a>
               </div>
             </ul>
