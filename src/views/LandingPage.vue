@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { ArrowRight } from 'lucide-vue-next';
 
+import { useI18n } from 'vue-i18n';
+const { t } = useI18n();
 </script>
 
 <template>
@@ -17,7 +19,7 @@ import { ArrowRight } from 'lucide-vue-next';
           The dynamic tech companion that powers modern web development with precision and style.
         </p>
         <router-link to="/docs/about" class="btn btn-success mt-4">
-          Get Started
+          {{ t("common.get-started") }}
           <ArrowRight />
         </router-link>
       </div>
