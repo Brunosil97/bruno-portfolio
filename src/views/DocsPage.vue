@@ -91,7 +91,7 @@ function goNext() {
         >
           <ArrowLeft />
           <div>
-            <span class="hidden sm:inline">Previous:</span>
+            <span class="hidden sm:inline">{{ $t("common.previous")}}:</span>
             {{ prevRoute.label }}
           </div>
         </button>
@@ -102,7 +102,7 @@ function goNext() {
           @click="goNext"
         >
           <div>
-            <span class="hidden sm:inline">Next:</span>
+            <span class="hidden sm:inline">{{ $t("common.next") }}:</span>
             {{ nextRoute.label }}
           </div>
           <ArrowRight />

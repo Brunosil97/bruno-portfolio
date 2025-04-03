@@ -10,13 +10,15 @@ const { t } = useI18n();
     <!-- Video Background -->
     <video autoplay loop muted playsinline class="absolute top-0 left-0 w-full h-full object-cover">
       <source src="../assets/background.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
+      {{ t("domain.video-not-supported") }}
     </video>
     <div class="relative">
       <div class="text-center">
-        <h1 class="mb-5 text-5xl font-bold text-white">Bruno Silva</h1>
+        <h1 class="mb-5 text-5xl font-bold text-white">
+          {{ t("common.name") }}
+        </h1>
         <p class="mb-5 ml-5 mr-5 text-white font-bold">
-          The dynamic tech companion that powers modern web development with precision and style.
+          {{ t("landing-page.intro") }}
         </p>
         <router-link to="/docs/about" class="btn btn-success mt-4">
           {{ t("common.get-started") }}
@@ -29,14 +31,13 @@ const { t } = useI18n();
         <!-- Approachable Card -->
         <div class="card bg-base-100 w-96 shadow-sm transition-transform duration-300 hover:scale-105 focus:scale-105">
           <div class="card-body">
-            <h2 class="card-title">Approachable</h2>
+            <h2 class="card-title">{{ t("landing-page.approachable") }}</h2>
             <p>
-              Communicates complex technical concepts in a clear, accessible way.
-              His portfolio, styled as a comprehensive documentation, invites developers and clients alike to explore and reach out.
+              {{ t("landing-page.approachable-bio") }}
             </p>
             <div class="card-actions justify-end">
               <router-link class="btn btn-primary" to="/docs/contact">
-                Contact
+                {{ t("domain.contact") }}
                 <ArrowRight :size="16" />
               </router-link>
             </div>
@@ -45,14 +46,13 @@ const { t } = useI18n();
         <!-- Performant Card -->
         <div class="card bg-base-100 w-96 shadow-sm transition-transform duration-300 hover:scale-105 focus:scale-105">
           <div class="card-body">
-            <h2 class="card-title">Performant</h2>
+            <h2 class="card-title">{{ t("landing-page.performant") }}</h2>
             <p>
-              Delivers solutions that are built for speed and efficiency.
-              His work leverages modern frameworks and best practices to ensure every project runs smoothly with minimal overhead.
+              {{ t("landing-page.performant-bio") }}
             </p>
             <div class="card-actions justify-end">
               <router-link class="btn btn-secondary" to="/docs/work">
-                Work Experience
+                {{ t("domain.work-experience") }}
                 <ArrowRight :size="16" />
               </router-link>
             </div>
@@ -61,14 +61,13 @@ const { t } = useI18n();
         <!-- Versatile Card -->
         <div class="card bg-base-100 w-96 shadow-sm transition-transform duration-300 hover:scale-105 focus:scale-105">
           <div class="card-body">
-            <h2 class="card-title">Versatile</h2>
+            <h2 class="card-title">{{ t("landing-page.versatile") }}</h2>
             <p>
-              With a skill set that spans the full spectrum of web development.
-              From front-end frameworks like Vue and React to full-stack solutions and cloud integrations, his adaptable approach meets the needs of any project.
+              {{ t("landing-page.versatile-bio") }}
             </p>
             <div class="card-actions justify-end">
               <router-link class="btn btn-accent" to="/docs/skills">
-                Skills
+                {{ t("domain.skills") }}
                 <ArrowRight :size="16" />
               </router-link>
             </div>

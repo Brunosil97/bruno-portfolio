@@ -1,51 +1,54 @@
 
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
 const emit = defineEmits(['link-clicked'])
 </script>
 
 <template>
   <ul class="menu bg-base-200 min-h-full w-60">
     <li>
-      <h2 class="menu-title">Getting Started</h2>
+      <h2 class="menu-title">{{ t("common.getting-started") }}</h2>
       <ul>
         <li>
           <router-link to="/docs/about" exact-active-class="menu-active" @click="emit('link-clicked')">
-            About Me
+            {{ t("domain.about-me") }}
           </router-link>
         </li>
         <li>
           <router-link to="/docs/contact" exact-active-class="menu-active" @click="emit('link-clicked')">
-            Contact
+            {{ t("domain.contact") }}
           </router-link>
         </li>
         <li>
           <router-link to="/docs/work" exact-active-class="menu-active" @click="emit('link-clicked')">
-            Work Experience
+            {{ t("domain.work-experience") }}
           </router-link>
         </li>
         <li>
           <router-link to="/docs/skills" exact-active-class="menu-active" @click="emit('link-clicked')">
-            Skills
+            {{ t("domain.skills") }}
           </router-link>
         </li>
         <li>
           <router-link to="/docs/projects" exact-active-class="menu-active" @click="emit('link-clicked')">
-            Projects
+            {{ t("domain.projects") }}
           </router-link>
         </li>
         <li>
           <router-link to="/docs/blogs" exact-active-class="menu-active" @click="emit('link-clicked')">
-            Blogs
+            {{ t("domain.blogs") }}
           </router-link>
         </li>
         <li>
           <router-link to="/docs/faqs" exact-active-class="menu-active" @click="emit('link-clicked')">
-            FAQs
+            {{ t("domain.faq") }}
           </router-link>
         </li>
         <li>
           <router-link to="/docs/cv" exact-active-class="menu-active" @click="emit('link-clicked')">
-            CV
+            {{ t("domain.cv") }}
           </router-link>
         </li>
       </ul>

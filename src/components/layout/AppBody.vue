@@ -4,6 +4,9 @@ import { useRoute } from 'vue-router';
 import NavMenu from './NavMenu.vue';
 import GithubStats from './GithubStats.vue';
 import { Github, Linkedin, Book, ChevronDown, Menu } from 'lucide-vue-next';
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
 
 const themes = ref([
   "light",
@@ -80,7 +83,7 @@ const showVideo = computed(() => route.path !== "/");
           class="absolute inset-0 w-full h-full object-cover z-0"
         >
           <source src="../../assets/background.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
+          {{ t("domain.video-not-supported") }}
         </video>
         <!-- Navbar Content -->
         <div class="relative z-10 flex items-center w-full">
@@ -90,13 +93,15 @@ const showVideo = computed(() => route.path !== "/");
             </label>
           </div>
           <div class="mx-2 flex flex-1 px-2">
-            <router-link class="btn text-xl hidden sm:flex" to="/">Bruno Silva</router-link>
+            <router-link class="btn text-xl hidden sm:flex" to="/">
+              {{ t("common.name") }}
+            </router-link>
           </div>
           <div class="flex">
             <ul class="menu menu-horizontal">
               <div class="dropdown">
                 <div tabindex="0" role="button" class="btn btn-sm sm:btn mr-2">
-                  Theme
+                  {{ t("common.theme") }}
                   <ChevronDown />
                 </div>
                 <ul tabindex="0" class="dropdown-content bg-base-300 rounded-box z-10 w-52 p-2 shadow-2xl max-h-80 overflow-y-auto">
@@ -105,7 +110,7 @@ const showVideo = computed(() => route.path !== "/");
                       v-model="selectedTheme"
                       type="radio"
                       name="theme-dropdown"
-                      class="theme-controller w-full btn btn-sm btn-block btn-ghost justify-start"
+                      class="theme-controller w-full btn btn-sm btn-block btn-ghost justify-start btn-active"
                       :aria-label="theme"
                       :value="theme"
                     />
@@ -154,7 +159,7 @@ const showVideo = computed(() => route.path !== "/");
       <label for="mobile-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
       <ul class="menu bg-base-200 min-h-full w-80 p-4">
         <nav-menu @link-clicked="closeDrawer" />
-        <div class="divider divider-primary">Stats</div>
+        <div class="divider divider-primary">{{ t("common.stats") }}</div>
         <github-stats />
       </ul>
     </div>

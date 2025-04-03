@@ -1,5 +1,34 @@
 {
   "common": {
-    "get-started": "Get Started"
+    "get-started": "Get Started",
+    "started": "Getting Started",
+    "name": "Bruno Silva",
+    "theme": "Theme",
+    "stats": "Stats",
+    "previous": "Previous",
+    "next": "Next"
+  },
+  "domain": {
+    "video-not-supported": "Your browser does not support the video tag",
+    "contact": "Contact",
+    "work-experience": "Work Experience",
+    "skills": "Skills",
+    "about-me": "About Me",
+    "projects": "Projects",
+    "blogs": "Blogs",
+    "faq": "FAQs",
+    "cv": "CV"
+  },
+  "about-me": {
+    
+  },
+  "landing-page": {
+    "intro": "The dynamic tech companion that powers modern web development with precision and style.",
+    "approachable": "Approachable",
+    "approachable-bio": "Communicates complex technical concepts in a clear, accessible way. His portfolio, styled as a comprehensive documentation, invites developers and clients alike to explore and reach out.",
+    "performant": "Performant",
+    "performant-bio": "Delivers solutions that are built for speed and efficiency. His work leverages modern frameworks and best practices to ensure every project runs smoothly with minimal overhead.",
+    "versatile": "Versatile",
+    "versatile-bio": "With a skill set that spans the full spectrum of web development. From front-end frameworks like Vue and React to full-stack solutions and cloud integrations, his adaptable approach meets the needs of any project."
   }
 }
