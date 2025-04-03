@@ -4,7 +4,7 @@
     <div class="space-y-8">
       <!-- v3.1.0 – Latest -->
       <div class="border-l-4 border-blue-500 pl-4">
-        <h2 class="text-2xl font-bold">v3.1.0 – April 2024 to Present</h2>
+        <h2 class="text-2xl font-bold">v3.1.0 – April 2024 : Now</h2>
         <p class="mt-2">
           <strong>Permanent Transition:</strong> Bruno’s ongoing role as Product Engineer at Herbert Smith Freehills.
         </p>

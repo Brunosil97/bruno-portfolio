@@ -7,7 +7,7 @@
   <div class="container mx-auto p-4 prose lg:prose-xl">
     <!-- Introduction Section -->
     <section>
-      <h1 class="text-4xl font-bold mb-4">Introduction</h1>
+      <h1 class="text-2xl md:text-4xl font-bold mb-4">Introduction</h1>
       <p>
         Bruno Silva is a dedicated Software Engineer with extensive experience in both front-end and full-stack development since 2020.
         Over the years, he has honed his skills by building innovative web applications and scalable digital solutions.
@@ -19,20 +19,20 @@
         consistently embracing modern frameworks and cloud services.
       </p>
     </section>
-
+    <div class="divider divider-primary" />
     <!-- Why Reach Out Section -->
     <section class="mt-8">
-      <h2 class="text-3xl font-semibold mb-3">Why Reach Out to Bruno?</h2>
+      <h2 class="text-2xl md:text-3xl font-semibold mb-3">Why Reach Out to Bruno?</h2>
       <p>
         Bruno’s robust technical expertise and collaborative approach make him the ideal partner for any tech-driven project.
         His hands-on experience managing the full product lifecycle—from stakeholder engagement and UI/UX design to development and deployment—
         means that he can deliver impactful solutions that are both efficient and scalable.
       </p>
     </section>
-
+    <div class="divider divider-primary" />
     <!-- Progressive Mindset Section -->
     <section class="mt-8">
-      <h2 class="text-3xl font-semibold mb-3">Progressive Mindset</h2>
+      <h2 class="text-2xl md:text-3xl font-semibold mb-3">Progressive Mindset</h2>
       <p>
         In today's rapidly evolving tech landscape, Bruno embraces a progressive mindset by continuously exploring emerging tools and frameworks.
         He is committed to identifying and adopting the best solutions for each unique project—whether that means modernising legacy systems or integrating cutting-edge CI/CD practices.
@@ -47,10 +47,10 @@
         His passion for self-improvement and exploration of new technologies allows him to deliver solutions that are robust, efficient, and tailored to the evolving needs of the digital world.
       </p>
     </section>
-
+    <div class="divider divider-primary" />
     <!-- Which Frameworks Section -->
     <section class="mt-8">
-      <h2 class="text-3xl font-semibold mb-3">Which Frameworks Can I Use With Bruno?</h2>
+      <h2 class="text-2xl md:text-3xl font-semibold mb-3">Which Frameworks Can I Use With Bruno?</h2>
       <p>
         Bruno’s toolkit covers a broad spectrum of the JavaScript ecosystem and beyond. His expertise includes:
       </p>

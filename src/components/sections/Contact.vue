@@ -93,6 +93,7 @@ import { MailPlus, MessageCircleMore } from 'lucide-vue-next';
         </div>
       </div>
 
+      <div class="divider divider-primary" />
       <h2 class="text-2xl font-semibold mb-2">Step 2: Configure Your Environment</h2>
       <p class="mb-2">
         Create a configuration file with the following details:
@@ -111,6 +112,7 @@ import { MailPlus, MessageCircleMore } from 'lucide-vue-next';
       </code>
       </pre>
 
+      <div class="divider divider-primary" />
       <h2 class="text-2xl font-semibold mb-2">Step 3: Import and Initialise</h2>
       <p class="mb-2">
         Import and initialise the module in your project:

@@ -15,7 +15,7 @@ const { t } = useI18n();
     <div class="relative">
       <div class="text-center">
         <h1 class="mb-5 text-5xl font-bold text-white">Bruno Silva</h1>
-        <p class="mb-5 text-white font-bold">
+        <p class="mb-5 ml-5 mr-5 text-white font-bold">
           The dynamic tech companion that powers modern web development with precision and style.
         </p>
         <router-link to="/docs/about" class="btn btn-success mt-4">
