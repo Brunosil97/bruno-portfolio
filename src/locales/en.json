@@ -8,6 +8,14 @@
     "previous": "Previous",
     "next": "Next"
   },
+  "tech": {
+    "react": "React",
+    "vue": "Vue.js",
+    "full-stack": "Full-Stack Development",
+    "cloud": "Cloud Services",
+    "test-docs": "Testing & Documentation",
+    "legacy": "Legacy & Diverse Stacks"
+  },
   "domain": {
     "video-not-supported": "Your browser does not support the video tag",
     "contact": "Contact",
@@ -20,7 +28,24 @@
     "cv": "CV"
   },
   "about-me": {
-    
+    "introduction": "Introduction",
+    "bio-1": "Bruno Silva is a dedicated Software Engineer with extensive experience in both front-end and full-stack development since 2020. Over the years, he has honed his skills by building innovative web applications and scalable digital solutions. His journey in software development has been driven by a passion for creating exceptional user experiences and robust, reliable systems.",
+    "bio-2": "With a solid background in JavaScript and TypeScript, Bruno has worked across diverse industries—from legal technology to financial services — consistently embracing modern frameworks and cloud services.",
+    "why": "Why reach out to Bruno?",
+    "why-bio": "Bruno’s robust technical expertise and collaborative approach make him the ideal partner for any tech-driven project. His hands-on experience managing the full product lifecycle—from stakeholder engagement and UI/UX design to development and deployment means that he can deliver impactful solutions that are both efficient and scalable.",
+    "progressive": "Progressive Mindset",
+    "progressive-bio-1": "In today's rapidly evolving tech landscape, Bruno embraces a progressive mindset by continuously exploring emerging tools and frameworks. He is committed to identifying and adopting the best solutions for each unique project—whether that means modernising legacy systems or integrating cutting-edge CI/CD practices.",
+    "progressive-bio-2": "Constantly learning and adapting, Bruno experiments with innovative libraries, new development paradigms, and state-of-the-art methodologies. This dedication ensures that his work remains at the forefront of web development, built on practices that are not only current but also future-proof.",
+    "progressive-bio-3": " His passion for self-improvement and exploration of new technologies allows him to deliver solutions that are robust, efficient, and tailored to the evolving needs of the digital world.",
+    "frameworks": "Which Frameworks Can I Use With Bruno?",
+    "frameworks-list-title": "Bruno’s toolkit covers a broad spectrum of the JavaScript ecosystem and beyond. His expertise includes:",
+    "vue": "Leveraging TypeScript and Vite for fast, component-driven development.",
+    "react": "Building dynamic user interfaces with modern React practices.",
+    "full-stack": "Integrating RESTful APIs, Node + Express, and CI/CD pipelines for complete, end-to-end solutions.",
+    "legacy": "Working with LAMP, PHP, and custom MVC frameworks to ensure versatile project delivery.",
+    "cloud": "Deploying scalable and secure applications using Microsoft Azure and Terraform.",
+    "test-docs": "Utilising tools like Vitest and Storybook/Chromatic to maintain high code quality and clear developer guidelines.",
+    "frameworks-bio": " With such a diverse skill set and a proactive approach to learning, Bruno ensures that every project benefits from the latest innovations in web technology."
   },
   "landing-page": {
     "intro": "The dynamic tech companion that powers modern web development with precision and style.",
