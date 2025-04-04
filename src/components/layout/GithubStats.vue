@@ -4,6 +4,9 @@ import { GithubStats, ContributionsResult } from './_types/stats';
 import { TrendingDown, TrendingUp } from 'lucide-vue-next';
 import { Octokit } from '@octokit/rest';
 import { graphql } from '@octokit/graphql';
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
 
 const githubLoading = ref<boolean>(true);
 const githubError = ref('');
@@ -187,18 +190,26 @@ onMounted(async () => {
             </div>
           </div>
         </div>
-        <div class="stat-title">Total Repositories</div>
+        <div class="stat-title">{{ t("stats.total") }}</div>
         <div class="stat-value text-primary">{{ githubData.publicRepos }}</div>
-        <div class="stat-title">{{ githubData.name }}</div>
-        <div class="stat-desc">{{ githubData.bio }}</div>
+        <div class="stat-title">
+          <i18n-t keypath="stats.github-name">
+            <template #name>{{ githubData.name }}</template>
+          </i18n-t>
+        </div>
+        <div class="stat-desc">
+          <i18n-t keypath="stats.github-bio">
+            <template #bio>{{ githubData.bio }}</template>
+          </i18n-t>
+        </div>
       </div>
       <div class="stat">
-        <div class="stat-title">Total Contributions</div>
+        <div class="stat-title">{{ t("stats.total-contributions") }}</div>
         <div class="stat-value text-primary">{{ allTimeContributions }}</div>
-        <div class="stat-desc">Oct 5th 2019 - Now</div>
+        <div class="stat-desc">Oct 5th 2019 &mdash; {{ t("common.now") }}</div>
       </div>
       <div class="stat">
-        <div class="stat-title">In Last Year</div>
+        <div class="stat-title">{{ t("stats.last-year") }}</div>
         <div class="stat-value text-primary">{{ currentYearContributions }}</div>
         <div class="stat-desc flex items-center space-x-2">
           <TrendingUp class="mr-2" v-if="percentageChange > 0" :size="16" color="#00FF00" />

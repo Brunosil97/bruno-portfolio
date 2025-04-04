@@ -132,6 +132,13 @@
     "pro": "Pro",
     "proficiency": "Proficiency"
   },
+  "stats": {
+    "total": "Total Repositories",
+    "total-contributions": "Total Contributions",
+    "last-year": "In Last Year",
+    "github-name": "{name}",
+    "github-bio": "{bio}"
+  },
   "landing-page": {
     "intro": "The dynamic tech companion that powers modern web development with precision and style.",
     "approachable": "Approachable",
