@@ -3,10 +3,10 @@ import { ref, watch, onMounted, computed } from 'vue';
 import { useRoute } from 'vue-router';
 import NavMenu from './NavMenu.vue';
 import GithubStats from './GithubStats.vue';
-import { Github, Linkedin, Book, ChevronDown, Menu } from 'lucide-vue-next';
+import { Github, Linkedin, Book, ChevronDown, Menu, Languages } from 'lucide-vue-next';
 import { useI18n } from 'vue-i18n';
 
-const { t } = useI18n();
+const { locale, t } = useI18n({ useScope: "global" });
 
 const themes = ref([
   "light",
@@ -41,6 +41,11 @@ const themes = ref([
   "abyss",
 ]);
 
+const languages = ref({
+  en: "English",
+  "pt-PT": "Português",
+});
+
 const selectedTheme = ref('cupcake');
 
 onMounted(() => {
@@ -66,6 +71,10 @@ const closeDrawer = () => {
 // Get current route and compute if we should show the video
 const route = useRoute();
 const showVideo = computed(() => route.path !== "/");
+
+const changeLocale = (lang: string) => {
+  locale.value = lang;
+};
 </script>
 
 <template>
@@ -110,13 +119,34 @@ const showVideo = computed(() => route.path !== "/");
                       v-model="selectedTheme"
                       type="radio"
                       name="theme-dropdown"
-                      class="theme-controller w-full btn btn-sm btn-block btn-ghost justify-start btn-active"
+                      class="theme-controller w-full btn btn-sm btn-block btn-ghost justify-start"
+                      :class="{ 'btn-active': selectedTheme === theme }"
                       :aria-label="theme"
                       :value="theme"
                     />
                   </li>
                 </ul>
               </div>
+
+              <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-sm sm:btn mr-2">
+                  <Languages :size="16" />
+                  <ChevronDown />
+                </div>
+
+                <ul tabindex="0" class="dropdown-content bg-base-300 rounded-box z-10 w-52 p-2 shadow-2xl max-h-80 overflow-y-auto">
+                  <li v-for="(label, code) in languages" :key="code">
+                    <button
+                      class="btn-primary btn btn-sm btn-block btn-ghost w-full text-left"
+                      :class="{ 'btn-active': locale === code }"
+                      @click="changeLocale(code)"
+                    >
+                      {{ label }}
+                    </button>
+                  </li>
+                </ul>
+              </div>
+
               <div class="tooltip tooltip-bottom" data-tip="GitHub">
                 <a
                   class="btn btn-sm sm:btn"
