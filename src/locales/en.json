@@ -47,6 +47,19 @@
     "test-docs": "Utilising tools like Vitest and Storybook/Chromatic to maintain high code quality and clear developer guidelines.",
     "frameworks-bio": " With such a diverse skill set and a proactive approach to learning, Bruno ensures that every project benefits from the latest innovations in web technology."
   },
+  "contact": {
+    "contact-title": "Installation Guide: Contact Bruno Silva",
+    "contact-title-mobile": "Installation Guide",
+    "email": "Email Me",
+    "phone": "Message Me",
+    "instruction": "Follow these steps to properly 'install' my contact details into your project.",
+    "step-1": "Step 1: Install the Contact Module",
+    "step-1-instruction": "Choose your package manager to install",
+    "step-2": "Step 2: Configure Your Environment",
+    "step-2-instruction": "Create a configuration file with the following details",
+    "step-3": "Step 3: Import and Initialise",
+    "step-3-instruction": "Import the contact module into your project and initialise"
+  },
   "landing-page": {
     "intro": "The dynamic tech companion that powers modern web development with precision and style.",
     "approachable": "Approachable",

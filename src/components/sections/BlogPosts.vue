@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import { ref } from 'vue';
+import { useI18n } from 'vue-i18n';
 import { ExternalLink } from 'lucide-vue-next';
+
+const { t } = useI18n();
 
 const blogs = ref([
 {
@@ -120,7 +123,7 @@ const blogs = ref([
 
 <template>
   <div class="container mx-auto p-4">
-    <h1 class="text-4xl font-bold mb-8">Blogs</h1>
+    <h1 class="text-4xl font-bold mb-8">{{ t("domain.blogs") }}</h1>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
       <div
         v-for="(blog, index) in blogs"
