@@ -7,7 +7,8 @@
     "stats": "Stats",
     "previous": "Previous",
     "next": "Next",
-    "now": "Now"
+    "now": "Now",
+    "all": "All"
   },
   "tech": {
     "react": "React",
@@ -117,6 +118,19 @@
     "v0-1-0": "v0.1.0 – June 2019",
     "v0-1-0-status": "Self-Taught Beginnings",
     "v0-1-0-description": "Started learning vanilla JavaScript on a self-taught journey."
+  },
+  "skills": {
+    "intermediate": "Intermediate",
+    "proficient": "Proficient",
+    "work-place": "Workplace",
+    "frameworks": "Frameworks",
+    "languages": "Languages",
+    "design-styling": "Design & Styling",
+    "development-toolchain": "Development Toolchain",
+    "testing-docs": "Testing & Documentation",
+    "cloud-infrastructure": "Cloud & Infrastructure",
+    "pro": "Pro",
+    "proficiency": "Proficiency"
   },
   "landing-page": {
     "intro": "The dynamic tech companion that powers modern web development with precision and style.",

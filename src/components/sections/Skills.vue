@@ -2,6 +2,9 @@
 import { ref, computed } from "vue";
 import { Check, X } from "lucide-vue-next";
 import SkillLevel from "../html/SkillLevel.vue";
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
 
 interface Skill {
   title: string;
@@ -277,33 +280,33 @@ const filteredCloudAndInfra = computed(() => {
         :class="{ 'btn-active': filterOption === '' }"
         @click="filterOption = ''"
       >
-        All
+        {{ t("common.all") }}
       </button>
       <button
         class="btn btn-soft btn-primary btn-sm sm:btn-md"
         :class="{ 'btn-active': filterOption === 'Intermediate' }"
         @click="filterOption = 'Intermediate'"
       >
-        Intermediate
+        {{ t("skills.intermediate") }}
       </button>
       <button
         class="btn btn-soft btn-primary btn-sm sm:btn-md"
         :class="{ 'btn-active': filterOption === 'Proficient' }"
         @click="filterOption = 'Proficient'"
       >
-        Proficient
+      {{ t("skills.proficient") }}
       </button>
       <button
         class="btn btn-soft btn-primary btn-sm sm:btn-md"
         :class="{ 'btn-active': filterOption === 'WorkPlace' }"
         @click="filterOption = 'WorkPlace'"
       >
-        Work Place
+      {{ t("skills.work-place") }}
       </button>
     </div>
 
     <!-- Frameworks -->
-    <h1 class="text font-bold ml-4 mb-4">Frameworks:</h1>
+    <h1 class="text font-bold ml-4 mb-4">{{ t("skills.frameworks") }}:</h1>
     <transition-group
       name="fade"
       tag="div"
@@ -324,14 +327,14 @@ const filteredCloudAndInfra = computed(() => {
               class="badge badge-sm"
               :class="framework.usedProffessionally ? 'badge-success' : 'badge-error'"
             >
-              Pro
+            {{ t("skills.pro") }}
               <Check v-if="framework.usedProffessionally" :size="16" />
               <X v-else :size="16" />
             </div>
           </div>
         </div>
         <div class="stat">
-          <div class="stat-title font-bold">Proficiency</div>
+          <div class="stat-title font-bold">{{ t("skills.proficiency") }}</div>
           <div class="stat-value">
             <div class="w-full w-56">
               <input
@@ -350,7 +353,7 @@ const filteredCloudAndInfra = computed(() => {
     </transition-group>
 
     <!-- Languages -->
-    <h1 class="text font-bold ml-4 mb-4">Languages:</h1>
+    <h1 class="text font-bold ml-4 mb-4">{{ t("skills.languages") }}:</h1>
     <transition-group
       name="fade"
       tag="div"
@@ -371,14 +374,14 @@ const filteredCloudAndInfra = computed(() => {
               class="badge badge-sm"
               :class="language.usedProffessionally ? 'badge-success' : 'badge-error'"
             >
-              Pro
+              {{ t("skills.pro") }}
               <Check v-if="language.usedProffessionally" :size="16" />
               <X v-else :size="16" />
             </div>
           </div>
         </div>
         <div class="stat">
-          <div class="stat-title font-bold">Proficiency</div>
+          <div class="stat-title font-bold">{{ t("skills.proficiency") }}</div>
           <div class="stat-value">
             <div class="w-full w-56">
               <input
@@ -397,7 +400,7 @@ const filteredCloudAndInfra = computed(() => {
     </transition-group>
 
     <!-- Design & Styling -->
-    <h1 class="text font-bold ml-4 mb-4">Design & Styling:</h1>
+    <h1 class="text font-bold ml-4 mb-4">{{ t("skills.design-styling") }}:</h1>
     <transition-group
       name="fade"
       tag="div"
@@ -418,14 +421,14 @@ const filteredCloudAndInfra = computed(() => {
               class="badge badge-sm"
               :class="style.usedProffessionally ? 'badge-success' : 'badge-error'"
             >
-              Pro
+              {{ t("skills.pro") }}
               <Check v-if="style.usedProffessionally" :size="16" />
               <X v-else :size="16" />
             </div>
           </div>
         </div>
         <div class="stat">
-          <div class="stat-title font-bold">Proficiency</div>
+          <div class="stat-title font-bold">{{ t("skills.proficiency") }}</div>
           <div class="stat-value">
             <div class="w-full w-56">
               <input
@@ -444,7 +447,7 @@ const filteredCloudAndInfra = computed(() => {
     </transition-group>
 
     <!-- Development Toolchain -->
-    <h1 class="text font-bold ml-4 mb-4">Development Toolchain:</h1>
+    <h1 class="text font-bold ml-4 mb-4">{{ t("skills.development-toolchains") }}:</h1>
     <transition-group
       name="fade"
       tag="div"
@@ -465,14 +468,14 @@ const filteredCloudAndInfra = computed(() => {
               class="badge badge-sm"
               :class="tool.usedProffessionally ? 'badge-success' : 'badge-error'"
             >
-              Pro
+              {{ t("skills.pro") }}
               <Check v-if="tool.usedProffessionally" :size="16" />
               <X v-else :size="16" />
             </div>
           </div>
         </div>
         <div class="stat">
-          <div class="stat-title font-bold">Proficiency</div>
+          <div class="stat-title font-bold">{{ t("skills.proficiency") }}</div>
           <div class="stat-value">
             <div class="w-full w-56">
               <input
@@ -491,7 +494,7 @@ const filteredCloudAndInfra = computed(() => {
     </transition-group>
 
     <!-- Testing & Documentation -->
-    <h1 class="text font-bold ml-4 mb-4">Testing & Documentation:</h1>
+    <h1 class="text font-bold ml-4 mb-4">{{ t("skills.testing-docs") }}:</h1>
     <transition-group
       name="fade"
       tag="div"
@@ -512,14 +515,14 @@ const filteredCloudAndInfra = computed(() => {
               class="badge badge-sm"
               :class="tool.usedProffessionally ? 'badge-success' : 'badge-error'"
             >
-              Pro
+              {{ t("skills.pro") }}
               <Check v-if="tool.usedProffessionally" :size="16" />
               <X v-else :size="16" />
             </div>
           </div>
         </div>
         <div class="stat">
-          <div class="stat-title font-bold">Proficiency</div>
+          <div class="stat-title font-bold">{{ t("skills.proficiency") }}</div>
           <div class="stat-value">
             <div class="w-full w-56">
               <input
@@ -538,7 +541,7 @@ const filteredCloudAndInfra = computed(() => {
     </transition-group>
 
     <!-- Cloud & Infrastructure -->
-    <h1 class="text font-bold ml-4 mb-4">Cloud & Infrastructure:</h1>
+    <h1 class="text font-bold ml-4 mb-4">{{ t("skills.cloud-infrastructure") }}:</h1>
     <transition-group
       name="fade"
       tag="div"
@@ -559,14 +562,14 @@ const filteredCloudAndInfra = computed(() => {
               class="badge badge-sm"
               :class="tool.usedProffessionally ? 'badge-success' : 'badge-error'"
             >
-              Pro
+              {{ t("skills.pro") }}
               <Check v-if="tool.usedProffessionally" :size="16" />
               <X v-else :size="16" />
             </div>
           </div>
         </div>
         <div class="stat">
-          <div class="stat-title font-bold">Proficiency</div>
+          <div class="stat-title font-bold">{{ t("skills.proficiency") }}</div>
           <div class="stat-value">
             <div class="w-full w-56">
               <input
