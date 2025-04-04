@@ -6,7 +6,8 @@
     "theme": "Theme",
     "stats": "Stats",
     "previous": "Previous",
-    "next": "Next"
+    "next": "Next",
+    "now": "Now"
   },
   "tech": {
     "react": "React",
@@ -59,6 +60,63 @@
     "step-2-instruction": "Create a configuration file with the following details",
     "step-3": "Step 3: Import and Initialise",
     "step-3-instruction": "Import the contact module into your project and initialise"
+  },
+  "work-experience": {
+    "title": "Changelog",
+    "v3-1-0": "v3.1.0 – April 2024",
+    "v3-1-0-status": "Permanent Transition",
+    "v3-1-0-description": "Bruno’s ongoing role as Product Engineer at Herbert Smith Freehills.",
+    "v3-1-0-point-1": "Oversees the full product lifecycle—from stakeholder engagement to deployment.",
+    "v3-1-0-point-2": "Develops responsive, scalable UIs using Vue.js, TypeScript, and Vite.",
+    "v3-1-0-point-3": "Utilises Microsoft Azure and Terraform for cloud infrastructure and secure deployments.",
+    "v3-1-0-point-4": "Coordinates with cross-functional teams and external consultants to deliver revenue-enhancing applications.",
+    "v3-1-0-point-5": "Conducts technical demos and presentations, translating complex tech into actionable insights.",
+
+    "v3-0-0": "v3.0.0 – April 2023",
+    "v3-0-0-status": "FTC Contract",
+    "v3-0-0-description": "Bruno served as a Product Engineer at Herbert Smith Freehills on a fixed-term contract.",
+    "v3-0-0-point-1": "Managed the full product lifecycle, delivering high-performance web applications.",
+    "v3-0-0-point-2": "Implemented modern UI designs with Vue.js and best practices in code quality.",
+    "v3-0-0-point-3": "Leveraged cloud services and infrastructure tools for scalability and security.",
+
+    "v2-0-0": "v2.0.0 – April 2022",
+    "v2-0-0-status": "Senior Software Consultant",
+    "v2-0-0-description": "While at Sparta Global, Bruno contributed to Herbert Smith Freehills (Contract).",
+    "v2-0-0-point-1": "Led the development of single-page applications using Vue.js.",
+    "v2-0-0-point-2": "Conducted code reviews and managed merge requests to ensure code quality.",
+    "v2-0-0-point-3": "Implemented CI/CD pipelines, integrated unit testing, and utilised SonarCloud.",
+
+    "v1-0-0": "v1.0.0 – November 2020",
+    "v1-0-0-status": "Senior Software Consultant",
+    "v1-0-0-description": "Bruno’s professional debut at Sparta Global, delivering projects for Raymond James (Contract).",
+    "v1-0-0-point-1": "Worked as a Full Stack Developer in a LAMP environment.",
+    "v1-0-0-point-2": "Developed and maintained customer-facing applications using PHP, HTML, CSS, JavaScript, jQuery, and Ajax.",
+    "v1-0-0-point-3": "Enhanced UIs and backend functionality; implemented an online file-sharing solution to improve efficiency.",
+
+    "v0-5-1": "v0.5.1 – October 2020",
+    "v0-5-1-status": "Skill Upgrade",
+    "v0-5-1-description": "Gained proficiency in PHP programming.",
+
+    "v0-5-0": "v0.5.0 – June 2020",
+    "v0-5-0-status": "Training Milestone",
+    "v0-5-0-description": "Completed the Sparta Global Training Program.",
+
+    "v0-4-0": "v0.4.0 – April 2020",
+    "v0-4-0-status": "Training Initiated",
+    "v0-4-0-description": "Began the Sparta Global Training Program focused on full-stack C# development.",
+    
+    "v0-3-0": "v0.3.0 – March 2020",
+    "v0-3-0-status": "Bootcamp Completed",
+    "v0-3-0-description": "Finished the Flatiron Web Development Bootcamp.",
+    "v0-3-0-point-1": "Learned full-stack development including OOP with Ruby, JavaScript, HTML/CSS, Ruby on Rails, and React.",
+
+    "v0-2-0": "v0.2.0 – December 2019",
+    "v0-2-0-status": "Educational Milestone",
+    "v0-2-0-description": "Enrolled in the Flatiron Web Development course.",
+
+    "v0-1-0": "v0.1.0 – June 2019",
+    "v0-1-0-status": "Self-Taught Beginnings",
+    "v0-1-0-description": "Started learning vanilla JavaScript on a self-taught journey."
   },
   "landing-page": {
     "intro": "The dynamic tech companion that powers modern web development with precision and style.",

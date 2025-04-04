@@ -9,7 +9,7 @@ const emit = defineEmits(['link-clicked'])
 <template>
   <ul class="menu bg-base-200 min-h-full w-60">
     <li>
-      <h2 class="menu-title">{{ t("common.getting-started") }}</h2>
+      <h2 class="menu-title">{{ t("common.started") }}</h2>
       <ul>
         <li>
           <router-link to="/docs/about" exact-active-class="menu-active" @click="emit('link-clicked')">
