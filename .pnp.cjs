@@ -57,6 +57,7 @@ const RAW_RUNTIME_STATE =
           ["vite", "virtual:166df8b627b427b22e25f9dc0f55a35f85449f84734faac7774b2a2a2cdfc0b25f79a9dba1f7f0756c502956bc6be23ae170f490c09a0ee2493dab2d0b44a870#npm:6.2.1"],\
           ["vite-plugin-vue-devtools", "virtual:166df8b627b427b22e25f9dc0f55a35f85449f84734faac7774b2a2a2cdfc0b25f79a9dba1f7f0756c502956bc6be23ae170f490c09a0ee2493dab2d0b44a870#npm:7.7.2"],\
           ["vue", "virtual:166df8b627b427b22e25f9dc0f55a35f85449f84734faac7774b2a2a2cdfc0b25f79a9dba1f7f0756c502956bc6be23ae170f490c09a0ee2493dab2d0b44a870#npm:3.5.13"],\
+          ["vue-flag-icon", "npm:2.1.0"],\
           ["vue-i18n", "virtual:166df8b627b427b22e25f9dc0f55a35f85449f84734faac7774b2a2a2cdfc0b25f79a9dba1f7f0756c502956bc6be23ae170f490c09a0ee2493dab2d0b44a870#npm:11.1.2"],\
           ["vue-router", "virtual:166df8b627b427b22e25f9dc0f55a35f85449f84734faac7774b2a2a2cdfc0b25f79a9dba1f7f0756c502956bc6be23ae170f490c09a0ee2493dab2d0b44a870#npm:4.5.0"],\
           ["vue-tsc", "virtual:166df8b627b427b22e25f9dc0f55a35f85449f84734faac7774b2a2a2cdfc0b25f79a9dba1f7f0756c502956bc6be23ae170f490c09a0ee2493dab2d0b44a870#npm:2.2.8"]\
@@ -3022,6 +3023,7 @@ const RAW_RUNTIME_STATE =
           ["vite", "virtual:166df8b627b427b22e25f9dc0f55a35f85449f84734faac7774b2a2a2cdfc0b25f79a9dba1f7f0756c502956bc6be23ae170f490c09a0ee2493dab2d0b44a870#npm:6.2.1"],\
           ["vite-plugin-vue-devtools", "virtual:166df8b627b427b22e25f9dc0f55a35f85449f84734faac7774b2a2a2cdfc0b25f79a9dba1f7f0756c502956bc6be23ae170f490c09a0ee2493dab2d0b44a870#npm:7.7.2"],\
           ["vue", "virtual:166df8b627b427b22e25f9dc0f55a35f85449f84734faac7774b2a2a2cdfc0b25f79a9dba1f7f0756c502956bc6be23ae170f490c09a0ee2493dab2d0b44a870#npm:3.5.13"],\
+          ["vue-flag-icon", "npm:2.1.0"],\
           ["vue-i18n", "virtual:166df8b627b427b22e25f9dc0f55a35f85449f84734faac7774b2a2a2cdfc0b25f79a9dba1f7f0756c502956bc6be23ae170f490c09a0ee2493dab2d0b44a870#npm:11.1.2"],\
           ["vue-router", "virtual:166df8b627b427b22e25f9dc0f55a35f85449f84734faac7774b2a2a2cdfc0b25f79a9dba1f7f0756c502956bc6be23ae170f490c09a0ee2493dab2d0b44a870#npm:4.5.0"],\
           ["vue-tsc", "virtual:166df8b627b427b22e25f9dc0f55a35f85449f84734faac7774b2a2a2cdfc0b25f79a9dba1f7f0756c502956bc6be23ae170f490c09a0ee2493dab2d0b44a870#npm:2.2.8"]\
@@ -3807,6 +3809,15 @@ const RAW_RUNTIME_STATE =
           ["find-up", "npm:5.0.0"],\
           ["locate-path", "npm:6.0.0"],\
           ["path-exists", "npm:4.0.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["flag-icons", [\
+      ["npm:6.15.0", {\
+        "packageLocation": "../../../.yarn/berry/cache/flag-icons-npm-6.15.0-f86ed0c896-10c0.zip/node_modules/flag-icons/",\
+        "packageDependencies": [\
+          ["flag-icons", "npm:6.15.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -6175,6 +6186,16 @@ const RAW_RUNTIME_STATE =
         "packagePeers": [\
           "@types/eslint",\
           "eslint"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["vue-flag-icon", [\
+      ["npm:2.1.0", {\
+        "packageLocation": "../../../.yarn/berry/cache/vue-flag-icon-npm-2.1.0-ca0b911521-10c0.zip/node_modules/vue-flag-icon/",\
+        "packageDependencies": [\
+          ["vue-flag-icon", "npm:2.1.0"],\
+          ["flag-icons", "npm:6.15.0"]\
         ],\
         "linkType": "HARD"\
       }]\

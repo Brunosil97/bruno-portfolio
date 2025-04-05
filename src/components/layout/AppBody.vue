@@ -6,6 +6,12 @@ import GithubStats from './GithubStats.vue';
 import { Github, Linkedin, Book, ChevronDown, Menu, Languages } from 'lucide-vue-next';
 import { useI18n } from 'vue-i18n';
 
+interface Locales {
+  code: string;
+  label: string;
+  iso: string;
+};
+
 const { locale, t } = useI18n({ useScope: "global" });
 
 const themes = ref([
@@ -41,10 +47,10 @@ const themes = ref([
   "abyss",
 ]);
 
-const languages = ref({
-  en: "English",
-  "pt-PT": "Português",
-});
+const languages = ref<Locales[]>([
+  { code: "en", label: "English", iso: "gb" },
+  { code: "pt-PT", label: "Português", iso: "pt" },
+]);
 
 const selectedTheme = ref('cupcake');
 
@@ -135,13 +141,14 @@ const changeLocale = (lang: string) => {
                 </div>
 
                 <ul tabindex="0" class="dropdown-content bg-base-300 rounded-box z-10 w-52 p-2 shadow-2xl max-h-80 overflow-y-auto">
-                  <li v-for="(label, code) in languages" :key="code">
+                  <li v-for="(language) in languages" :key="language.code">
                     <button
                       class="btn-primary btn btn-sm btn-block btn-ghost w-full text-left"
-                      :class="{ 'btn-active': locale === code }"
-                      @click="changeLocale(code)"
+                      :class="{ 'btn-active': locale === language.code }"
+                      @click="changeLocale(language.code)"
                     >
-                      {{ label }}
+                      <flag :iso="language.iso" />
+                      {{ language.label }}
                     </button>
                   </li>
                 </ul>
