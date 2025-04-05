@@ -8,11 +8,16 @@
     "previous": "Previous",
     "next": "Next",
     "now": "Now",
-    "all": "All"
+    "all": "All",
+    "settings": "Settings",
+    "resources": "Resources"
   },
   "tech": {
     "react": "React",
     "vue": "Vue.js",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "medium": "Medium",
     "full-stack": "Full-Stack Development",
     "cloud": "Cloud Services",
     "test-docs": "Testing & Documentation",
@@ -122,7 +127,7 @@
   "skills": {
     "intermediate": "Intermediate",
     "proficient": "Proficient",
-    "work-place": "Workplace",
+    "work-place": "Work",
     "frameworks": "Frameworks",
     "languages": "Languages",
     "design-styling": "Design & Styling",

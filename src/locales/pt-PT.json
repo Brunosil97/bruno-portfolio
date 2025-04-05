@@ -8,11 +8,16 @@
     "previous": "Anterior",
     "next": "Seguinte",
     "now": "Agora",
-    "all": "Tudo"
+    "all": "Tudo",
+    "settings": "Configurações",
+    "resources": "Recursos"
   },
   "tech": {
     "react": "React",
     "vue": "Vue.js",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "medium": "Medium",
     "full-stack": "Desenvolvimento Full-Stack",
     "cloud": "Serviços de Nuvem",
     "test-docs": "Testes e Documentação",
@@ -25,26 +30,26 @@
     "skills": "Competências",
     "about-me": "Sobre Mim",
     "projects": "Projetos",
-    "blogs": "Blogs",
-    "faq": "FAQs",
+    "blogs": "Blogues",
+    "faq": "Perguntas frequentes",
     "cv": "CV"
   },
   "about-me": {
     "introduction": "Introdução",
     "bio-1": "Bruno Silva é um Engenheiro de Software dedicado com vasta experiência em desenvolvimento front-end e full-stack desde 2020. Ao longo dos anos, aperfeiçoou as suas competências ao criar aplicações web inovadoras e soluções digitais escaláveis. A sua jornada no desenvolvimento de software tem sido impulsionada pela paixão em criar experiências de utilizador excecionais e sistemas robustos e fiáveis.",
-    "bio-2": "Com uma base sólida em JavaScript e TypeScript, Bruno trabalhou em diversas indústrias – desde a tecnologia jurídica até aos serviços financeiros – adotando constantemente frameworks modernos e serviços de nuvem.",
+    "bio-2": "Com uma base sólida em JavaScript e TypeScript, Bruno trabalhou em diversas indústrias – desde a tecnologia jurídica até aos serviços financeiros – adotando constantemente abstrações modernos e serviços de nuvem.",
     "why": "Por que contactar o Bruno?",
-    "why-bio": "A robusta experiência técnica e a abordagem colaborativa de Bruno fazem dele o parceiro ideal para qualquer projeto tecnológico. A sua experiência prática na gestão do ciclo completo do produto – desde o envolvimento das partes interessadas e design de UI/UX até ao desenvolvimento e implantação – permite-lhe entregar soluções impactantes que são tanto eficientes quanto escaláveis.",
+    "why-bio": "A robusta experiência técnica e a abordagem colaborativa de Bruno fazem dele o parceiro ideal para qualquer projeto tecnológico. A sua experiência prática na gestão do ciclo completo do produto – desde o envolvimento das partes interessadas e estilo de UI/UX até ao desenvolvimento e implantação – permite-lhe entregar soluções impactantes que são tanto eficientes quanto escaláveis.",
     "progressive": "Mentalidade Progressista",
-    "progressive-bio-1": "No cenário tecnológico em constante evolução, Bruno adota uma mentalidade progressista, explorando continuamente ferramentas e frameworks emergentes. Compromete-se a identificar e adotar as melhores soluções para cada projeto único – seja modernizando sistemas legados ou integrando práticas avançadas de CI/CD.",
+    "progressive-bio-1": "No cenário tecnológico em constante evolução, Bruno adota uma mentalidade progressista, explorando continuamente ferramentas e abstrações emergentes. Compromete-se a identificar e adotar as melhores soluções para cada projeto único – seja modernizando sistemas legados ou integrando práticas avançadas de CI/CD.",
     "progressive-bio-2": "Sempre em aprendizagem e adaptação, Bruno experimenta bibliotecas inovadoras, novos paradigmas de desenvolvimento e metodologias de ponta. Esta dedicação garante que o seu trabalho se mantém na vanguarda do desenvolvimento web, fundamentado em práticas que não só são atuais, mas também preparadas para o futuro.",
     "progressive-bio-3": "A sua paixão pela auto-melhora e exploração de novas tecnologias permite-lhe entregar soluções robustas, eficientes e adaptadas às necessidades em constante mudança do mundo digital.",
-    "frameworks": "Que Frameworks posso usar com o Bruno?",
+    "frameworks": "Que abstrações posso usar com o Bruno?",
     "frameworks-list-title": "A caixa de ferramentas de Bruno abrange um amplo espectro do ecossistema JavaScript e para além. A sua experiência inclui:",
     "vue": "Utilização de TypeScript e Vite para um desenvolvimento rápido e orientado por componentes.",
     "react": "Criação de interfaces de utilizador dinâmicas com as práticas modernas do React.",
     "full-stack": "Integração de APIs RESTful, Node + Express e pipelines de CI/CD para soluções completas de ponta a ponta.",
-    "legacy": "Trabalho com LAMP, PHP e frameworks MVC personalizados para garantir uma entrega versátil de projetos.",
+    "legacy": "Trabalho com LAMP, PHP e abstrações MVC personalizados para garantir uma entrega versátil de projetos.",
     "cloud": "Implantação de aplicações escaláveis e seguras utilizando Microsoft Azure e Terraform.",
     "test-docs": "Utilização de ferramentas como Vitest e Storybook/Chromatic para manter alta qualidade de código e diretrizes claras para os desenvolvedores.",
     "frameworks-bio": "Com um conjunto tão diversificado de competências e uma abordagem proativa à aprendizagem, Bruno garante que cada projeto beneficia das inovações mais recentes na tecnologia web."
@@ -77,7 +82,7 @@
     "v3-0-0-status": "Contrato de FTC",
     "v3-0-0-description": "Bruno atuou como Engenheiro de Produto na Herbert Smith Freehills sob contrato a termo.",
     "v3-0-0-point-1": "Geriu todo o ciclo de vida do produto, entregando aplicações web de alto desempenho.",
-    "v3-0-0-point-2": "Implementou designs modernos de UI com Vue.js e melhores práticas de qualidade de código.",
+    "v3-0-0-point-2": "Implementou estilos modernos de UI com Vue.js e melhores práticas de qualidade de código.",
     "v3-0-0-point-3": "Aproveitou serviços de nuvem e ferramentas de infraestrutura para escalabilidade e segurança.",
     
     "v2-0-0": "v2.0.0 – Abril 2022",
@@ -104,7 +109,7 @@
     
     "v0-4-0": "v0.4.0 – Abril 2020",
     "v0-4-0-status": "Início de Formação",
-    "v0-4-0-description": "Iniciou o Programa de Formação da Sparta Global focado em desenvolvimento full-stack com C#, incluindo OOP, Entity Framework, Azure, MVC e desenvolvimento de API.",
+    "v0-4-0-description": "Iniciou o Programa de Formação da Sparta Global focado em desenvolvimento full-stack com C#, incluindo OOP, Entity abstração, Azure, MVC e desenvolvimento de API.",
     
     "v0-3-0": "v0.3.0 – Março 2020",
     "v0-3-0-status": "Bootcamp Concluído",
@@ -122,10 +127,10 @@
   "skills": {
     "intermediate": "Intermédio",
     "proficient": "Competente",
-    "work-place": "Ambiente Profissional",
-    "frameworks": "Frameworks",
+    "work-place": "Trabalho",
+    "frameworks": "Abstrações",
     "languages": "Linguagens",
-    "design-styling": "Design e Estilo",
+    "design-styling": "Estilo",
     "development-toolchain": "Ferramentas de Desenvolvimento",
     "testing-docs": "Testes e Documentação",
     "cloud-infrastructure": "Nuvem e Infraestrutura",
@@ -144,8 +149,8 @@
     "approachable": "Acessível",
     "approachable-bio": "Comunica conceitos técnicos complexos de forma clara e acessível. O seu portfólio, estilizado como uma documentação completa, convida tanto desenvolvedores como clientes a explorar e entrar em contacto.",
     "performant": "Eficiente",
-    "performant-bio": "Entrega soluções construídas para velocidade e eficiência. O seu trabalho aproveita frameworks modernos e melhores práticas para garantir que cada projeto funcione de forma fluída com o mínimo de sobrecarga.",
+    "performant-bio": "Entrega soluções construídas para velocidade e eficiência. O seu trabalho aproveita abstrações modernos e melhores práticas para garantir que cada projeto funcione de forma fluída com o mínimo de sobrecarga.",
     "versatile": "Versátil",
-    "versatile-bio": "Com um conjunto de competências que abrange todo o espectro do desenvolvimento web. Desde frameworks de front-end como Vue e React a soluções full-stack e integrações na nuvem, a sua abordagem adaptável satisfaz as necessidades de qualquer projeto."
+    "versatile-bio": "Com um conjunto de competências que abrange todo o espectro do desenvolvimento web. Desde abstrações de front-end como Vue e React a soluções full-stack e integrações na nuvem, a sua abordagem adaptável satisfaz as necessidades de qualquer projeto."
   }
 }

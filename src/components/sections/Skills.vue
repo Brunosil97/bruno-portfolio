@@ -274,7 +274,7 @@ const filteredCloudAndInfra = computed(() => {
 <template>
   <div class="container mx-auto p-0 sm:p-6">
     <!-- DaisyUI Filter Buttons -->
-    <div class="join ml-4 mb-6">
+    <div class="join ml-4 mb-6 w-full">
       <button
         class="btn btn-soft btn-primary btn-sm sm:btn-md"
         :class="{ 'btn-active': filterOption === '' }"
@@ -447,7 +447,7 @@ const filteredCloudAndInfra = computed(() => {
     </transition-group>
 
     <!-- Development Toolchain -->
-    <h1 class="text font-bold ml-4 mb-4">{{ t("skills.development-toolchains") }}:</h1>
+    <h1 class="text font-bold ml-4 mb-4">{{ t("skills.development-toolchain") }}:</h1>
     <transition-group
       name="fade"
       tag="div"
