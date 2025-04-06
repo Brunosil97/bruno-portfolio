@@ -57,8 +57,8 @@
   "contact": {
     "contact-title": "Installation Guide: Contact Bruno Silva",
     "contact-title-mobile": "Installation Guide",
-    "email": "Email Me",
-    "phone": "Message Me",
+    "email": "Email",
+    "phone": "Message",
     "instruction": "Follow these steps to properly 'install' my contact details into your project.",
     "step-1": "Step 1: Install the Contact Module",
     "step-1-instruction": "Choose your package manager to install",
@@ -142,7 +142,8 @@
     "total-contributions": "Total Contributions",
     "last-year": "In Last Year",
     "github-name": "{name}",
-    "github-bio": "{bio}"
+    "github-bio": "{bio}",
+    "start-date": "October 5th 2019"
   },
   "landing-page": {
     "intro": "The dynamic tech companion that powers modern web development with precision and style.",

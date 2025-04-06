@@ -206,7 +206,7 @@ onMounted(async () => {
       <div class="stat">
         <div class="stat-title">{{ t("stats.total-contributions") }}</div>
         <div class="stat-value text-primary">{{ allTimeContributions }}</div>
-        <div class="stat-desc">Oct 5th 2019 &mdash; {{ t("common.now") }}</div>
+        <div class="stat-desc">{{ t("stats.start-date") }} &mdash; {{ t("common.now") }}</div>
       </div>
       <div class="stat">
         <div class="stat-title">{{ t("stats.last-year") }}</div>

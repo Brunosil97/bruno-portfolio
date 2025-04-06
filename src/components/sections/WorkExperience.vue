@@ -1,9 +1,10 @@
 <script setup lang="ts">
+import { computed } from "vue";
 import { useI18n } from 'vue-i18n';
 
 const { t } = useI18n();
 // Build changelog entries using translation keys.
-const changelogEntries = [
+const changelogEntries = computed(() => [
   {
     version: t('work-experience.v3-1-0'),
     status: t('work-experience.v3-1-0-status'),
@@ -85,7 +86,7 @@ const changelogEntries = [
     points: [],
     borderColor: "border-gray-400"
   }
-];
+]);
 </script>
 
 <template>

@@ -1,20 +1,24 @@
 <script setup lang="ts">
 import { computed } from 'vue';
-import GithubStats from '../components/layout/GithubStats.vue';
-import NavMenu from '../components/layout/NavMenu.vue';
+import { useI18n } from 'vue-i18n';
 import { useRouter, useRoute } from 'vue-router';
 import { ArrowLeft, ArrowRight } from 'lucide-vue-next';
 
+import GithubStats from '../components/layout/GithubStats.vue';
+import NavMenu from '../components/layout/NavMenu.vue';
+
+const { t } = useI18n();
+
 // Define the ordered docs paths
 const docRoutes = [
-  { path: '/docs/about',    label: 'About Me' },
-  { path: '/docs/contact',  label: 'Contact' },
-  { path: '/docs/work',     label: 'Work Experience' },
-  { path: '/docs/skills',   label: 'Skills' },
-  { path: '/docs/projects', label: 'Projects' },
-  { path: '/docs/blogs',    label: 'Blogs' },
-  { path: '/docs/faqs',     label: 'FAQs' },
-  { path: '/docs/cv',       label: 'CV' },
+  { path: '/docs/about',    label: t("domain.about-me") },
+  { path: '/docs/contact',  label: t("domain.contact") },
+  { path: '/docs/work',     label: t("domain.work-experience") },
+  { path: '/docs/skills',   label: t("domain.skills") },
+  { path: '/docs/projects', label: t("domain.projects") },
+  { path: '/docs/blogs',    label: t("domain.blogs") },
+  { path: '/docs/faqs',     label: t("domain.faq") },
+  { path: '/docs/cv',       label: t("domain.cv") },
 ];
 
 // Create a dictionary to map each path to its index

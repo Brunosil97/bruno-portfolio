@@ -57,8 +57,8 @@
   "contact": {
     "contact-title": "Guia de Instalação: Contacte o Bruno Silva",
     "contact-title-mobile": "Guia de Instalação",
-    "email": "Enviar Email",
-    "phone": "Enviar Mensagem",
+    "email": "Email",
+    "phone": "Mensagem",
     "instruction": "Siga estes passos para 'instalar' corretamente os meus dados de contacto no seu projeto.",
     "step-1": "Passo 1: Instalar o Módulo de Contacto",
     "step-1-instruction": "Escolha o seu gestor de pacotes para instalar",
@@ -142,7 +142,8 @@
     "total-contributions": "Total de Contribuições",
     "last-year": "No Último Ano",
     "github-name": "{name}",
-    "github-bio": "{bio}"
+    "github-bio": "{bio}",
+    "start-date": "5 de outubro de 2019"
   },
   "landing-page": {
     "intro": "O companheiro tecnológico dinâmico que impulsiona o desenvolvimento web moderno com precisão e estilo.",
