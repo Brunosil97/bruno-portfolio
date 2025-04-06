@@ -57,8 +57,8 @@
   "contact": {
     "contact-title": "Guía de Instalación: Contacta a Bruno Silva",
     "contact-title-mobile": "Guía de Instalación",
-    "email": "Enviar correo",
-    "phone": "Enviar mensaje",
+    "email": "Correo",
+    "phone": "Mensaje",
     "instruction": "Sigue estos pasos para 'instalar' correctamente mis datos de contacto en tu proyecto.",
     "step-1": "Paso 1: Instala el Módulo de Contacto",
     "step-1-instruction": "Elige tu gestor de paquetes para la instalación",

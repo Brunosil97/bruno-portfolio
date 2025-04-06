@@ -3,19 +3,21 @@ import en from '../locales/en.json';
 import pt from '../locales/pt-PT.json';
 import de from '../locales/de.json';
 import es from '../locales/es.json';
+import fr from '../locales/fr.json';
 
 const messages = {
   en,
   pt,
   de,
-  es
+  es,
+  fr,
 };
 
 const i18n = createI18n({
   legacy: false, // Enable Composition API mode
   locale: 'en',  // Set default locale
   fallbackLocale: 'en',
-  availableLocales: ['en', 'pt', 'de', 'es'],
+  availableLocales: ['en', 'pt', 'de', 'es', 'fr'],
   messages,
 });
 
