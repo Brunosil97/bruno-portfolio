@@ -32,7 +32,9 @@
     "projects": "Proyectos",
     "blogs": "Bitácora",
     "faq": "Preguntas frecuentes",
-    "cv": "CV"
+    "cv": "CV",
+    "help-translate": "Ayudame a traducir!",
+    "inacurate": "Traducción inexacta"
   },
   "about-me": {
     "introduction": "Introducción",

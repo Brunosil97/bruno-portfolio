@@ -32,7 +32,9 @@
     "projects": "项目",
     "blogs": "博客",
     "faq": "常见问题",
-    "cv": "简历"
+    "cv": "简历",
+    "help-translate": "帮助我翻译！",
+    "inacurate": "翻译不准确"
   },
   "about-me": {
     "introduction": "介绍",

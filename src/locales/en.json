@@ -32,7 +32,9 @@
     "projects": "Projects",
     "blogs": "Blogs",
     "faq": "FAQs",
-    "cv": "CV"
+    "cv": "CV",
+    "help-translate": "Help me translate!",
+    "inacurate": "Inacurate Translation"
   },
   "about-me": {
     "introduction": "Introduction",

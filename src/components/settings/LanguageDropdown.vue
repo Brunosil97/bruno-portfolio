@@ -16,7 +16,7 @@ const props = defineProps({
   }
 });
 
-const { locale } = useI18n({ useScope: "global" });
+const { locale, t } = useI18n({ useScope: "global" });
 
 const languages = ref<Locales[]>([
   { code: "en", label: "English", iso: "gb" },
@@ -52,7 +52,7 @@ const buttonClasses = computed(() => {
 
     <ul
       tabindex="0"
-      class="dropdown-content bg-base-300 rounded-box z-10 w-52 p-2 shadow-2xl max-h-80 overflow-y-auto"
+      class="dropdown-content bg-base-300 rounded-box z-10 w-52 p-2 shadow-2xl max-h-100 overflow-y-auto"
     >
       <li v-for="(language) in languages" :key="language.code">
         <button
@@ -63,6 +63,14 @@ const buttonClasses = computed(() => {
           <flag :iso="language.iso" />
           {{ language.label }}
         </button>
+      </li>
+      <li>
+        <a
+          class="btn btn-sm btn-neutral btn-outline w-full justify-left"
+          :href="`mailto:brunosilvinosilva@gmail.com?subject=Bruno Silva: ${t('domain.inacurate')}`"
+        >
+          {{ t("domain.help-translate") }}
+        </a>
       </li>
     </ul>
   </div>

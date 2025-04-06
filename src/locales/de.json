@@ -32,7 +32,9 @@
     "projects": "Projekte",
     "blogs": "Tagebuch",
     "faq": "Häufig Gestellte Fragen",
-    "cv": "Lebenslauf"
+    "cv": "Lebenslauf",
+    "help-translate": "Hilf mir beim Übersetzen!",
+    "inacurate": "Ungenaue Übersetzung"
   },
   "about-me": {
     "introduction": "Einführung",

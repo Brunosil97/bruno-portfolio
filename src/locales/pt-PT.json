@@ -32,7 +32,9 @@
     "projects": "Projetos",
     "blogs": "Blogues",
     "faq": "Perguntas frequentes",
-    "cv": "CV"
+    "cv": "CV",
+    "help-translate": "Ajude-me a traduzir!",
+    "inacurate": "Tradução imprecisa"
   },
   "about-me": {
     "introduction": "Introdução",
