@@ -10,7 +10,7 @@ import NavMenu from '../components/layout/NavMenu.vue';
 const { t } = useI18n();
 
 // Define the ordered docs paths
-const docRoutes = [
+const docRoutes = computed(() => [
   { path: '/docs/about',    label: t("domain.about-me") },
   { path: '/docs/contact',  label: t("domain.contact") },
   { path: '/docs/work',     label: t("domain.work-experience") },
@@ -19,10 +19,10 @@ const docRoutes = [
   { path: '/docs/blogs',    label: t("domain.blogs") },
   { path: '/docs/faqs',     label: t("domain.faq") },
   { path: '/docs/cv',       label: t("domain.cv") },
-];
+]);
 
 // Create a dictionary to map each path to its index
-const docRoutesMap: Record<string, number> = docRoutes.reduce(
+const docRoutesMap: Record<string, number> = docRoutes.value.reduce(
   (acc: Record<string, number>, route, idx) => {
     acc[route.path] = idx;
     return acc;
@@ -44,15 +44,15 @@ const currentIndex = computed(() => {
 // Compute the previous route (null if we’re at the first)
 const prevRoute = computed(() => {
   if (currentIndex.value > 0) {
-    return docRoutes[currentIndex.value - 1];
+    return docRoutes.value[currentIndex.value - 1];
   }
   return null;
 });
 
 // Compute the next route (null if we’re at the last)
 const nextRoute = computed(() => {
-  if (currentIndex.value < docRoutes.length - 1) {
-    return docRoutes[currentIndex.value + 1];
+  if (currentIndex.value < docRoutes.value.length - 1) {
+    return docRoutes.value[currentIndex.value + 1];
   }
   return null;
 });

@@ -21,7 +21,8 @@ const { locale } = useI18n({ useScope: "global" });
 const languages = ref<Locales[]>([
   { code: "en", label: "English", iso: "gb" },
   { code: "pt-PT", label: "Português", iso: "pt" },
-  { code: "de", label: "Deutsch", iso: "de"}
+  { code: "de", label: "Deutsch", iso: "de"},
+  { code: "es", label: "Español", iso: "es" },
 ]);
 
 const changeLocale = (lang: string) => {

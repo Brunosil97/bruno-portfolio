@@ -1,0 +1,157 @@
+{
+  "common": {
+    "get-started": "Empezar",
+    "started": "Poniéndose en marcha",
+    "name": "Bruno Silva",
+    "theme": "Tema",
+    "stats": "Estadísticas",
+    "previous": "Anterior",
+    "next": "Siguiente",
+    "now": "Ahora",
+    "all": "Todo",
+    "settings": "Ajustes",
+    "resources": "Recursos"
+  },
+  "tech": {
+    "react": "React",
+    "vue": "Vue.js",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "medium": "Medium",
+    "full-stack": "Desarrollo Full-Stack",
+    "cloud": "Servicios en la Nube",
+    "test-docs": "Pruebas y Documentación",
+    "legacy": "Stacks Legacy y Diversos"
+  },
+  "domain": {
+    "video-not-supported": "Tu navegador no soporta la etiqueta de video",
+    "contact": "Contacto",
+    "work-experience": "Experiencia Laboral",
+    "skills": "Habilidades",
+    "about-me": "Acerca de Mí",
+    "projects": "Proyectos",
+    "blogs": "Bitácora",
+    "faq": "Preguntas frecuentes",
+    "cv": "CV"
+  },
+  "about-me": {
+    "introduction": "Introducción",
+    "bio-1": "Bruno Silva es un ingeniero de software dedicado con amplia experiencia tanto en el desarrollo front-end como full-stack desde 2020. A lo largo de los años, ha perfeccionado sus habilidades construyendo aplicaciones web innovadoras y soluciones digitales escalables. Su camino en el desarrollo de software ha estado impulsado por la pasión de crear experiencias de usuario excepcionales y sistemas robustos y fiables.",
+    "bio-2": "Con una sólida formación en JavaScript y TypeScript, Bruno ha trabajado en diversas industrias, desde la tecnología jurídica hasta los servicios financieros, adoptando de forma constante marcos modernos y servicios en la nube.",
+    "why": "¿Por qué contactar a Bruno?",
+    "why-bio": "El amplio conocimiento técnico y el enfoque colaborativo de Bruno lo convierten en el socio ideal para cualquier proyecto impulsado por tecnología. Su experiencia práctica en gestionar el ciclo de vida completo del producto –desde la implicación de los interesados y el diseño de UI/UX hasta el desarrollo y la implementación– le permite ofrecer soluciones impactantes, eficientes y escalables.",
+    "progressive": "Mentalidad Progresista",
+    "progressive-bio-1": "En el vertiginoso panorama tecnológico actual, Bruno adopta una mentalidad progresista explorando continuamente herramientas y marcos emergentes. Está comprometido a identificar y adoptar las mejores soluciones para cada proyecto, ya sea modernizando sistemas heredados o integrando prácticas de CI/CD de vanguardia.",
+    "progressive-bio-2": "Constantemente aprendiendo y adaptándose, Bruno experimenta con bibliotecas innovadoras, nuevos paradigmas de desarrollo y metodologías de última generación. Esta dedicación garantiza que su trabajo se mantenga a la vanguardia del desarrollo web, basado en prácticas que no solo son actuales, sino también preparadas para el futuro.",
+    "progressive-bio-3": "Su pasión por la superación personal y la exploración de nuevas tecnologías le permite ofrecer soluciones robustas, eficientes y adaptadas a las necesidades cambiantes del mundo digital.",
+    "frameworks": "¿Qué marcos puedo utilizar con Bruno?",
+    "frameworks-list-title": "La caja de herramientas de Bruno abarca un amplio espectro del ecosistema JavaScript y más. Su experiencia incluye:",
+    "vue": "Aprovechar TypeScript y Vite para un desarrollo rápido y basado en componentes.",
+    "react": "Construir interfaces de usuario dinámicas con las prácticas modernas de React.",
+    "full-stack": "Integrar APIs RESTful, Node + Express y pipelines de CI/CD para soluciones completas de extremo a extremo.",
+    "legacy": "Trabajar con LAMP, PHP y marcos MVC personalizados para garantizar una ejecución versátil de proyectos.",
+    "cloud": "Desplegar aplicaciones escalables y seguras utilizando Microsoft Azure y Terraform.",
+    "test-docs": "Utilizar herramientas como Vitest y Storybook/Chromatic para mantener una alta calidad de código y directrices claras para desarrolladores.",
+    "frameworks-bio": "Con un conjunto tan diverso de habilidades y un enfoque proactivo en el aprendizaje, Bruno se asegura de que cada proyecto se beneficie de las últimas innovaciones en tecnología web."
+  },
+  "contact": {
+    "contact-title": "Guía de Instalación: Contacta a Bruno Silva",
+    "contact-title-mobile": "Guía de Instalación",
+    "email": "Enviar correo",
+    "phone": "Enviar mensaje",
+    "instruction": "Sigue estos pasos para 'instalar' correctamente mis datos de contacto en tu proyecto.",
+    "step-1": "Paso 1: Instala el Módulo de Contacto",
+    "step-1-instruction": "Elige tu gestor de paquetes para la instalación",
+    "step-2": "Paso 2: Configura tu Entorno",
+    "step-2-instruction": "Crea un archivo de configuración con los siguientes detalles",
+    "step-3": "Paso 3: Importa e Inicializa",
+    "step-3-instruction": "Importa el módulo de contacto en tu proyecto e inicialízalo"
+  },
+  "work-experience": {
+    "title": "Changelog",
+    "v3-1-0": "v3.1.0 – Abril 2024",
+    "v3-1-0-status": "Transición Permanente",
+    "v3-1-0-description": "El rol continuo de Bruno como Product Engineer en Herbert Smith Freehills.",
+    "v3-1-0-point-1": "Supervisa todo el ciclo de vida del producto, desde la implicación de los interesados hasta el despliegue.",
+    "v3-1-0-point-2": "Desarrolla interfaces de usuario responsivas y escalables utilizando Vue.js, TypeScript y Vite.",
+    "v3-1-0-point-3": "Utiliza Microsoft Azure y Terraform para la infraestructura en la nube y despliegues seguros.",
+    "v3-1-0-point-4": "Coordina equipos multifuncionales y consultores externos para ofrecer aplicaciones que incrementan los ingresos.",
+    "v3-1-0-point-5": "Realiza demostraciones técnicas y presentaciones, traduciendo tecnología compleja en ideas accionables.",
+    
+    "v3-0-0": "v3.0.0 – Abril 2023",
+    "v3-0-0-status": "Contrato FTC",
+    "v3-0-0-description": "Bruno trabajó como Product Engineer en Herbert Smith Freehills bajo un contrato a plazo fijo.",
+    "v3-0-0-point-1": "Gestionó todo el ciclo de vida del producto, entregando aplicaciones web de alto rendimiento.",
+    "v3-0-0-point-2": "Implementó diseños modernos de interfaz de usuario con Vue.js y las mejores prácticas de calidad de código.",
+    "v3-0-0-point-3": "Aprovechó servicios en la nube y herramientas de infraestructura para garantizar la escalabilidad y la seguridad.",
+    
+    "v2-0-0": "v2.0.0 – Abril 2022",
+    "v2-0-0-status": "Consultor Sénior de Software",
+    "v2-0-0-description": "Durante su paso por Sparta Global, Bruno contribuyó a Herbert Smith Freehills (Contrato).",
+    "v2-0-0-point-1": "Lideró el desarrollo de aplicaciones de una sola página utilizando Vue.js.",
+    "v2-0-0-point-2": "Realizó revisiones de código y gestionó merge requests para garantizar la calidad del código.",
+    "v2-0-0-point-3": "Implementó pipelines de CI/CD, integró pruebas unitarias y utilizó SonarCloud.",
+    
+    "v1-0-0": "v1.0.0 – Noviembre 2020",
+    "v1-0-0-status": "Consultor Sénior de Software",
+    "v1-0-0-description": "El debut profesional de Bruno en Sparta Global, entregando proyectos para Raymond James (Contrato).",
+    "v1-0-0-point-1": "Trabajó como desarrollador Full Stack en un entorno LAMP.",
+    "v1-0-0-point-2": "Desarrolló y mantuvo aplicaciones orientadas al cliente utilizando PHP, HTML, CSS, JavaScript, jQuery y Ajax.",
+    "v1-0-0-point-3": "Mejoró las interfaces de usuario y la funcionalidad del backend; implementó una solución de compartición de archivos en línea para aumentar la eficiencia.",
+    
+    "v0-5-1": "v0.5.1 – Octubre 2020",
+    "v0-5-1-status": "Mejora de Competencias",
+    "v0-5-1-description": "Adquirió competencia en la programación en PHP.",
+    
+    "v0-5-0": "v0.5.0 – Junio 2020",
+    "v0-5-0-status": "Hito de Formación",
+    "v0-5-0-description": "Completó el programa de formación de Sparta Global.",
+    
+    "v0-4-0": "v0.4.0 – Abril 2020",
+    "v0-4-0-status": "Inicio de Formación",
+    "v0-4-0-description": "Inició el programa de formación de Sparta Global enfocado en el desarrollo full-stack con C#, incluyendo OOP, Entity marco, Azure, MVC y desarrollo de API.",
+    
+    "v0-3-0": "v0.3.0 – Marzo 2020",
+    "v0-3-0-status": "Bootcamp Completado",
+    "v0-3-0-description": "Finalizó el Bootcamp de Desarrollo Web de Flatiron.",
+    "v0-3-0-point-1": "Aprendió desarrollo full-stack incluyendo OOP con Ruby, JavaScript, HTML/CSS, Ruby on Rails y React.",
+    
+    "v0-2-0": "v0.2.0 – Diciembre 2019",
+    "v0-2-0-status": "Hito Educativo",
+    "v0-2-0-description": "Se matriculó en el curso de Desarrollo Web de Flatiron.",
+    
+    "v0-1-0": "v0.1.0 – Junio 2019",
+    "v0-1-0-status": "Inicios Autodidactas",
+    "v0-1-0-description": "Comenzó a aprender JavaScript puro de manera autodidacta."
+  },
+  "skills": {
+    "intermediate": "Intermedio",
+    "proficient": "Competente",
+    "work-place": "Profesional",
+    "frameworks": "Marcos",
+    "languages": "Lenguajes",
+    "design-styling": "Diseño y Estilo",
+    "development-toolchain": "Herramientas de Desarrollo",
+    "testing-docs": "Pruebas y Documentación",
+    "cloud-infrastructure": "Nube e Infraestructura",
+    "pro": "Pro",
+    "proficiency": "Competencia"
+  },
+  "stats": {
+    "total": "Total de Repositorios",
+    "total-contributions": "Total de Contribuciones",
+    "last-year": "En el Último Año",
+    "github-name": "{name}",
+    "github-bio": "{bio}",
+    "start-date": "5 de octubre de 2019"
+  },
+  "landing-page": {
+    "intro": "El compañero tecnológico dinámico que impulsa el desarrollo web moderno con precisión y estilo.",
+    "approachable": "Accesible",
+    "approachable-bio": "Comunica conceptos técnicos complejos de forma clara y accesible. Su portafolio, diseñado como una documentación completa, invita a desarrolladores y clientes a explorar y ponerse en contacto.",
+    "performant": "Eficiente",
+    "performant-bio": "Entrega soluciones diseñadas para la velocidad y la eficiencia. Su trabajo utiliza marcos modernos y las mejores prácticas para garantizar que cada proyecto funcione sin problemas y con un mínimo de sobrecarga.",
+    "versatile": "Versátil",
+    "versatile-bio": "Con un conjunto de habilidades que abarca todo el espectro del desarrollo web, desde marcos de frontend como Vue y React hasta soluciones full-stack e integraciones en la nube, su enfoque adaptable satisface las necesidades de cualquier proyecto."
+  }
+}
