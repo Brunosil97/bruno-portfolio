@@ -8,7 +8,7 @@ const { t } = useI18n();
 const props = defineProps({
   isMobile: {
     type: Boolean,
-    required: true,
+    default: false,
   }
 });
 

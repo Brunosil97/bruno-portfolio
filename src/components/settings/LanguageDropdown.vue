@@ -12,7 +12,7 @@ interface Locales {
 const props = defineProps({
   isMobile: {
     type: Boolean,
-    required: true,
+    default: false,
   }
 });
 

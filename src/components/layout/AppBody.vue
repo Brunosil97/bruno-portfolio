@@ -1,13 +1,14 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 import { useRoute } from 'vue-router';
-import { Github, Linkedin, Book, AlignLeft, Settings } from 'lucide-vue-next';
+import { AlignLeft, Settings } from 'lucide-vue-next';
 import { useI18n } from 'vue-i18n';
 
 import NavMenu from './NavMenu.vue';
 import GithubStats from './GithubStats.vue';
 import ThemeDropdown from '../settings/ThemeDropdown.vue';
 import LanguageDropdown from '../settings/LanguageDropdown.vue';
+import ResourceOptions from '../settings/ResourceOptions.vue';
 
 const { t } = useI18n();
 
@@ -70,47 +71,16 @@ const showVideo = computed(() => route.path !== "/");
             <div class="drawer-side">
               <label for="mobile-right-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
               <ul class="menu bg-base-200 min-h-full w-60 p-4">
+                <!-- Divider -->
                 <div class="divider divider-primary">{{ t("common.settings") }}</div>
                 <!-- Mobile Change -->
                 <theme-dropdown is-mobile />
                 <!-- Language Change -->
                 <language-dropdown is-mobile />
-
+                <!-- Divider -->
                 <div class="divider divider-primary">{{ t("common.resources") }}</div>
-
-                <div class="tooltip tooltip-bottom mb-2" data-tip="GitHub">
-                  <a
-                    class="btn btn-sm sm:btn btn-wide"
-                    style="background-color: black;"
-                    href="https://github.com/Brunosil97"
-                    target="_blank"
-                  >
-                    <span class="text-white">{{ t("tech.github") }}</span>
-                    <Github :size="16" color="white" />
-                  </a>
-                </div>
-                <div class="tooltip tooltip-bottom mb-2" data-tip="LinkedIn">
-                  <a
-                    class="btn btn-sm btn-wide sm:btn"
-                    style="background-color: #0077B5;"
-                    href="https://www.linkedin.com/in/bruno-silvino-silva/"
-                    target="_blank"
-                  >
-                    <span class="text-white">{{ t("tech.linkedin") }}</span>
-                    <Linkedin :size="16" color="white" />
-                  </a>
-                </div>
-                <div class="tooltip tooltip-bottom" data-tip="Medium">
-                  <a
-                    class="btn btn-sm  btn-wide sm:btn"
-                    style="background-color: oklch(60% 0.118 184.704)"
-                    href="https://medium.com/@brunosilvinosilva"
-                    target="_blank"
-                  >
-                    <span class="text-white">{{ t("tech.medium") }}</span>
-                    <Book :size="16" color="white" />
-                  </a>
-                </div>
+                <!-- Resource Options -->
+                <resource-options is-mobile />
               </ul>
             </div>
           </div>
@@ -121,37 +91,8 @@ const showVideo = computed(() => route.path !== "/");
               <theme-dropdown />
               <!-- Language Change -->
               <language-dropdown />
-
-              <div class="tooltip tooltip-bottom" data-tip="GitHub">
-                <a
-                  class="btn btn-sm sm:btn"
-                  style="background-color: black;"
-                  href="https://github.com/Brunosil97"
-                  target="_blank"
-                >
-                  <Github :size="16" color="white" />
-                </a>
-              </div>
-              <div class="tooltip tooltip-bottom ml-2" data-tip="LinkedIn">
-                <a
-                  class="btn btn-sm sm:btn"
-                  style="background-color: #0077B5;"
-                  href="https://www.linkedin.com/in/bruno-silvino-silva/"
-                  target="_blank"
-                >
-                  <Linkedin :size="16" color="white" />
-                </a>
-              </div>
-              <div class="tooltip tooltip-bottom ml-2" data-tip="Medium">
-                <a
-                  class="btn btn-sm sm:btn"
-                  style="background-color: oklch(60% 0.118 184.704)"
-                  href="https://medium.com/@brunosilvinosilva"
-                  target="_blank"
-                >
-                  <Book :size="16" color="white" />
-                </a>
-              </div>
+              <!-- Resource Options -->
+              <resource-options />
             </ul>
           </div>
         </div>
