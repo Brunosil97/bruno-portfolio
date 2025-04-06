@@ -5,6 +5,7 @@ import de from '../locales/de.json';
 import es from '../locales/es.json';
 import fr from '../locales/fr.json';
 import it from '../locales/it.json';
+import ko from '../locales/ko.json';
 
 const messages = {
   en,
@@ -13,13 +14,14 @@ const messages = {
   es,
   fr,
   it,
+  ko,
 };
 
 const i18n = createI18n({
   legacy: false, // Enable Composition API mode
   locale: 'en',  // Set default locale
   fallbackLocale: 'en',
-  availableLocales: ['en', 'pt', 'de', 'es', 'fr', 'it'],
+  availableLocales: ['en', 'pt', 'de', 'es', 'fr', 'it', 'ko'],
   messages,
 });
 
