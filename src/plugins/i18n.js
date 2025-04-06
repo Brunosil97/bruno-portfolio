@@ -11,6 +11,7 @@ const i18n = createI18n({
   legacy: false, // Enable Composition API mode
   locale: 'en',  // Set default locale
   fallbackLocale: 'en',
+  availableLocales: ['en', 'pt'],
   messages,
 });
 

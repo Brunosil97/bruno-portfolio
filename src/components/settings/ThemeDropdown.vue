@@ -1,9 +1,11 @@
 <script setup lang="ts">
 import { ref, onMounted, watch, computed } from "vue";
+import { useRoute } from "vue-router";
 import { ChevronDown } from 'lucide-vue-next';
 import { useI18n } from 'vue-i18n';
 
 const { t } = useI18n();
+const route = useRoute();
 
 const props = defineProps({
   isMobile: {
@@ -45,21 +47,32 @@ const themes = ref([
   "abyss",
 ]);
 
-const selectedTheme = ref('cupcake');
+const selectedTheme = ref("autumn");
 
 onMounted(() => {
-  const storedTheme = localStorage.getItem('theme');
-  if (storedTheme) {
-    selectedTheme.value = JSON.parse(storedTheme);
-    document.documentElement.setAttribute('data-theme', storedTheme);
+  if (route.path === "/") {
+    selectedTheme.value = "synthwave";
   } else {
-    document.documentElement.setAttribute('data-theme', selectedTheme.value);
+    const stored = localStorage.getItem("theme");
+    selectedTheme.value = stored ? JSON.parse(stored) : "autumn";
   }
+  document.documentElement.setAttribute("data-theme", selectedTheme.value);
 });
 
-watch(selectedTheme, (newTheme: string) => {
-  localStorage.setItem('theme', JSON.stringify(newTheme));
-  document.documentElement.setAttribute('data-theme', newTheme);
+watch(selectedTheme, (newTheme) => {
+  if (route.path !== "/") {
+    localStorage.setItem("theme", JSON.stringify(newTheme));
+  }
+  document.documentElement.setAttribute("data-theme", newTheme);
+});
+
+watch(() => route.path, (newPath) => {
+  if (newPath === "/") {
+    selectedTheme.value = "synthwave";
+  } else {
+    const stored = localStorage.getItem("theme");
+    selectedTheme.value = stored ? JSON.parse(stored) : "autumn";
+  }
 });
 
 const buttonClasses = computed(() => {

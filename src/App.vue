@@ -1,5 +1,28 @@
 <script setup lang="ts">
+import { onMounted } from 'vue';
 import AppBody from './components/layout/AppBody.vue';
+import { useI18n } from 'vue-i18n';
+
+const { locale, availableLocales, fallbackLocale } = useI18n({ useScope: 'global' });
+
+onMounted(() => {
+  // Get the user's language from the browser
+  const userLang = navigator.language || fallbackLocale;
+  // If the exact language is available, use it
+  if (availableLocales.includes(userLang)) {
+    locale.value = userLang;
+  } else {
+    // Otherwise, check the base language (e.g. "en" from "en-US")
+    const baseLang = userLang.split('-')[0];
+    // If the base language is available, use it
+    if (availableLocales.includes(baseLang)) {
+      locale.value = baseLang;
+    } else {
+      // Fallback to English if no match is found
+      locale.value = fallbackLocale;
+    }
+  }
+});
 </script>
 
 <template>
@@ -9,67 +32,3 @@ import AppBody from './components/layout/AppBody.vue';
     <app-body />
   </div>
 </template>
-
-<style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
-}
-
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }
-}
-</style>
