@@ -24,6 +24,7 @@ const languages = ref<Locales[]>([
   { code: "de", label: "Deutsch", iso: "de"},
   { code: "es", label: "Español", iso: "es" },
   { code: "fr", label: "français", iso: "fr" },
+  { code: "it", label: "Italiano", iso: "it" },
 ]);
 
 const changeLocale = (lang: string) => {
