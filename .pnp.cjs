@@ -40,7 +40,7 @@ const RAW_RUNTIME_STATE =
           ["@vue/eslint-config-prettier", "virtual:166df8b627b427b22e25f9dc0f55a35f85449f84734faac7774b2a2a2cdfc0b25f79a9dba1f7f0756c502956bc6be23ae170f490c09a0ee2493dab2d0b44a870#npm:10.2.0"],\
           ["@vue/eslint-config-typescript", "virtual:166df8b627b427b22e25f9dc0f55a35f85449f84734faac7774b2a2a2cdfc0b25f79a9dba1f7f0756c502956bc6be23ae170f490c09a0ee2493dab2d0b44a870#npm:14.5.0"],\
           ["@vue/tsconfig", "virtual:166df8b627b427b22e25f9dc0f55a35f85449f84734faac7774b2a2a2cdfc0b25f79a9dba1f7f0756c502956bc6be23ae170f490c09a0ee2493dab2d0b44a870#npm:0.7.0"],\
-          ["daisyui", "npm:5.0.9"],\
+          ["daisyui", "npm:5.0.19"],\
           ["eslint", "virtual:166df8b627b427b22e25f9dc0f55a35f85449f84734faac7774b2a2a2cdfc0b25f79a9dba1f7f0756c502956bc6be23ae170f490c09a0ee2493dab2d0b44a870#npm:9.22.0"],\
           ["eslint-plugin-oxlint", "npm:0.15.13"],\
           ["eslint-plugin-vue", "virtual:166df8b627b427b22e25f9dc0f55a35f85449f84734faac7774b2a2a2cdfc0b25f79a9dba1f7f0756c502956bc6be23ae170f490c09a0ee2493dab2d0b44a870#npm:9.33.0"],\
@@ -54,7 +54,7 @@ const RAW_RUNTIME_STATE =
           ["tailwindcss", "npm:4.0.12"],\
           ["three", "npm:0.174.0"],\
           ["typescript", "patch:typescript@npm%3A5.7.3#optional!builtin<compat/typescript>::version=5.7.3&hash=5786d5"],\
-          ["vite", "virtual:166df8b627b427b22e25f9dc0f55a35f85449f84734faac7774b2a2a2cdfc0b25f79a9dba1f7f0756c502956bc6be23ae170f490c09a0ee2493dab2d0b44a870#npm:6.2.1"],\
+          ["vite", "virtual:166df8b627b427b22e25f9dc0f55a35f85449f84734faac7774b2a2a2cdfc0b25f79a9dba1f7f0756c502956bc6be23ae170f490c09a0ee2493dab2d0b44a870#npm:6.2.6"],\
           ["vite-plugin-vue-devtools", "virtual:166df8b627b427b22e25f9dc0f55a35f85449f84734faac7774b2a2a2cdfc0b25f79a9dba1f7f0756c502956bc6be23ae170f490c09a0ee2493dab2d0b44a870#npm:7.7.2"],\
           ["vue", "virtual:166df8b627b427b22e25f9dc0f55a35f85449f84734faac7774b2a2a2cdfc0b25f79a9dba1f7f0756c502956bc6be23ae170f490c09a0ee2493dab2d0b44a870#npm:3.5.13"],\
           ["vue-flag-icon", "npm:2.1.0"],\
@@ -1908,7 +1908,7 @@ const RAW_RUNTIME_STATE =
           ["@types/vite", null],\
           ["lightningcss", "npm:1.29.2"],\
           ["tailwindcss", "npm:4.0.12"],\
-          ["vite", "virtual:166df8b627b427b22e25f9dc0f55a35f85449f84734faac7774b2a2a2cdfc0b25f79a9dba1f7f0756c502956bc6be23ae170f490c09a0ee2493dab2d0b44a870#npm:6.2.1"]\
+          ["vite", "virtual:166df8b627b427b22e25f9dc0f55a35f85449f84734faac7774b2a2a2cdfc0b25f79a9dba1f7f0756c502956bc6be23ae170f490c09a0ee2493dab2d0b44a870#npm:6.2.6"]\
         ],\
         "packagePeers": [\
           "@types/vite",\
@@ -2220,7 +2220,7 @@ const RAW_RUNTIME_STATE =
           ["@vitejs/plugin-vue", "virtual:166df8b627b427b22e25f9dc0f55a35f85449f84734faac7774b2a2a2cdfc0b25f79a9dba1f7f0756c502956bc6be23ae170f490c09a0ee2493dab2d0b44a870#npm:5.2.1"],\
           ["@types/vite", null],\
           ["@types/vue", "npm:2.0.0"],\
-          ["vite", "virtual:166df8b627b427b22e25f9dc0f55a35f85449f84734faac7774b2a2a2cdfc0b25f79a9dba1f7f0756c502956bc6be23ae170f490c09a0ee2493dab2d0b44a870#npm:6.2.1"],\
+          ["vite", "virtual:166df8b627b427b22e25f9dc0f55a35f85449f84734faac7774b2a2a2cdfc0b25f79a9dba1f7f0756c502956bc6be23ae170f490c09a0ee2493dab2d0b44a870#npm:6.2.6"],\
           ["vue", "virtual:166df8b627b427b22e25f9dc0f55a35f85449f84734faac7774b2a2a2cdfc0b25f79a9dba1f7f0756c502956bc6be23ae170f490c09a0ee2493dab2d0b44a870#npm:3.5.13"]\
         ],\
         "packagePeers": [\
@@ -2249,7 +2249,7 @@ const RAW_RUNTIME_STATE =
           ["@types/vite", null],\
           ["@types/vue", "npm:2.0.0"],\
           ["@vue/babel-plugin-jsx", "virtual:052bc85ce3bf444d2ceb508663fe21815f9e163e212343807eb76406c1d9fe3c6c66785c9583da445816d4f7cfb9b565815bc2c7a3757c620c53bf917673aaa3#npm:1.4.0"],\
-          ["vite", "virtual:166df8b627b427b22e25f9dc0f55a35f85449f84734faac7774b2a2a2cdfc0b25f79a9dba1f7f0756c502956bc6be23ae170f490c09a0ee2493dab2d0b44a870#npm:6.2.1"],\
+          ["vite", "virtual:166df8b627b427b22e25f9dc0f55a35f85449f84734faac7774b2a2a2cdfc0b25f79a9dba1f7f0756c502956bc6be23ae170f490c09a0ee2493dab2d0b44a870#npm:6.2.6"],\
           ["vue", "virtual:166df8b627b427b22e25f9dc0f55a35f85449f84734faac7774b2a2a2cdfc0b25f79a9dba1f7f0756c502956bc6be23ae170f490c09a0ee2493dab2d0b44a870#npm:3.5.13"]\
         ],\
         "packagePeers": [\
@@ -3006,7 +3006,7 @@ const RAW_RUNTIME_STATE =
           ["@vue/eslint-config-prettier", "virtual:166df8b627b427b22e25f9dc0f55a35f85449f84734faac7774b2a2a2cdfc0b25f79a9dba1f7f0756c502956bc6be23ae170f490c09a0ee2493dab2d0b44a870#npm:10.2.0"],\
           ["@vue/eslint-config-typescript", "virtual:166df8b627b427b22e25f9dc0f55a35f85449f84734faac7774b2a2a2cdfc0b25f79a9dba1f7f0756c502956bc6be23ae170f490c09a0ee2493dab2d0b44a870#npm:14.5.0"],\
           ["@vue/tsconfig", "virtual:166df8b627b427b22e25f9dc0f55a35f85449f84734faac7774b2a2a2cdfc0b25f79a9dba1f7f0756c502956bc6be23ae170f490c09a0ee2493dab2d0b44a870#npm:0.7.0"],\
-          ["daisyui", "npm:5.0.9"],\
+          ["daisyui", "npm:5.0.19"],\
           ["eslint", "virtual:166df8b627b427b22e25f9dc0f55a35f85449f84734faac7774b2a2a2cdfc0b25f79a9dba1f7f0756c502956bc6be23ae170f490c09a0ee2493dab2d0b44a870#npm:9.22.0"],\
           ["eslint-plugin-oxlint", "npm:0.15.13"],\
           ["eslint-plugin-vue", "virtual:166df8b627b427b22e25f9dc0f55a35f85449f84734faac7774b2a2a2cdfc0b25f79a9dba1f7f0756c502956bc6be23ae170f490c09a0ee2493dab2d0b44a870#npm:9.33.0"],\
@@ -3020,7 +3020,7 @@ const RAW_RUNTIME_STATE =
           ["tailwindcss", "npm:4.0.12"],\
           ["three", "npm:0.174.0"],\
           ["typescript", "patch:typescript@npm%3A5.7.3#optional!builtin<compat/typescript>::version=5.7.3&hash=5786d5"],\
-          ["vite", "virtual:166df8b627b427b22e25f9dc0f55a35f85449f84734faac7774b2a2a2cdfc0b25f79a9dba1f7f0756c502956bc6be23ae170f490c09a0ee2493dab2d0b44a870#npm:6.2.1"],\
+          ["vite", "virtual:166df8b627b427b22e25f9dc0f55a35f85449f84734faac7774b2a2a2cdfc0b25f79a9dba1f7f0756c502956bc6be23ae170f490c09a0ee2493dab2d0b44a870#npm:6.2.6"],\
           ["vite-plugin-vue-devtools", "virtual:166df8b627b427b22e25f9dc0f55a35f85449f84734faac7774b2a2a2cdfc0b25f79a9dba1f7f0756c502956bc6be23ae170f490c09a0ee2493dab2d0b44a870#npm:7.7.2"],\
           ["vue", "virtual:166df8b627b427b22e25f9dc0f55a35f85449f84734faac7774b2a2a2cdfc0b25f79a9dba1f7f0756c502956bc6be23ae170f490c09a0ee2493dab2d0b44a870#npm:3.5.13"],\
           ["vue-flag-icon", "npm:2.1.0"],\
@@ -3178,10 +3178,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["daisyui", [\
-      ["npm:5.0.9", {\
-        "packageLocation": "../../../.yarn/berry/cache/daisyui-npm-5.0.9-46e58e3361-10c0.zip/node_modules/daisyui/",\
+      ["npm:5.0.19", {\
+        "packageLocation": "../../../.yarn/berry/cache/daisyui-npm-5.0.19-08f1cb2a06-10c0.zip/node_modules/daisyui/",\
         "packageDependencies": [\
-          ["daisyui", "npm:5.0.9"]\
+          ["daisyui", "npm:5.0.19"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -5874,17 +5874,17 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["vite", [\
-      ["npm:6.2.1", {\
-        "packageLocation": "../../../.yarn/berry/cache/vite-npm-6.2.1-af70784b4e-10c0.zip/node_modules/vite/",\
+      ["npm:6.2.6", {\
+        "packageLocation": "../../../.yarn/berry/cache/vite-npm-6.2.6-19e4bde6cc-10c0.zip/node_modules/vite/",\
         "packageDependencies": [\
-          ["vite", "npm:6.2.1"]\
+          ["vite", "npm:6.2.6"]\
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:166df8b627b427b22e25f9dc0f55a35f85449f84734faac7774b2a2a2cdfc0b25f79a9dba1f7f0756c502956bc6be23ae170f490c09a0ee2493dab2d0b44a870#npm:6.2.1", {\
-        "packageLocation": "./.yarn/__virtual__/vite-virtual-3e0f07d95e/4/.yarn/berry/cache/vite-npm-6.2.1-af70784b4e-10c0.zip/node_modules/vite/",\
+      ["virtual:166df8b627b427b22e25f9dc0f55a35f85449f84734faac7774b2a2a2cdfc0b25f79a9dba1f7f0756c502956bc6be23ae170f490c09a0ee2493dab2d0b44a870#npm:6.2.6", {\
+        "packageLocation": "./.yarn/__virtual__/vite-virtual-05106f5203/4/.yarn/berry/cache/vite-npm-6.2.6-19e4bde6cc-10c0.zip/node_modules/vite/",\
         "packageDependencies": [\
-          ["vite", "virtual:166df8b627b427b22e25f9dc0f55a35f85449f84734faac7774b2a2a2cdfc0b25f79a9dba1f7f0756c502956bc6be23ae170f490c09a0ee2493dab2d0b44a870#npm:6.2.1"],\
+          ["vite", "virtual:166df8b627b427b22e25f9dc0f55a35f85449f84734faac7774b2a2a2cdfc0b25f79a9dba1f7f0756c502956bc6be23ae170f490c09a0ee2493dab2d0b44a870#npm:6.2.6"],\
           ["@types/jiti", null],\
           ["@types/less", null],\
           ["@types/lightningcss", null],\
@@ -5983,7 +5983,7 @@ const RAW_RUNTIME_STATE =
           ["perfect-debounce", "npm:1.0.0"],\
           ["picocolors", "npm:1.1.1"],\
           ["sirv", "npm:3.0.1"],\
-          ["vite", "virtual:166df8b627b427b22e25f9dc0f55a35f85449f84734faac7774b2a2a2cdfc0b25f79a9dba1f7f0756c502956bc6be23ae170f490c09a0ee2493dab2d0b44a870#npm:6.2.1"]\
+          ["vite", "virtual:166df8b627b427b22e25f9dc0f55a35f85449f84734faac7774b2a2a2cdfc0b25f79a9dba1f7f0756c502956bc6be23ae170f490c09a0ee2493dab2d0b44a870#npm:6.2.6"]\
         ],\
         "packagePeers": [\
           "@nuxt/kit",\
@@ -6012,7 +6012,7 @@ const RAW_RUNTIME_STATE =
           ["@vue/devtools-shared", "npm:7.7.2"],\
           ["execa", "npm:9.5.2"],\
           ["sirv", "npm:3.0.1"],\
-          ["vite", "virtual:166df8b627b427b22e25f9dc0f55a35f85449f84734faac7774b2a2a2cdfc0b25f79a9dba1f7f0756c502956bc6be23ae170f490c09a0ee2493dab2d0b44a870#npm:6.2.1"],\
+          ["vite", "virtual:166df8b627b427b22e25f9dc0f55a35f85449f84734faac7774b2a2a2cdfc0b25f79a9dba1f7f0756c502956bc6be23ae170f490c09a0ee2493dab2d0b44a870#npm:6.2.6"],\
           ["vite-plugin-inspect", "virtual:40cc833926e45009aa2207787c9564b3af57acdcbfd24271effdb0fdee7f9cb6248484d4d2b5ba8341abc0d9680ce6b89dbc0994330e8e82916d05e82139ac5f#npm:0.8.9"],\
           ["vite-plugin-vue-inspector", "virtual:40cc833926e45009aa2207787c9564b3af57acdcbfd24271effdb0fdee7f9cb6248484d4d2b5ba8341abc0d9680ce6b89dbc0994330e8e82916d05e82139ac5f#npm:5.3.1"]\
         ],\
@@ -6045,7 +6045,7 @@ const RAW_RUNTIME_STATE =
           ["@vue/compiler-dom", "npm:3.5.13"],\
           ["kolorist", "npm:1.8.0"],\
           ["magic-string", "npm:0.30.17"],\
-          ["vite", "virtual:166df8b627b427b22e25f9dc0f55a35f85449f84734faac7774b2a2a2cdfc0b25f79a9dba1f7f0756c502956bc6be23ae170f490c09a0ee2493dab2d0b44a870#npm:6.2.1"]\
+          ["vite", "virtual:166df8b627b427b22e25f9dc0f55a35f85449f84734faac7774b2a2a2cdfc0b25f79a9dba1f7f0756c502956bc6be23ae170f490c09a0ee2493dab2d0b44a870#npm:6.2.6"]\
         ],\
         "packagePeers": [\
           "@types/vite",\
