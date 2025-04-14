@@ -17,7 +17,6 @@ const docRoutes = computed(() => [
   { path: '/docs/skills',   label: t("domain.skills") },
   { path: '/docs/projects', label: t("domain.projects") },
   { path: '/docs/blogs',    label: t("domain.blogs") },
-  { path: '/docs/faqs',     label: t("domain.faq") },
   { path: '/docs/cv',       label: t("domain.cv") },
 ]);
 

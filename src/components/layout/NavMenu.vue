@@ -42,11 +42,6 @@ const emit = defineEmits(['link-clicked'])
           </router-link>
         </li>
         <li>
-          <router-link to="/docs/faqs" exact-active-class="menu-active" @click="emit('link-clicked')">
-            {{ t("domain.faq") }}
-          </router-link>
-        </li>
-        <li>
           <router-link to="/docs/cv" exact-active-class="menu-active" @click="emit('link-clicked')">
             {{ t("domain.cv") }}
           </router-link>

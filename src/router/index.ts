@@ -7,7 +7,6 @@ import WorkExperience from '../components/sections/WorkExperience.vue';
 import Skills from '../components/sections/Skills.vue';
 import Projects from '../components/sections/Projects.vue';
 import BlogPosts from '../components/sections/BlogPosts.vue';
-import FAQs from '../components/sections/FAQs.vue';
 import CV from '../components/sections/CV.vue';
 
 const router = createRouter({
@@ -32,7 +31,6 @@ const router = createRouter({
         { path: 'skills', name: 'Skills', component: Skills },
         { path: 'projects', name: 'Projects', component: Projects },
         { path: 'blogs', name: 'Blogs', component: BlogPosts },
-        { path: 'faqs', name: 'FAQs', component: FAQs },
         { path: 'cv', name: 'CV', component: CV },
       ],
     },
