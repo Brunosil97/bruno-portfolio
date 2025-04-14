@@ -13,7 +13,9 @@
     "resources": "资源",
     "live": "实时",
     "published": "已发布",
-    "read-more": "阅读更多"
+    "read-more": "阅读更多",
+    "professional": "专业",
+    "personal": "个人"
   },
   "tech": {
     "frontend": "前端",
@@ -151,5 +153,18 @@
     "performant-bio": "提供旨在实现速度和高效性的解决方案。他的工作利用现代框架和最佳实践，确保每个项目在最小负荷下顺畅运行。",
     "versatile": "多才多艺",
     "versatile-bio": "凭借涵盖网页开发全领域的技能，从 Vue 和 React 等前端框架到全栈解决方案及云集成，他灵活的方式能够满足任何项目的需求。"
+  },
+  "projects": {
+    "heiko-cbd-desc": "这是一个实时电子商务网站，专为英国健康和生活方式市场提供优质 CBD 产品的客户而建。",
+    "heiko-cbd-desc-2": "该网站采用现代化、响应式的设计和直观的用户界面，确保流畅的导航和安全的结账流程。它集成了先进的产品管理和筛选选项，提供个性化的购物体验，并注重转化率优化。",
+    "heiko-cbd-desc-3": "该网站不仅显著提高了销售额，还增强了品牌参与度和信任度。",
+    "heiko-education-desc": "Heiko Education 是为与 HeikoCBD 相同的客户创建的创新教育平台。",
+    "heiko-education-desc-2": "此外，该网站还提供易于使用的联系选项，允许用户直接与 Heiko 联系以进行进一步的咨询。",
+    "heiko-education-desc-3": "作为一个在线中心，该网站提供精选的博客、文章和资源，提供有关 CBD、健康和生活方式的深刻见解。",
+    "heiko-education-desc-4": "此外，该网站还提供易于使用的联系选项，允许用户直接与 Heiko 联系以进行进一步的咨询。",
+    "rain-or-shine-desc": "Rain Or Shine 是一款基于 Vue 3 和 Vite 构建的响应式天气预报应用。它与 Rain Or Shine 后端连接，提供详细的天气预报，包括今日天气概览和每小时数据。",
+    "rain-or-shine-desc-2": "该应用程序采用 Vuetify UI 库来提供现代、直观的界面，可无缝适应桌面和移动屏幕。Rain Or Shine 后端提供详细的天气预报，包括今日天气概览和每小时数据。",
+    "rain-or-shine-desc-3": "后端服务使用 Deno（一种安全且现代的 JavaScript 和 TypeScript 运行时）开发，并与 OpenWeatherMap API 集成，以通过 One Call API 获取精确的城市地理编码和天气详细信息。",
+    "rain-or-shine-desc-4": "这个项目的主要目的是练习我的 API 开发技能，并尝试学习 Deno，特别是 Deno 2。"
   }
 }

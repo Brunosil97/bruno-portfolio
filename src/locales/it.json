@@ -13,7 +13,9 @@
     "resources": "Risorse",
     "live": "Live",
     "published": "Pubblicato",
-    "read-more": "Leggi di più"
+    "read-more": "Leggi di più",
+    "professional": "Professionale",
+    "personal": "Personale"
   },
   "tech": {
     "frontend": "Frontend",
@@ -151,5 +153,18 @@
     "performant-bio": "Fornisce soluzioni concepite per la velocità e l'efficienza. Il suo lavoro sfrutta framework moderni e le migliori pratiche per garantire che ogni progetto funzioni senza intoppi con un minimo sovraccarico.",
     "versatile": "Versatile",
     "versatile-bio": "Con un set di competenze che copre l'intero spettro dello sviluppo web, dai framework front-end come Vue e React fino a soluzioni full-stack e integrazioni cloud, il suo approccio adattabile risponde alle esigenze di ogni progetto."
+  },
+  "projects": {
+    "heiko-cbd-desc": "Si tratta di un sito web di e-commerce attivo, realizzato per un cliente specializzato in prodotti CBD di alta qualità per il mercato della salute e dello stile di vita del Regno Unito.",
+    "heiko-cbd-desc-2": "Il sito presenta un design moderno e reattivo e un'interfaccia utente intuitiva che garantisce una navigazione fluida e un processo di pagamento sicuro. Integra opzioni avanzate di gestione dei prodotti e di filtraggio per offrire esperienze di acquisto personalizzate, con particolare attenzione all'ottimizzazione delle conversioni.",
+    "heiko-cbd-desc-3": "Il sito web non solo incrementa significativamente le vendite, ma rafforza anche il coinvolgimento e la fiducia nel marchio.",
+    "heiko-education-desc": "Heiko Education è una piattaforma educativa innovativa creata per lo stesso cliente di HeikoCBD.",
+    "heiko-education-desc-2": "Inoltre, il sito offre opzioni di contatto semplici da usare che consentono agli utenti di contattare Heiko direttamente per ulteriori informazioni.",
+    "heiko-education-desc-3": "Questo sito, che funge da hub online, offre una raccolta curata di blog, articoli e risorse che forniscono informazioni approfondite su CBD, salute e stile di vita.",
+    "heiko-education-desc-4": "Inoltre, il sito offre opzioni di contatto semplici da usare che consentono agli utenti di contattare Heiko direttamente per ulteriori informazioni.",
+    "rain-or-shine-desc": "Rain Or Shine è un'applicazione di previsioni meteo responsive sviluppata con Vue 3 e Vite. Si collega al backend di Rain Or Shine per fornire previsioni meteo dettagliate, tra cui una panoramica del meteo odierno e dati orari.",
+    "rain-or-shine-desc-2": "L'applicazione utilizza la libreria Vuetify UI per offrire un'interfaccia moderna e intuitiva che si adatta perfettamente sia agli schermi desktop che a quelli mobili.",
+    "rain-or-shine-desc-3": "Il servizio backend è sviluppato utilizzando Deno, un runtime sicuro e moderno per JavaScript e TypeScript, e si integra con l'API OpenWeatherMap per recuperare la geocodifica precisa della città e i dettagli meteorologici tramite l'API One Call.",
+    "rain-or-shine-desc-4": "L'obiettivo principale di questo progetto era mettere in pratica le mie competenze di sviluppo API e cimentarmi nell'apprendimento di Deno, in particolare di Deno 2."
   }
 }

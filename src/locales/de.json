@@ -13,7 +13,9 @@
     "resources": "Ressourcen",
     "live": "Live",
     "published": "Veröffentlicht",
-    "read-more": "Mehr lesen"
+    "read-more": "Mehr lesen",
+    "professional": "Professionell",
+    "personal": "Persönlich"
   },
   "tech": {
     "frontend": "Frontend",
@@ -151,5 +153,18 @@
     "performant-bio": "Liefert Lösungen, die auf Geschwindigkeit und Effizienz ausgelegt sind. Seine Arbeit nutzt moderne Frameworks und Best Practices, um sicherzustellen, dass jedes Projekt reibungslos mit minimalem Overhead läuft.",
     "versatile": "Vielseitig",
     "versatile-bio": "Mit einem Kompetenzspektrum, das den gesamten Bereich der Webentwicklung abdeckt – von Frontend-Frameworks wie Vue und React bis hin zu Full-Stack-Lösungen und Cloud-Integrationen – erfüllt seine anpassungsfähige Herangehensweise die Anforderungen jedes Projekts."
+  },
+  "projects": {
+    "heiko-cbd-desc": "HeikoCBD ist eine E-Commerce-Website, die für einen Kunden entwickelt wurde, der sich auf CBD-Produkte spezialisiert hat.",
+    "heiko-cbd-desc-2": "Die Website bietet eine benutzerfreundliche Oberfläche, die es den Nutzern ermöglicht, Produkte zu durchsuchen, zu vergleichen und zu kaufen.",
+    "heiko-cbd-desc-3": "Die Website bietet eine benutzerfreundliche Oberfläche, die es den Nutzern ermöglicht, Produkte zu durchsuchen, zu vergleichen und zu kaufen.",
+    "heiko-education-desc": "Heiko Education ist eine informative Website, die sich auf die Bereitstellung von Bildungsressourcen und Informationen über CBD-Produkte konzentriert.",
+    "heiko-education-desc-2": "Die Website bietet eine benutzerfreundliche Oberfläche, die es den Nutzern ermöglicht, verschiedene Artikel und Blogs zu erkunden, die sich mit CBD, Gesundheit und Lebensstil befassen.",
+    "heiko-education-desc-3": "Die Website enthält auch eine umfassende FAQ-Sektion, die häufige Fragen zu CBD-Produkten und deren Verwendung beantwortet.",
+    "heiko-education-desc-4": "Die Website ist so konzipiert, dass sie den Nutzern hilft, fundierte Entscheidungen über CBD-Produkte zu treffen und deren Vorteile zu verstehen.",
+    "rain-or-shine-desc": "Rain or Shine ist eine Webanwendung, die den Nutzern aktuelle Wetterdaten für verschiedene Städte weltweit bereitstellt.",
+    "rain-or-shine-desc-2": "Die Anwendung ermöglicht es den Nutzern, eine Stadt auszuwählen und die aktuellen Wetterbedingungen, einschließlich Temperatur, Luftfeuchtigkeit und Wettervorhersage, anzuzeigen.",
+    "rain-or-shine-desc-3": "Der Backend-Dienst wird mit Deno entwickelt, einer sicheren und modernen Laufzeitumgebung für JavaScript und TypeScript, und ist in die OpenWeatherMap-API integriert, um über die One Call-API präzise Geokodierungs- und Wetterdetails für Städte abzurufen.",
+    "rain-or-shine-desc-4": "Der Schwerpunkt dieses Projekts lag darauf, meine API-Entwicklungsfähigkeiten zu üben und mich mit Deno vertraut zu machen. Insbesondere mit Deno 2."
   }
 }

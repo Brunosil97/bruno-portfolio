@@ -13,7 +13,9 @@
     "resources": "Resources",
     "live": "Live",
     "published": "Published",
-    "read-more": "Read More"
+    "read-more": "Read More",
+    "professional": "Professional",
+    "personal": "Personal"
   },
   "tech": {
     "frontend": "Frontend",
@@ -160,5 +162,18 @@
     "performant-bio": "Delivers solutions that are built for speed and efficiency. His work leverages modern frameworks and best practices to ensure every project runs smoothly with minimal overhead.",
     "versatile": "Versatile",
     "versatile-bio": "With a skill set that spans the full spectrum of web development. From front-end frameworks like Vue and React to full-stack solutions and cloud integrations, his adaptable approach meets the needs of any project."
+  },
+  "projects": {
+    "heiko-cbd-desc": "This is a live e-commerce website built for a client specialising in premium CBD products for the UK health and lifestyle market.",
+    "heiko-cbd-desc-2": "The site features a modern, responsive design and an intuitive user interface that ensures smooth navigation and a secure checkout process. It integrates advanced product management and filtering options to deliver personalised shopping experiences. With a focus on conversion optimisation.",
+    "heiko-cbd-desc-3": "The website not only significantly boosts sales but also strengthens brand engagement and trust.",
+    "heiko-education-desc": "Heiko Education is an innovative educational platform created for the same client as HeikoCBD.",
+    "heiko-education-desc-2": "Additionally, the site features easy-to-use contact options to allow users to connect with Heiko directly for further inquiries.",
+    "heiko-education-desc-3": "Serving as an online hub, this site offers a curated collection of blogs, articles, and resources that provide insightful information about CBD, health, and lifestyle.",
+    "heiko-education-desc-4": "Additionally, the site features easy-to-use contact options to allow users to connect with Heiko directly for further inquiries.",
+    "rain-or-shine-desc": "Rain Or Shine is a responsive weather forecasting application built with Vue 3 and Vite. It connects with the Rain Or Shine backend to deliver detailed weather forecasts including an overview of today's weather and hourly data.",
+    "rain-or-shine-desc-2": "The application employs the Vuetify UI library to offer a modern, intuitive interface that adapts seamlessly to both desktop and mobile screens.",
+    "rain-or-shine-desc-3": "The backend service is developed using Deno, a secure and modern runtime for JavaScript and TypeScript, and integrates with the OpenWeatherMap API to fetch precise city geocoding and weather details via the One Call API.",
+    "rain-or-shine-desc-4": "The main focus of this project was to practice my API development skills and venture into learning about Deno. Specifically Deno 2."
   }
 }

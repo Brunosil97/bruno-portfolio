@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { computed } from 'vue';
 import { ExternalLink } from 'lucide-vue-next';
 import { useI18n } from 'vue-i18n';
 
@@ -20,29 +20,29 @@ interface PersonalProject {
   descriptions: string[];
 }
 
-const proProjects = ref<ProfessionalProject[]>([
+const proProjects = computed(() => <ProfessionalProject[]>[
   {
     url: 'https://heikocbd.com/',
     title: 'Heiko CBD',
     descriptions: [
-      "This is a live e-commerce website built for a client specialising in premium CBD products for the UK health and lifestyle market.",
-      "The site features a modern, responsive design and an intuitive user interface that ensures smooth navigation and a secure checkout process. It integrates advanced product management and filtering options to deliver personalised shopping experiences. With a focus on conversion optimisation.",
-      "The website not only significantly boosts sales but also strengthens brand engagement and trust."
+      t("projects.heiko-cbd-desc"),
+      t("projects.heiko-cbd-desc-2"),
+      t("projects.heiko-cbd-desc-3"),
     ],
   },
   {
     url: 'https://heikoeducation.com/journals',
     title: 'Heiko Education',
     descriptions: [
-      "Heiko Education is an innovative educational platform created for the same client as HeikoCBD.",
-      "Additionally, the site features easy-to-use contact options to allow users to connect with Heiko directly for further inquiries.",
-      "Serving as an online hub, this site offers a curated collection of blogs, articles, and resources that provide insightful information about CBD, health, and lifestyle.",
-      "Additionally, the site features easy-to-use contact options to allow users to connect with Heiko directly for further inquiries."
+      t("projects.heiko-education-desc"),
+      t("projects.heiko-education-desc-2"),
+      t("projects.heiko-education-desc-3"),
+      t("projects.heiko-education-desc-4"),
     ],
   }
 ]);
 
-const perProjects = ref<PersonalProject[]>([
+const perProjects = computed(() => <PersonalProject[]>[
   {
     url: "https://localhost/rain-or-shine",
     imgSrc: "https://github.com/Brunosil97/rain-or-shine-frontend/blob/main/src/assets/dashboard.png?raw=true",
@@ -50,10 +50,10 @@ const perProjects = ref<PersonalProject[]>([
     backend: "https://github.com/Brunosil97/rain-or-shine-backend",
     frontend: "https://github.com/Brunosil97/rain-or-shine-frontend",
     descriptions: [
-      "Rain Or Shine is a responsive weather forecasting application built with Vue 3 and Vite. It connects with the Rain Or Shine backend to deliver detailed weather forecasts including an overview of today's weather and hourly data.",
-      "The application employs the Vuetify UI library to offer a modern, intuitive interface that adapts seamlessly to both desktop and mobile screens.",
-      "The backend service is developed using Deno, a secure and modern runtime for JavaScript and TypeScript, and integrates with the OpenWeatherMap API to fetch precise city geocoding and weather details via the One Call API.",
-      "The main focus of this project was to practice my API development skills and venture into learning about Deno. Specifically Deno 2."
+      t("projects.rain-or-shine-desc"),
+      t("projects.rain-or-shine-desc-2"),
+      t("projects.rain-or-shine-desc-3"),
+      t("projects.rain-or-shine-desc-4"),
     ]
   }
 ])
@@ -61,8 +61,9 @@ const perProjects = ref<PersonalProject[]>([
 
 <template>
   <div class="container mx-auto p-4">
-    <h1 class="text-4xl font-bold mb-8">Projects</h1>
-    <div class="divider divider-primary mb-8">Professional</div>
+    <h1 class="text-4xl font-bold mb-8">{{ t("domain.projects") }}</h1>
+    <div class="divider divider-primary mb-8">{{ t("common.professional") }}</div>
+    <!-- Professional Projects Section -->
     <template v-for="(project, index) in proProjects" :key="project.title">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <!-- Left Column: DaisyUI Browser Mockup with iframe (spanning 2 columns on desktop) -->
@@ -90,8 +91,8 @@ const perProjects = ref<PersonalProject[]>([
       <div v-if="index < proProjects.length - 1" class="divider divider-secondary my-8" />
     </template>
 
-    <div class="divider divider-primary mt-8 mb-8">Personal</div>
-
+    <div class="divider divider-primary mt-8 mb-8">{{ t("common.personal") }}</div>
+    <!-- Personal Projects Section -->
     <template v-for="(project, index) in perProjects" :key="project.title">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <!-- Left Column: DaisyUI Browser Mockup with iframe (spanning 2 columns on desktop) -->
