@@ -15,7 +15,8 @@
     "published": "已发布",
     "read-more": "阅读更多",
     "professional": "专业",
-    "personal": "个人"
+    "personal": "个人",
+    "download": "下载"
   },
   "tech": {
     "frontend": "前端",
@@ -32,6 +33,7 @@
   },
   "domain": {
     "video-not-supported": "您的浏览器不支持 video 标签",
+    "pdf-not-supported": "无法在移动设备上预览 PDF 格式的简历，请随意下载。",
     "contact": "联系",
     "work-experience": "工作经历",
     "skills": "技能",

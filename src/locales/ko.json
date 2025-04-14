@@ -15,7 +15,8 @@
     "published": "게시됨",
     "read-more": "더 읽기",
     "professional": "전문가",
-    "personal": "개인"
+    "personal": "개인",
+    "download": "다운로드"
   },
   "tech": {
     "frontend": "프론트엔드",
@@ -32,6 +33,7 @@
   },
   "domain": {
     "video-not-supported": "사용 중인 브라우저는 비디오 태그를 지원하지 않습니다",
+    "pdf-not-supported": "모바일에서는 이력서를 PDF로 미리 볼 수 없습니다. 대신 다운로드하시기 바랍니다.",
     "contact": "연락처",
     "work-experience": "경력",
     "skills": "기술",

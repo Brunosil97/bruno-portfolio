@@ -15,7 +15,8 @@
     "published": "公開",
     "read-more": "続きを読む",
     "professional": "プロフェッショナル",
-    "personal": "パーソナル"
+    "personal": "パーソナル",
+    "download": "ダウンロード"
   },
   "tech": {
     "frontend": "フロントエンド",
@@ -32,6 +33,7 @@
   },
   "domain": {
     "video-not-supported": "お使いのブラウザは video タグをサポートしていません",
+    "pdf-not-supported": "モバイルでは履歴書を PDF としてプレビューできません。代わりにダウンロードしてください。",
     "contact": "連絡先",
     "work-experience": "職務経歴",
     "skills": "スキル",

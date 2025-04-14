@@ -15,7 +15,8 @@
     "published": "Publicado",
     "read-more": "Leer Más",
     "professional": "Profesional",
-    "personal": "Personal"
+    "personal": "Personal",
+    "download": "Descargar"
   },
   "tech": {
     "frontend": "Front-end",
@@ -32,6 +33,7 @@
   },
   "domain": {
     "video-not-supported": "Tu navegador no soporta la etiqueta de video",
+    "pdf-not-supported": "No es posible obtener una vista previa del CV como PDF en el móvil, no dudes en descargarlo en su lugar.",
     "contact": "Contacto",
     "work-experience": "Experiencia Laboral",
     "skills": "Habilidades",

@@ -15,7 +15,8 @@
     "published": "Veröffentlicht",
     "read-more": "Mehr lesen",
     "professional": "Professionell",
-    "personal": "Persönlich"
+    "personal": "Persönlich",
+    "download": "Herunterladen"
   },
   "tech": {
     "frontend": "Frontend",
@@ -32,6 +33,7 @@
   },
   "domain": {
     "video-not-supported": "Ihr Browser unterstützt das Video-Tag nicht",
+    "pdf-not-supported": "Auf dem Mobilgerät ist keine Vorschau des Lebenslaufs als PDF möglich. Laden Sie ihn stattdessen gerne herunter.",
     "contact": "Kontakt",
     "work-experience": "Berufserfahrung",
     "skills": "Fähigkeiten",

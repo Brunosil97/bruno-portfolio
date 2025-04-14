@@ -37,7 +37,7 @@ const showVideo = computed(() => route.path !== "/");
           loop
           class="absolute inset-0 w-full h-full object-cover z-0"
         >
-          <source src="../../assets/background.mp4" type="video/mp4" />
+          <source src="/video/background.mp4" type="video/mp4" />
           {{ t("domain.video-not-supported") }}
         </video>
         <!-- Navbar Content -->
