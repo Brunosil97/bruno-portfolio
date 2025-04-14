@@ -1,10 +1,10 @@
-# Bruno Portfolio
+# Bruno's Portfolio
 
-Welcome to **Bruno Portfolio**—a modern, innovative personal portfolio developed with Vue 3 and Vite, designed to showcase my technical skills and projects as a developer. This portfolio is presented as a real-world technical documentation site, giving visitors a unique experience that mimics the look and feel of professional web documentation.
+Welcome to **Bruno's Portfolio**—a modern, innovative personal portfolio developed with Vue 3 and Vite, designed to showcase my technical skills and projects as a developer. This portfolio is presented as a real-world technical documentation site, giving visitors a unique experience that mimics the look and feel of professional web documentation.
 
 ## Overview
 
-**Bruno Portfolio** serves as an online resume and project showcase for Bruno Silva. Designed as if it were a tech documentation website, the portfolio details my professional experience, technical skills, and diverse projects. Each section is presented with clarity and precision, reinforcing my commitment to quality and innovation.
+**Bruno's Portfolio** serves as an online resume and project showcase for Bruno Silva. Designed as if it were a tech documentation website, the portfolio details my professional experience, technical skills, and diverse projects. Each section is presented with clarity and precision, reinforcing my commitment to quality and innovation.
 
 ## Features
 
@@ -54,6 +54,7 @@ Clone the repository and install the dependencies:
 
 ```sh
 git clone https://github.com/Brunosil97/bruno-portfolio.git
+
 cd bruno-portfolio
 ```
 
