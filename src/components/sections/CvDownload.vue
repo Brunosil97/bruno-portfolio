@@ -2,7 +2,8 @@
 import { computed } from 'vue';
 import { Download, Info } from 'lucide-vue-next';
 import { useI18n } from 'vue-i18n';
-import pdfUrl from "/pdf/cv_bruno_silva.pdf";
+
+const pdfUrl = "/pdf/cv_bruno_silva.pdf";
 
 const { t } = useI18n();
 // Dynamically get the DaisyUI info colour (from the CSS variable --color-info)

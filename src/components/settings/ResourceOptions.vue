@@ -2,12 +2,7 @@
 import { Github, Linkedin, Book } from 'lucide-vue-next';
 import { useI18n } from 'vue-i18n';
 
-const props = defineProps({
-  isMobile: {
-    type: Boolean,
-    default: false
-  }
-});
+const { isMobile } = defineProps<{ isMobile?: boolean }>();
 
 const { t } = useI18n();
 </script>

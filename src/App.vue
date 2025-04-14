@@ -1,25 +1,24 @@
 <script setup lang="ts">
 import { onMounted } from 'vue';
-import AppBody from './components/layout/AppBody.vue';
 import { useI18n } from 'vue-i18n';
+
+import AppBody from './components/layout/AppBody.vue';
 
 const { locale, availableLocales, fallbackLocale } = useI18n({ useScope: 'global' });
 
 onMounted(() => {
-  // Get the user's language from the browser
-  const userLang = navigator.language || fallbackLocale;
-  // If the exact language is available, use it
+  // Ensure fallbackLocale is a string; otherwise, default to 'en'
+  const fallback: string = typeof fallbackLocale === 'string' ? fallbackLocale : 'en';
+  const userLang: string = navigator.language || fallback;
+
   if (availableLocales.includes(userLang)) {
     locale.value = userLang;
   } else {
-    // Otherwise, check the base language (e.g. "en" from "en-US")
     const baseLang = userLang.split('-')[0];
-    // If the base language is available, use it
     if (availableLocales.includes(baseLang)) {
       locale.value = baseLang;
     } else {
-      // Fallback to English if no match is found
-      locale.value = fallbackLocale;
+      locale.value = fallback;
     }
   }
 });
