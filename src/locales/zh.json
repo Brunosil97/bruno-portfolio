@@ -10,9 +10,14 @@
     "now": "现在",
     "all": "全部",
     "settings": "设置",
-    "resources": "资源"
+    "resources": "资源",
+    "live": "实时",
+    "published": "已发布",
+    "read-more": "阅读更多"
   },
   "tech": {
+    "frontend": "前端",
+    "backend": "后端",
     "react": "React",
     "vue": "Vue.js",
     "github": "GitHub",

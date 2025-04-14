@@ -143,11 +143,11 @@ const blogs = ref([
           <p class="text-sm">{{ blog.subtitle }}</p>
           <p class="text-xs text-gray-500">
             <span class="text-primary mr-2">{{ blog.date }}</span>
-            <div v-if="blog.published" class="badge badge-outline badge-primary badge-sm">Published</div>
+            <div v-if="blog.published" class="badge badge-outline badge-primary badge-sm">{{ t("common.published") }}</div>
           </p>
           <div class="card-actions justify-end mt-2">
             <a :href="blog.src" target="_blank" class="btn btn-primary btn-sm">
-              Read More
+              {{ t("common.read-more") }}
               <ExternalLink :size="16" />
             </a>
           </div>

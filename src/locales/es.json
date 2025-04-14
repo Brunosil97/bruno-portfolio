@@ -10,9 +10,14 @@
     "now": "Ahora",
     "all": "Todo",
     "settings": "Ajustes",
-    "resources": "Recursos"
+    "resources": "Recursos",
+    "live": "En Vivo",
+    "published": "Publicado",
+    "read-more": "Leer Más"
   },
   "tech": {
+    "frontend": "Front-end",
+    "backend": "Back-end",
     "react": "React",
     "vue": "Vue.js",
     "github": "GitHub",

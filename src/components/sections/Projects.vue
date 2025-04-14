@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { ExternalLink } from 'lucide-vue-next';
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
 
 interface ProfessionalProject {
   url: string;
@@ -74,7 +77,7 @@ const perProjects = ref<PersonalProject[]>([
           <div class="flex items-center space-x-4">
             <h2 class="text-1xl font-bold md:text-2xl">{{ project.title }}</h2>
             <a :href="project.url" target="_blank" class="btn btn-primary btn-xs md:btn-sm">
-              Live
+              {{ t("common.live") }}
               <ExternalLink :size="16" />
             </a>
           </div>
@@ -103,11 +106,11 @@ const perProjects = ref<PersonalProject[]>([
           <div class="flex items-center space-x-3 md:space-x-4">
             <h2 class="text-1xl font-bold md:text-2xl">{{ project.title }}</h2>
             <a :href="project.backend" target="_blank" class="btn btn-primary btn-xs md:btn-sm">
-              Backend
+              {{ t("tech.backend") }}
               <ExternalLink :size="16" />
             </a>
             <a :href="project.frontend" target="_blank" class="btn btn-primary btn-xs md:btn-sm">
-              Frontend
+              {{ t("tech.frontend") }}
               <ExternalLink :size="16" />
             </a>
           </div>
