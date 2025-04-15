@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed } from 'vue';
+import { computed, reactive, onMounted } from 'vue';
 import { ExternalLink } from 'lucide-vue-next';
 import { useI18n } from 'vue-i18n';
 
@@ -19,6 +19,9 @@ interface PersonalProject {
   frontend: string;
   descriptions: string[];
 }
+
+// Reactive object to keep track of each iframe's load status using project title as key.
+const iframeStatus = reactive<Record<string, boolean>>({});
 
 const proProjects = computed(() => <ProfessionalProject[]>[
   {
@@ -41,6 +44,13 @@ const proProjects = computed(() => <ProfessionalProject[]>[
     ],
   }
 ]);
+
+// Ensure that for each professional project, we initialise its load status to false.
+onMounted(() => {
+  proProjects.value.forEach((project: ProfessionalProject) => {
+    iframeStatus[project.title] = false;
+  });
+});
 
 const perProjects = computed(() => <PersonalProject[]>[
   {
@@ -71,7 +81,21 @@ const perProjects = computed(() => <PersonalProject[]>[
           <div class="mockup-browser-toolbar">
             <div class="input">{{ project.url }}</div>
           </div>
-          <iframe :src="project.url" class="w-full h-150" frameborder="0"></iframe>
+         <!-- Loader: Shown while iframe is loading -->
+         <div
+            v-if="!iframeStatus[project.title]"
+            class="flex justify-center items-center h-96"
+          >
+            <span class="loading loading-spinner text-primary" />
+          </div>
+          <!-- Iframe: Hidden until loaded -->
+          <iframe
+            v-show="iframeStatus[project.title]"
+            :src="project.url"
+            class="w-full h-96"
+            frameborder="0"
+            @load="iframeStatus[project.title] = true"
+          />
         </div>
         <!-- Right Column: Project Description -->
         <div class="flex flex-col items-start">

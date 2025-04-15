@@ -27,23 +27,23 @@ const { t } = useI18n();
         <p class="mb-5 ml-5 mr-5 text-white font-bold">
           {{ t("landing-page.intro") }}
         </p>
-        <router-link to="/docs/about" class="btn btn-success mt-4">
+        <router-link to="/docs/about" class="btn btn-success mt-4 btn-sm sm:btn-lg">
           {{ t("common.get-started") }}
           <ArrowRight />
         </router-link>
       </div>
 
       <!-- Cards Container -->
-      <div class="flex flex-col md:flex-row justify-center gap-4 mt-8">
+      <div class="flex flex-wrap content-center flex-col md:flex-row justify-center gap-4 mt-8">
         <!-- Approachable Card -->
-        <div class="card bg-base-100 w-96 shadow-sm transition-transform duration-300 hover:scale-105 focus:scale-105">
+        <div class="card bg-base-100 card-xs sm:card-lg sm:w-96 w-75 shadow-sm transition-transform duration-300 hover:scale-105 focus:scale-105">
           <div class="card-body">
             <h2 class="card-title">{{ t("landing-page.approachable") }}</h2>
             <p>
               {{ t("landing-page.approachable-bio") }}
             </p>
             <div class="card-actions justify-end">
-              <router-link class="btn btn-primary" to="/docs/contact">
+              <router-link class="btn btn-primary btn-xs sm:btn-md" to="/docs/contact">
                 {{ t("domain.contact") }}
                 <ArrowRight :size="16" />
               </router-link>
@@ -51,14 +51,14 @@ const { t } = useI18n();
           </div>
         </div>
         <!-- Performant Card -->
-        <div class="card bg-base-100 w-96 shadow-sm transition-transform duration-300 hover:scale-105 focus:scale-105">
+        <div class="card bg-base-100 card-xs sm:card-lg sm:w-96 w-75 shadow-sm transition-transform duration-300 hover:scale-105 focus:scale-105">
           <div class="card-body">
             <h2 class="card-title">{{ t("landing-page.performant") }}</h2>
             <p>
               {{ t("landing-page.performant-bio") }}
             </p>
             <div class="card-actions justify-end">
-              <router-link class="btn btn-secondary" to="/docs/work">
+              <router-link class="btn btn-secondary btn-xs sm:btn-md" to="/docs/work">
                 {{ t("domain.work-experience") }}
                 <ArrowRight :size="16" />
               </router-link>
@@ -66,14 +66,14 @@ const { t } = useI18n();
           </div>
         </div>
         <!-- Versatile Card -->
-        <div class="card bg-base-100 w-96 shadow-sm transition-transform duration-300 hover:scale-105 focus:scale-105">
+        <div class="card bg-base-100 card-xs sm:card-lg sm:w-96 w-75 shadow-sm transition-transform duration-300 hover:scale-105 focus:scale-105">
           <div class="card-body">
             <h2 class="card-title">{{ t("landing-page.versatile") }}</h2>
             <p>
               {{ t("landing-page.versatile-bio") }}
             </p>
             <div class="card-actions justify-end">
-              <router-link class="btn btn-accent" to="/docs/skills">
+              <router-link class="btn btn-accent btn-xs sm:btn-md" to="/docs/skills">
                 {{ t("domain.skills") }}
                 <ArrowRight :size="16" />
               </router-link>
