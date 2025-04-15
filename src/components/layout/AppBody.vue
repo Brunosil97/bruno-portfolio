@@ -34,13 +34,14 @@ const showVideo = computed(() => route.path !== "/");
       <div class="navbar sticky top-0 z-30  bg-base-100 w-full relative">
         <!-- Video Background (behind navbar content) -->
         <video
-          v-if="showVideo"
+          v-show="showVideo"
+          class="absolute inset-0 w-full h-full object-cover z-0"
           autoplay
           muted
           loop
           playsinline
           preload="auto"
-          class="absolute inset-0 w-full h-full object-cover z-0"
+          poster="/img/navbar-poster.png"
         >
           <source src="/video/background.mp4" type="video/mp4" />
           {{ t("domain.video-not-supported") }}

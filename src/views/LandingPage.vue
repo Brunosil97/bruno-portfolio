@@ -14,6 +14,7 @@ const { t } = useI18n();
       muted
       playsinline
       preload="auto"
+      poster="/img/desktop-poster.png"
       class="absolute top-0 left-0 w-full h-full object-cover"
     >
       <source src="/video/background.mp4" type="video/mp4" />
