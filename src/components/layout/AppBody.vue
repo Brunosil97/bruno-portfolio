@@ -55,13 +55,13 @@ const showVideo = computed(() => route.path !== "/");
           </div>
           <!-- Desktop Title (visible on sm and up) -->
           <div class="hidden sm:flex mx-2 flex-1 px-2">
-            <router-link class="btn text-xl" to="/home">
+            <router-link class="btn text-xl" to="/">
               {{ t("common.name") }}
             </router-link>
           </div>
           <!-- Mobile Title (visible below sm) -->
           <div v-if="showVideo" class="sm:hidden absolute left-1/2 transform -translate-x-1/2">
-            <router-link class="btn btn-ghost text-white text-xl" to="/home">
+            <router-link class="btn btn-ghost text-white text-xl" to="/">
               {{ t("common.name") }}
             </router-link>
           </div>
