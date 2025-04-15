@@ -30,6 +30,10 @@ const languages = ref<Locales[]>([
   { code: "ja", label: "日本語", iso: "jp" },
 ]);
 
+/**
+ * Change language locale
+ * @param lang The language to change localisation to
+ */
 const changeLocale = (lang: string) => {
   locale.value = lang;
 };

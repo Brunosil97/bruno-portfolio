@@ -12,6 +12,9 @@ import ResourceOptions from '../settings/ResourceOptions.vue';
 
 const { t } = useI18n();
 
+/**
+ * Close the mobile drawer when a link is clicked
+ */
 const closeDrawer = () => {
   const drawerToggle = document.getElementById("mobile-drawer") as HTMLInputElement;
   if (drawerToggle) drawerToggle.checked = false;
@@ -35,6 +38,8 @@ const showVideo = computed(() => route.path !== "/");
           autoplay
           muted
           loop
+          playsinline
+          preload="auto"
           class="absolute inset-0 w-full h-full object-cover z-0"
         >
           <source src="/video/background.mp4" type="video/mp4" />
@@ -50,13 +55,13 @@ const showVideo = computed(() => route.path !== "/");
           </div>
           <!-- Desktop Title (visible on sm and up) -->
           <div class="hidden sm:flex mx-2 flex-1 px-2">
-            <router-link class="btn text-xl" to="/">
+            <router-link class="btn text-xl" to="/home">
               {{ t("common.name") }}
             </router-link>
           </div>
           <!-- Mobile Title (visible below sm) -->
           <div v-if="showVideo" class="sm:hidden absolute left-1/2 transform -translate-x-1/2">
-            <router-link class="btn btn-ghost text-white text-xl" to="/">
+            <router-link class="btn btn-ghost text-white text-xl" to="/home">
               {{ t("common.name") }}
             </router-link>
           </div>
@@ -106,7 +111,7 @@ const showVideo = computed(() => route.path !== "/");
       <ul class="menu bg-base-200 min-h-full w-80 p-4">
         <nav-menu @link-clicked="closeDrawer" />
         <div class="divider divider-primary">{{ t("common.stats") }}</div>
-        <github-stats />
+        <github-stats is-mobile />
       </ul>
     </div>
   </div>

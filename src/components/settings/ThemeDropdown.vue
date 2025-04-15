@@ -50,12 +50,15 @@ const themes = ref([
 const selectedTheme = ref("autumn");
 
 onMounted(() => {
+  // Set the initial theme based on the route
   if (route.path === "/") {
     selectedTheme.value = "synthwave";
   } else {
+    // Check localStorage for a saved theme
     const stored = localStorage.getItem("theme");
     selectedTheme.value = stored ? JSON.parse(stored) : "autumn";
   }
+  // Apply the theme to the document
   document.documentElement.setAttribute("data-theme", selectedTheme.value);
 });
 
@@ -63,6 +66,7 @@ watch(selectedTheme, (newTheme) => {
   if (route.path !== "/") {
     localStorage.setItem("theme", JSON.stringify(newTheme));
   }
+  // Apply the new theme to the document
   document.documentElement.setAttribute("data-theme", newTheme);
 });
 
@@ -70,6 +74,7 @@ watch(() => route.path, (newPath) => {
   if (newPath === "/") {
     selectedTheme.value = "synthwave";
   } else {
+    // Check localStorage for a saved theme
     const stored = localStorage.getItem("theme");
     selectedTheme.value = stored ? JSON.parse(stored) : "autumn";
   }

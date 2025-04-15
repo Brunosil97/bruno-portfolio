@@ -7,6 +7,7 @@ import { graphql } from '@octokit/graphql';
 import { useI18n } from 'vue-i18n';
 
 const { t } = useI18n();
+const { isMobile } = defineProps<{ isMobile?: boolean }>();
 
 const githubLoading = ref<boolean>(true);
 const githubError = ref('');
@@ -37,7 +38,9 @@ const percentageChange = computed(() => {
   return parseFloat(percentage.toFixed(1));
 });
 
-// Fetch public stats from GitHub's REST API (public endpoint)
+/**
+ * Fetch public GitHub stats for a user
+ */
 const fetchPublicStats = async() => {
   try {
     githubLoading.value = true;
@@ -58,13 +61,17 @@ const fetchPublicStats = async() => {
     };
   } catch (error: any) {
     githubError.value = error;
-    console.error(error);
   } finally {
     githubLoading.value = false;
   }
 }
 
-// New helper: fetch contributions for a given period defined by start and end ISO dates
+/**
+ * Helper: Fetch contributions for a given period by start and end ISO dates
+ *
+ * @param start Start date in ISO format
+ * @param end End date in ISO format
+ */
 const fetchContributionsForPeriod = async(start: string, end: string): Promise<number> => {
   const query = `
     query($start: DateTime!, $end: DateTime!) {
@@ -85,20 +92,31 @@ const fetchContributionsForPeriod = async(start: string, end: string): Promise<n
   return result.user.contributionsCollection.contributionCalendar.totalContributions;
 }
 
-// Fetch contributions for a specific calendar year
+/**
+ * Fetch contributions for a specific year
+ *
+ * @param year Year to fetch contributions for
+ */
 const fetchContributionsForYear = async(year: number): Promise<number> => {
-  const start = new Date(year, 0, 1).toISOString();    // January 1st
-  const end = new Date(year, 11, 31).toISOString();      // December 31st
+  const start = new Date(year, 0, 1).toISOString();
+  const end = new Date(year, 11, 31).toISOString();
+
   return await fetchContributionsForPeriod(start, end);
 }
 
-// Fetch contributions for a rolling 365-day period ending today
+/**
+ * Fetch contributions for the rolling year (365 days) from today
+ */
 const fetchRollingYearContributions = async(): Promise<number> => {
   const now = new Date();
   const oneYearAgo = new Date(now.getTime() - 365 * 24 * 60 * 60 * 1000);
+
   return await fetchContributionsForPeriod(oneYearAgo.toISOString(), now.toISOString());
 }
 
+/**
+ * Fetch all the relevant GitHub contributions and stats
+ */
 const fetchContributions = async() => {
   try {
     if (!token) {
@@ -107,33 +125,35 @@ const fetchContributions = async() => {
     loadingContributions.value = true;
     // Fetch contributions for the rolling 365-day period (current year contributions)
     currentYearContributions.value = await fetchRollingYearContributions();
-
     // Fetch last calendar year's contributions
     const currentYear = new Date().getFullYear();
     const lastYear = currentYear - 1;
     lastYearContributions.value = await fetchContributionsForYear(lastYear);
-
     // Calculate all-time contributions from a defined start year (e.g., 2019) to current year
     const startYear = 2019;
     const years = [];
     for (let year = startYear; year <= currentYear; year++) {
       years.push(year);
     }
+    // Fetch contributions for each year in the range
     const contributionsPerYear = await Promise.all(
       years.map(year => fetchContributionsForYear(year))
     );
+    // Calculate all-time contributions
     allTimeContributions.value = contributionsPerYear.reduce((sum, count) => sum + count, 0);
   } catch (error: any) {
-    console.error(error);
     errorContributions.value = error;
   } finally {
     loadingContributions.value = false;
   }
 }
 
-// Load stored data from localStorage, return true if data is fresh
+/**
+ * Load stored data from localStorage and check if it's still valid
+ */
 const loadStoredData = (): boolean => {
   const storedTimestamp = localStorage.getItem('githubDataTimestamp');
+  // Check if timestamp exists and is a valid number
   if (storedTimestamp) {
     const timestamp = parseInt(storedTimestamp, 10);
     // Check if data is less than CACHE_DURATION old
@@ -142,16 +162,18 @@ const loadStoredData = (): boolean => {
       const storedCurrentYear = localStorage.getItem('currentYearContributions');
       const storedLastYear = localStorage.getItem('lastYearContributions');
       const storedAllTime = localStorage.getItem('allTimeContributions');
-
+      // Check if all required data exists
       if (storedGithubData && storedCurrentYear && storedLastYear && storedAllTime) {
         githubData.value = JSON.parse(storedGithubData);
         currentYearContributions.value = Number(storedCurrentYear);
         lastYearContributions.value = Number(storedLastYear);
         allTimeContributions.value = Number(storedAllTime);
+
         return true;
       }
     }
   }
+
   return false;
 };
 
@@ -191,7 +213,9 @@ onMounted(async () => {
           </div>
         </div>
         <div class="stat-title">{{ t("stats.total") }}</div>
-        <div class="stat-value text-primary">{{ githubData.publicRepos }}</div>
+        <div class="stat-value text-primary" :class="{ 'text-sm': isMobile }">
+          {{ githubData.publicRepos }}
+        </div>
         <div class="stat-title">
           <i18n-t keypath="stats.github-name">
             <template #name>{{ githubData.name }}</template>
@@ -205,12 +229,16 @@ onMounted(async () => {
       </div>
       <div class="stat">
         <div class="stat-title">{{ t("stats.total-contributions") }}</div>
-        <div class="stat-value text-primary">{{ allTimeContributions }}</div>
+        <div class="stat-value text-primary" :class="{ 'text-sm': isMobile }">
+          {{ allTimeContributions }}
+        </div>
         <div class="stat-desc">{{ t("stats.start-date") }} &mdash; {{ t("common.now") }}</div>
       </div>
       <div class="stat">
         <div class="stat-title">{{ t("stats.last-year") }}</div>
-        <div class="stat-value text-primary">{{ currentYearContributions }}</div>
+        <div class="stat-value text-primary" :class="{ 'text-sm': isMobile }">
+          {{ currentYearContributions }}
+        </div>
         <div class="stat-desc flex items-center space-x-2">
           <TrendingUp class="mr-2" v-if="percentageChange > 0" :size="16" color="#00FF00" />
           <TrendingDown class="mr-2" v-else :size="16" color="#FF0000" />

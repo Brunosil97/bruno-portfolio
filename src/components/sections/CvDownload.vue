@@ -13,11 +13,15 @@ const infoColour = computed(() => {
     .trim() || "#0f172a"; // Fallback color if not set
 });
 
+/**
+ * Download the PDF file
+ */
 const downloadPDF = () => {
   // Create an invisible link element, set its href and download attribute, then click it.
   const link = document.createElement('a');
   link.href = pdfUrl;
   link.download = 'cv_bruno_silva.pdf';
+
   link.click();
 };
 </script>

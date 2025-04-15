@@ -8,7 +8,14 @@ const { t } = useI18n();
 <template>
   <div class="relative hero min-h-screen overflow-hidden">
     <!-- Video Background -->
-    <video autoplay loop muted playsinline class="absolute top-0 left-0 w-full h-full object-cover">
+    <video
+      autoplay
+      loop
+      muted
+      playsinline
+      preload="auto"
+      class="absolute top-0 left-0 w-full h-full object-cover"
+    >
       <source src="/video/background.mp4" type="video/mp4" />
       {{ t("domain.video-not-supported") }}
     </video>
