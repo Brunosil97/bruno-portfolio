@@ -3,7 +3,7 @@ import { computed } from 'vue';
 import { Download, Info } from 'lucide-vue-next';
 import { useI18n } from 'vue-i18n';
 
-const pdfUrl = "/pdf/cv_bruno_silva.pdf";
+const pdfUrl = "/pdf/cv_bruno_silva_2025.pdf";
 
 const { t } = useI18n();
 // Dynamically get the DaisyUI info colour (from the CSS variable --color-info)
@@ -20,7 +20,7 @@ const downloadPDF = () => {
   // Create an invisible link element, set its href and download attribute, then click it.
   const link = document.createElement('a');
   link.href = pdfUrl;
-  link.download = 'cv_bruno_silva.pdf';
+  link.download = 'cv_bruno_silva_2025.pdf';
 
   link.click();
 };
