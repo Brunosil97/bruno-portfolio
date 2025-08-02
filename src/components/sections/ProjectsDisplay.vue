@@ -163,7 +163,7 @@ const showPersonal = computed(() => activeFilter.value === 'all' || activeFilter
 
     <div v-if="showProfessional" class="divider divider-primary mb-8">{{ t("common.professional") }}</div>
     <!-- Professional Projects Section -->
-    <template v-for="(project, index) in proProjects" :key="project.title">
+    <template v-if="showProfessional" v-for="(project, index) in proProjects" :key="project.title">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <!-- Left Column: DaisyUI Browser Mockup with iframe (spanning 2 columns on desktop) -->
         <div class="mockup-browser bg-base-100 lg:col-span-2">
@@ -206,7 +206,7 @@ const showPersonal = computed(() => activeFilter.value === 'all' || activeFilter
 
     <div v-if="showPersonal" class="divider divider-primary mt-8 mb-8">{{ t("common.personal") }}</div>
     <!-- Personal Projects Section -->
-    <template v-for="(project, index) in perProjects" :key="project.title">
+    <template v-if="showPersonal" v-for="(project, index) in perProjects" :key="project.title">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <!-- Left Column: DaisyUI Browser Mockup with image/carousel (spanning 2 columns on desktop) -->
         <div class="mockup-browser bg-base-100 lg:col-span-2">
