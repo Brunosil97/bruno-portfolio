@@ -122,11 +122,11 @@ onMounted(() => {
     </div>
 
     <!-- Which Frameworks Section -->
-    <div class="card bg-base-200 shadow-xl border-l-4 border-info">
+    <div class="card bg-base-200 shadow-xl border-l-4 border-secondary">
       <div class="card-body">
         <h2 class="card-title text-3xl mb-4">
-          <div class="rounded-full bg-info/20 p-2">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-info" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <div class="rounded-full bg-secondary/20 p-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
             </svg>
           </div>
@@ -135,99 +135,69 @@ onMounted(() => {
         <p class="text-base leading-relaxed mb-6">{{ t("about-me.frameworks-list-title") }}</p>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
-          <div class="card bg-gradient-to-br from-success/10 to-success/5 border border-success/20 hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer">
+          <div class="card bg-base-200 hover:bg-base-300 hover:shadow-xl hover:scale-105 transition-all duration-300 border-l-4 border-primary">
             <div class="card-body p-4">
-              <h3 class="font-bold text-success flex items-center gap-2">
-                <span class="badge badge-success badge-sm">Vue.js</span>
+              <h3 class="font-bold flex items-center gap-2">
+                <span class="badge badge-primary badge-sm">Vue.js</span>
                 {{ t("tech.vue") }}
               </h3>
-              <p class="text-sm leading-relaxed mt-2">{{ t("about-me.vue") }}</p>
-              <div class="flex gap-1 mt-3">
-                <div class="w-full bg-success/20 rounded-full h-2">
-                  <div class="bg-success h-2 rounded-full" style="width: 95%"></div>
-                </div>
-              </div>
+              <p class="text-sm leading-relaxed mt-2 opacity-80">{{ t("about-me.vue") }}</p>
             </div>
           </div>
 
-          <div class="card bg-gradient-to-br from-info/10 to-info/5 border border-info/20 hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer">
+          <div class="card bg-base-200 hover:bg-base-300 hover:shadow-xl hover:scale-105 transition-all duration-300 border-l-4 border-primary">
             <div class="card-body p-4">
-              <h3 class="font-bold text-info flex items-center gap-2">
-                <span class="badge badge-info badge-sm">React</span>
+              <h3 class="font-bold flex items-center gap-2">
+                <span class="badge badge-primary badge-sm">React</span>
                 {{ t("tech.react") }}
               </h3>
-              <p class="text-sm leading-relaxed mt-2">{{ t("about-me.react") }}</p>
-              <div class="flex gap-1 mt-3">
-                <div class="w-full bg-info/20 rounded-full h-2">
-                  <div class="bg-info h-2 rounded-full" style="width: 85%"></div>
-                </div>
-              </div>
+              <p class="text-sm leading-relaxed mt-2 opacity-80">{{ t("about-me.react") }}</p>
             </div>
           </div>
 
-          <div class="card bg-gradient-to-br from-primary/10 to-primary/5 border border-primary/20 hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer">
+          <div class="card bg-base-200 hover:bg-base-300 hover:shadow-xl hover:scale-105 transition-all duration-300 border-l-4 border-primary">
             <div class="card-body p-4">
-              <h3 class="font-bold text-primary flex items-center gap-2">
+              <h3 class="font-bold flex items-center gap-2">
                 <span class="badge badge-primary badge-sm">Full-Stack</span>
                 {{ t("tech.full-stack") }}
               </h3>
-              <p class="text-sm leading-relaxed mt-2">{{ t("about-me.full-stack") }}</p>
-              <div class="flex gap-1 mt-3">
-                <div class="w-full bg-primary/20 rounded-full h-2">
-                  <div class="bg-primary h-2 rounded-full" style="width: 90%"></div>
-                </div>
-              </div>
+              <p class="text-sm leading-relaxed mt-2 opacity-80">{{ t("about-me.full-stack") }}</p>
             </div>
           </div>
 
-          <div class="card bg-gradient-to-br from-warning/10 to-warning/5 border border-warning/20 hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer">
+          <div class="card bg-base-200 hover:bg-base-300 hover:shadow-xl hover:scale-105 transition-all duration-300 border-l-4 border-secondary">
             <div class="card-body p-4">
-              <h3 class="font-bold text-warning flex items-center gap-2">
-                <span class="badge badge-warning badge-sm">Legacy</span>
+              <h3 class="font-bold flex items-center gap-2">
+                <span class="badge badge-secondary badge-sm">Legacy</span>
                 {{ t("tech.legacy") }}
               </h3>
-              <p class="text-sm leading-relaxed mt-2">{{ t("about-me.legacy") }}</p>
-              <div class="flex gap-1 mt-3">
-                <div class="w-full bg-warning/20 rounded-full h-2">
-                  <div class="bg-warning h-2 rounded-full" style="width: 80%"></div>
-                </div>
-              </div>
+              <p class="text-sm leading-relaxed mt-2 opacity-80">{{ t("about-me.legacy") }}</p>
             </div>
           </div>
 
-          <div class="card bg-gradient-to-br from-accent/10 to-accent/5 border border-accent/20 hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer">
+          <div class="card bg-base-200 hover:bg-base-300 hover:shadow-xl hover:scale-105 transition-all duration-300 border-l-4 border-secondary">
             <div class="card-body p-4">
-              <h3 class="font-bold text-accent flex items-center gap-2">
-                <span class="badge badge-accent badge-sm">Cloud</span>
+              <h3 class="font-bold flex items-center gap-2">
+                <span class="badge badge-secondary badge-sm">Cloud</span>
                 {{ t("tech.cloud") }}
               </h3>
-              <p class="text-sm leading-relaxed mt-2">{{ t("about-me.cloud") }}</p>
-              <div class="flex gap-1 mt-3">
-                <div class="w-full bg-accent/20 rounded-full h-2">
-                  <div class="bg-accent h-2 rounded-full" style="width: 88%"></div>
-                </div>
-              </div>
+              <p class="text-sm leading-relaxed mt-2 opacity-80">{{ t("about-me.cloud") }}</p>
             </div>
           </div>
 
-          <div class="card bg-gradient-to-br from-secondary/10 to-secondary/5 border border-secondary/20 hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer">
+          <div class="card bg-base-200 hover:bg-base-300 hover:shadow-xl hover:scale-105 transition-all duration-300 border-l-4 border-secondary">
             <div class="card-body p-4">
-              <h3 class="font-bold text-secondary flex items-center gap-2">
+              <h3 class="font-bold flex items-center gap-2">
                 <span class="badge badge-secondary badge-sm">Testing</span>
                 {{ t("tech.test-docs") }}
               </h3>
-              <p class="text-sm leading-relaxed mt-2">{{ t("about-me.test-docs") }}</p>
-              <div class="flex gap-1 mt-3">
-                <div class="w-full bg-secondary/20 rounded-full h-2">
-                  <div class="bg-secondary h-2 rounded-full" style="width: 85%"></div>
-                </div>
-              </div>
+              <p class="text-sm leading-relaxed mt-2 opacity-80">{{ t("about-me.test-docs") }}</p>
             </div>
           </div>
         </div>
 
-        <div class="alert alert-info shadow-lg">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6">
+        <div class="alert shadow-lg bg-base-300">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6 text-secondary">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
           </svg>
           <span class="text-sm leading-relaxed">{{ t("about-me.frameworks-bio") }}</span>
