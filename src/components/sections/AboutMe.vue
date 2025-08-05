@@ -1,7 +1,29 @@
 <script setup lang="ts">
+import { ref, onMounted } from 'vue';
 import { useI18n } from 'vue-i18n';
 
 const { t } = useI18n();
+const avatarUrl = ref<string>('');
+
+onMounted(() => {
+  // Try to get avatar from localStorage first (from GithubStats component)
+  const storedGithubData = localStorage.getItem('githubData');
+  if (storedGithubData) {
+    const githubData = JSON.parse(storedGithubData);
+    avatarUrl.value = githubData.avatar;
+  } else {
+    // Fallback: fetch directly from GitHub API
+    fetch('https://api.github.com/users/Brunosil97')
+      .then(res => res.json())
+      .then(data => {
+        avatarUrl.value = data.avatar_url;
+      })
+      .catch(() => {
+        // Ultimate fallback
+        avatarUrl.value = 'https://avatars.githubusercontent.com/u/41350516';
+      });
+  }
+});
 </script>
 
 <template>
@@ -11,9 +33,12 @@ const { t } = useI18n();
       <div class="absolute inset-0 bg-grid-pattern opacity-5"></div>
       <div class="hero-content text-center py-16 relative z-10">
         <div class="max-w-4xl">
-          <div class="avatar placeholder mb-6">
-            <div class="bg-primary text-primary-content rounded-full w-24 h-24 ring ring-primary ring-offset-base-100 ring-offset-2">
-              <span class="text-5xl font-bold">BS</span>
+          <div class="avatar online mb-6">
+            <div class="w-32 h-32 rounded-full ring ring-primary ring-offset-base-100 ring-offset-4">
+              <img v-if="avatarUrl" :src="avatarUrl" alt="Bruno Silva" />
+              <div v-else class="bg-primary text-primary-content w-full h-full flex items-center justify-center">
+                <span class="text-5xl font-bold">BS</span>
+              </div>
             </div>
           </div>
           <h1 class="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
@@ -27,17 +52,17 @@ const { t } = useI18n();
             <div class="stat place-items-center">
               <div class="stat-title">Experience</div>
               <div class="stat-value text-primary">5+</div>
-              <div class="stat-desc">Years</div>
+              <div class="stat-desc">Years in Industry</div>
             </div>
             <div class="stat place-items-center">
-              <div class="stat-title">Technologies</div>
-              <div class="stat-value text-secondary">15+</div>
-              <div class="stat-desc">Mastered</div>
+              <div class="stat-title">Role</div>
+              <div class="stat-value text-secondary text-2xl">Senior</div>
+              <div class="stat-desc">Software Engineer</div>
             </div>
             <div class="stat place-items-center">
-              <div class="stat-title">Projects</div>
-              <div class="stat-value text-accent">50+</div>
-              <div class="stat-desc">Delivered</div>
+              <div class="stat-title">Focus</div>
+              <div class="stat-value text-accent text-2xl">AI</div>
+              <div class="stat-desc">Innovation & Solutions</div>
             </div>
           </div>
         </div>
