@@ -175,6 +175,13 @@
     "rain-or-shine-desc": "Rain Or Shine is a responsive weather forecasting application built with Vue 3 and Vite. It connects with the Rain Or Shine backend to deliver detailed weather forecasts including an overview of today's weather and hourly data.",
     "rain-or-shine-desc-2": "The application employs the Vuetify UI library to offer a modern, intuitive interface that adapts seamlessly to both desktop and mobile screens.",
     "rain-or-shine-desc-3": "The backend service is developed using Deno, a secure and modern runtime for JavaScript and TypeScript, and integrates with the OpenWeatherMap API to fetch precise city geocoding and weather details via the One Call API.",
-    "rain-or-shine-desc-4": "The main focus of this project was to practice my API development skills and venture into learning about Deno. Specifically Deno 2."
+    "rain-or-shine-desc-4": "The main focus of this project was to practice my API development skills and venture into learning about Deno. Specifically Deno 2.",
+    "bookhub-desc": "BookHub is a modern full-stack book management application that allows users to track their personal reading collection. Built with Vue 3, TypeScript, and Vuetify on the frontend, paired with a .NET 8 Web API backend.",
+    "bookhub-desc-2": "The application features comprehensive book management with CRUD operations, search and filtering capabilities, rating system (1-5 stars), personal comments, and analytics dashboard showing reading habits and statistics.",
+    "bookhub-desc-3": "The backend uses in-memory storage with custom validation rules, enforcing business logic such as maximum collection limits, unique ISBN validation, and field length constraints.",
+    "bookhub-desc-4": "This project demonstrates expertise in building responsive web applications with modern frameworks, RESTful API design, state management with Pinia, and comprehensive testing with Vitest.",
+    "whos-better-desc": "Who's Better? is a competitive leaderboard web application built to track and compare Marvel Rivals game statistics between friends. This gimmick project settles debates with real data from the Marvel Rivals API.",
+    "whos-better-desc-2": "Features include overall rankings using a point-based system across Win Rate, KDA, MVPs, SVPs, and Rank, detailed player cards with hero statistics, live rank displays, and auto-refresh with 12-hour caching using IndexedDB.",
+    "whos-better-desc-3": "Built with Vue 3 Composition API, TypeScript, Vuetify 3, and Pinia for state management. This project showcases API integration, local data caching strategies, and creating engaging user experiences for competitive gaming communities."
   }
 }

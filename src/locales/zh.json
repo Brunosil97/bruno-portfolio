@@ -166,6 +166,13 @@
     "rain-or-shine-desc": "Rain Or Shine 是一款基于 Vue 3 和 Vite 构建的响应式天气预报应用。它与 Rain Or Shine 后端连接，提供详细的天气预报，包括今日天气概览和每小时数据。",
     "rain-or-shine-desc-2": "该应用程序采用 Vuetify UI 库来提供现代、直观的界面，可无缝适应桌面和移动屏幕。Rain Or Shine 后端提供详细的天气预报，包括今日天气概览和每小时数据。",
     "rain-or-shine-desc-3": "后端服务使用 Deno（一种安全且现代的 JavaScript 和 TypeScript 运行时）开发，并与 OpenWeatherMap API 集成，以通过 One Call API 获取精确的城市地理编码和天气详细信息。",
-    "rain-or-shine-desc-4": "这个项目的主要目的是练习我的 API 开发技能，并尝试学习 Deno，特别是 Deno 2。"
+    "rain-or-shine-desc-4": "这个项目的主要目的是练习我的 API 开发技能，并尝试学习 Deno，特别是 Deno 2。",
+    "bookhub-desc": "BookHub 是一个现代化的全栈图书管理应用程序，允许用户跟踪他们的个人阅读收藏。前端使用 Vue 3、TypeScript 和 Vuetify 构建，后端使用 .NET 8 Web API。",
+    "bookhub-desc-2": "该应用程序提供全面的图书管理功能，包括 CRUD 操作、搜索和过滤功能、评分系统（1-5 星）、个人评论以及显示阅读习惯和统计数据的分析仪表板。",
+    "bookhub-desc-3": "后端使用内存存储和自定义验证规则，强制执行业务逻辑，如最大收藏限制、唯一 ISBN 验证和字段长度约束。",
+    "bookhub-desc-4": "该项目展示了使用现代框架构建响应式 Web 应用程序、RESTful API 设计、使用 Pinia 进行状态管理以及使用 Vitest 进行全面测试的专业知识。",
+    "whos-better-desc": "Who's Better? 是一个竞争性排行榜 Web 应用程序，用于跟踪和比较朋友之间的 Marvel Rivals 游戏统计数据。这个噱头项目使用来自 Marvel Rivals API 的真实数据来解决争论。",
+    "whos-better-desc-2": "功能包括使用基于积分的系统对胜率、KDA、MVP、SVP 和排名进行总体排名，包含英雄统计数据的详细玩家卡片，实时排名显示以及使用 IndexedDB 进行 12 小时缓存的自动刷新。",
+    "whos-better-desc-3": "使用 Vue 3 Composition API、TypeScript、Vuetify 3 和 Pinia 进行状态管理构建。该项目展示了 API 集成、本地数据缓存策略以及为竞技游戏社区创建引人入胜的用户体验。"
   }
 }

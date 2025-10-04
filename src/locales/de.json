@@ -166,6 +166,13 @@
     "rain-or-shine-desc": "Rain or Shine ist eine Webanwendung, die den Nutzern aktuelle Wetterdaten für verschiedene Städte weltweit bereitstellt.",
     "rain-or-shine-desc-2": "Die Anwendung ermöglicht es den Nutzern, eine Stadt auszuwählen und die aktuellen Wetterbedingungen, einschließlich Temperatur, Luftfeuchtigkeit und Wettervorhersage, anzuzeigen.",
     "rain-or-shine-desc-3": "Der Backend-Dienst wird mit Deno entwickelt, einer sicheren und modernen Laufzeitumgebung für JavaScript und TypeScript, und ist in die OpenWeatherMap-API integriert, um über die One Call-API präzise Geokodierungs- und Wetterdetails für Städte abzurufen.",
-    "rain-or-shine-desc-4": "Der Schwerpunkt dieses Projekts lag darauf, meine API-Entwicklungsfähigkeiten zu üben und mich mit Deno vertraut zu machen. Insbesondere mit Deno 2."
+    "rain-or-shine-desc-4": "Der Schwerpunkt dieses Projekts lag darauf, meine API-Entwicklungsfähigkeiten zu üben und mich mit Deno vertraut zu machen. Insbesondere mit Deno 2.",
+    "bookhub-desc": "BookHub ist eine moderne Full-Stack-Anwendung zur Verwaltung von Büchern, mit der Benutzer ihre persönliche Lesekollektion verfolgen können. Entwickelt mit Vue 3, TypeScript und Vuetify im Frontend, gepaart mit einem .NET 8 Web-API-Backend.",
+    "bookhub-desc-2": "Die Anwendung bietet umfassende Buchverwaltung mit CRUD-Operationen, Such- und Filterfunktionen, einem Bewertungssystem (1-5 Sterne), persönlichen Kommentaren und einem Analyse-Dashboard mit Statistiken zu Lesegewohnheiten.",
+    "bookhub-desc-3": "Das Backend verwendet In-Memory-Speicher mit benutzerdefinierten Validierungsregeln, die Geschäftslogik durchsetzen, wie z. B. maximale Sammlungslimits, eindeutige ISBN-Validierung und Feldlängenbeschränkungen.",
+    "bookhub-desc-4": "Dieses Projekt demonstriert Expertise im Aufbau responsiver Webanwendungen mit modernen Frameworks, RESTful-API-Design, State-Management mit Pinia und umfassenden Tests mit Vitest.",
+    "whos-better-desc": "Who's Better? ist eine wettbewerbsfähige Leaderboard-Webanwendung, die entwickelt wurde, um Marvel Rivals-Spielstatistiken zwischen Freunden zu verfolgen und zu vergleichen. Dieses Gimmick-Projekt klärt Debatten mit echten Daten von der Marvel Rivals API.",
+    "whos-better-desc-2": "Zu den Funktionen gehören Gesamtrankings mit einem punktbasierten System über Win Rate, KDA, MVPs, SVPs und Rang, detaillierte Spielerkarten mit Heldenstatistiken, Live-Ranganzeigen und automatische Aktualisierung mit 12-Stunden-Caching über IndexedDB.",
+    "whos-better-desc-3": "Entwickelt mit Vue 3 Composition API, TypeScript, Vuetify 3 und Pinia für State-Management. Dieses Projekt zeigt API-Integration, lokale Daten-Caching-Strategien und die Schaffung ansprechender Benutzererlebnisse für kompetitive Gaming-Communities."
   }
 }
