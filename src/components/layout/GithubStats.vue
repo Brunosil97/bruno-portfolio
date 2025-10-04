@@ -10,7 +10,7 @@ const { t } = useI18n();
 const { isMobile } = defineProps<{ isMobile?: boolean }>();
 
 const githubLoading = ref<boolean>(true);
-const githubError = ref('');
+const githubError = ref<UIError>('');
 const githubData = ref<GithubStats>({
   publicRepos: 0,
   followers: 0,
@@ -23,7 +23,7 @@ const githubData = ref<GithubStats>({
 const currentYearContributions = ref<number>(0);
 const allTimeContributions = ref<number>(0);
 const loadingContributions = ref<boolean>(false);
-const errorContributions = ref<string>('');
+const errorContributions = ref<UIError>('');
 const lastYearContributions = ref<number>(0);
 
 // Hardcoded token (for demo purposes only—ensure to secure this in production)
@@ -59,8 +59,8 @@ const fetchPublicStats = async() => {
       name: data.name,
       bio: data.bio,
     };
-  } catch (error: any) {
-    githubError.value = error;
+  } catch (error: unknown) {
+    githubError.value = error as UIError;
   } finally {
     githubLoading.value = false;
   }
@@ -141,8 +141,8 @@ const fetchContributions = async() => {
     );
     // Calculate all-time contributions
     allTimeContributions.value = contributionsPerYear.reduce((sum, count) => sum + count, 0);
-  } catch (error: any) {
-    errorContributions.value = error;
+  } catch (error: unknown) {
+    errorContributions.value = error as UIError;
   } finally {
     loadingContributions.value = false;
   }
