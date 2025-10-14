@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, reactive, onMounted } from 'vue';
+import { computed, reactive, onMounted, ref } from 'vue';
 import { ExternalLink } from 'lucide-vue-next';
 import { useI18n } from 'vue-i18n';
 
@@ -7,6 +7,9 @@ const { t } = useI18n();
 
 // Track current slide index for each project carousel
 const carouselIndexes = reactive<Record<string, number>>({});
+
+// Track active filter: 'all', 'professional', or 'personal'
+const activeFilter = ref<'all' | 'professional' | 'personal'>('professional');
 
 interface ProfessionalProject {
   url: string;
@@ -123,12 +126,42 @@ const perProjects = computed(() => <PersonalProject[]>[
     ]
   }
 ])
+
+// Computed properties to show/hide sections based on filter
+const showProfessional = computed(() => activeFilter.value === 'all' || activeFilter.value === 'professional');
+const showPersonal = computed(() => activeFilter.value === 'all' || activeFilter.value === 'personal');
 </script>
 
 <template>
   <div class="container mx-auto p-4">
     <h1 class="text-4xl font-bold mb-8">{{ t("domain.projects") }}</h1>
-    <div class="divider divider-primary mb-8">{{ t("common.professional") }}</div>
+
+    <!-- Filter Buttons -->
+    <div class="join mb-6">
+      <button
+        class="btn btn-soft btn-primary btn-sm sm:btn-md"
+        :class="{ 'btn-active': activeFilter === 'professional' }"
+        @click="activeFilter = 'professional'"
+      >
+        {{ t("common.professional") }}
+      </button>
+      <button
+        class="btn btn-soft btn-primary btn-sm sm:btn-md"
+        :class="{ 'btn-active': activeFilter === 'personal' }"
+        @click="activeFilter = 'personal'"
+      >
+        {{ t("common.personal") }}
+      </button>
+      <button
+        class="btn btn-soft btn-primary btn-sm sm:btn-md"
+        :class="{ 'btn-active': activeFilter === 'all' }"
+        @click="activeFilter = 'all'"
+      >
+        {{ t("common.all") }}
+      </button>
+    </div>
+
+    <div v-if="showProfessional" class="divider divider-primary mb-8">{{ t("common.professional") }}</div>
     <!-- Professional Projects Section -->
     <template v-for="(project, index) in proProjects" :key="project.title">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -171,7 +204,7 @@ const perProjects = computed(() => <PersonalProject[]>[
       <div v-if="index < proProjects.length - 1" class="divider divider-secondary my-8" />
     </template>
 
-    <div class="divider divider-primary mt-8 mb-8">{{ t("common.personal") }}</div>
+    <div v-if="showPersonal" class="divider divider-primary mt-8 mb-8">{{ t("common.personal") }}</div>
     <!-- Personal Projects Section -->
     <template v-for="(project, index) in perProjects" :key="project.title">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
