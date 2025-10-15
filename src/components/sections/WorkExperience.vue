@@ -6,6 +6,20 @@ const { t } = useI18n();
 // Build changelog entries using translation keys.
 const changelogEntries = computed(() => [
   {
+    version: t('work-experience.v3-2-0'),
+    status: t('work-experience.v3-2-0-status'),
+    description: t('work-experience.v3-2-0-description'),
+    points: [
+      t('work-experience.v3-2-0-point-1'),
+      t('work-experience.v3-2-0-point-2'),
+      t('work-experience.v3-2-0-point-3'),
+      t('work-experience.v3-2-0-point-4'),
+      t('work-experience.v3-2-0-point-5'),
+      t('work-experience.v3-2-0-point-6')
+    ],
+    borderColor: "border-blue-500"
+  },
+  {
     version: t('work-experience.v3-1-0'),
     status: t('work-experience.v3-1-0-status'),
     description: t('work-experience.v3-1-0-description'),
