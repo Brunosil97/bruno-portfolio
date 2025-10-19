@@ -79,6 +79,16 @@
   },
   "work-experience": {
     "title": "Registro delle modifiche",
+    "v3-2-0": "v3.2.0 – Novembre 2025",
+    "v3-2-0-status": "Ingegnere Software Senior",
+    "v3-2-0-description": "La promozione di Bruno a Ingegnere Software Senior presso Herbert Smith Freehills Kramer, guidando l'ingegneria dei prodotti digitali e promuovendo l'innovazione.",
+    "v3-2-0-point-1": "Guida la creazione di prodotti digitali innovativi dall'impegno delle parti interessate al deployment, collaborando direttamente con avvocati e collaboratori.",
+    "v3-2-0-point-2": "Progetta e sviluppa componenti software robusti e manutenibili allineati agli standard di architettura aziendale e alle best practice.",
+    "v3-2-0-point-3": "Promuove metodologie agili (Scrum, Kanban, Lean) e garantisce la qualità del software attraverso test, code review e pipeline CI/CD.",
+    "v3-2-0-point-4": "Agisce come esperto per il supporto di terza linea e forma i membri del team per sviluppare competenze tecniche.",
+    "v3-2-0-point-5": "Collabora con i team di IA e Innovazione per prototipare e mettere in produzione soluzioni di IA.",
+    "v3-2-0-point-6": "Guida la pianificazione dei programmi, l'esecuzione della roadmap e promuove principi di ingegneria moderni inclusi DevOps, automazione e IaC.",
+
     "v3-1-0": "v3.1.0 – Aprile 2024",
     "v3-1-0-status": "Transizione Permanente",
     "v3-1-0-description": "Il ruolo attuale di Bruno come Product Engineer presso Herbert Smith Freehills Kramer.",
