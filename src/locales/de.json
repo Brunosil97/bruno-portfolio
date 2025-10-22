@@ -79,6 +79,16 @@
   },
   "work-experience": {
     "title": "Changelog",
+    "v3-2-0": "v3.2.0 – November 2025",
+    "v3-2-0-status": "Senior Software Engineer",
+    "v3-2-0-description": "Brunos Beförderung zum Senior Software Engineer bei Herbert Smith Freehills Kramer, wo er die digitale Produktentwicklung leitet und Innovationen vorantreibt.",
+    "v3-2-0-point-1": "Leitet die Entwicklung innovativer digitaler Produkte vom Stakeholder-Engagement bis zur Bereitstellung und arbeitet direkt mit Anwälten und Mitarbeitern zusammen.",
+    "v3-2-0-point-2": "Entwirft und entwickelt robuste, wartbare Softwarekomponenten gemäß Enterprise-Architekturstandards und Best Practices.",
+    "v3-2-0-point-3": "Fördert agile Methoden (Scrum, Kanban, Lean) und gewährleistet Softwarequalität durch Tests, Code-Reviews und CI/CD-Pipelines.",
+    "v3-2-0-point-4": "Fungiert als Fachexperte für Third-Line-Support und betreut Teammitglieder beim Aufbau technischer Fähigkeiten.",
+    "v3-2-0-point-5": "Arbeitet mit KI- und Innovationsteams zusammen, um KI-Lösungen zu prototypisieren und in Produktion zu bringen.",
+    "v3-2-0-point-6": "Treibt Programmplanung, Roadmap-Umsetzung voran und fördert moderne Engineering-Prinzipien wie DevOps, Automatisierung und IaC.",
+
     "v3-1-0": "v3.1.0 – April 2024",
     "v3-1-0-status": "Permanenter Übergang",
     "v3-1-0-description": "Brunos fortlaufende Rolle als Product Engineer bei Herbert Smith Freehills Kramer.",
