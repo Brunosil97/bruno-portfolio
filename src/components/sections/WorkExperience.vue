@@ -154,8 +154,8 @@ const changelogEntries = computed(() => [
             </svg>
           </div>
         </div>
-        <div :class="[index % 2 === 0 ? 'timeline-start md:text-end md:me-6' : 'timeline-end md:ms-6', 'mb-10']">
-          <div :class="['card shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 border-2', entry.color === 'primary' ? 'border-primary' : entry.color === 'accent' ? 'border-accent' : entry.color === 'neutral' ? 'border-neutral' : `border-${entry.color}`, entry.cardBg]">
+        <div :class="[index % 2 === 0 ? 'timeline-start md:text-end md:me-6' : 'timeline-end md:ms-6', 'mb-10 w-full md:max-w-2xl']">
+          <div :class="['card shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 border-2 w-full', entry.color === 'primary' ? 'border-primary' : entry.color === 'accent' ? 'border-accent' : entry.color === 'neutral' ? 'border-neutral' : `border-${entry.color}`, entry.cardBg]">
             <div class="card-body">
               <div class="flex items-center gap-2 flex-wrap" :class="index % 2 === 0 ? 'md:flex-row-reverse' : ''">
                 <h2 class="card-title text-2xl">
@@ -170,9 +170,9 @@ const changelogEntries = computed(() => [
               <p class="mt-2 text-base leading-relaxed">{{ entry.description }}</p>
               <ul v-if="entry.points.length" class="menu menu-sm bg-base-200/50 rounded-box mt-4 p-2 w-full">
                 <li v-for="(point, pointIndex) in entry.points" :key="pointIndex" class="w-full">
-                  <a class="cursor-default hover:bg-base-300/50 text-sm leading-relaxed py-3 whitespace-normal">
-                    <span :class="['badge badge-sm mr-2 flex-shrink-0', entry.badgeColor]">{{ pointIndex + 1 }}</span>
-                    <span class="flex-1">{{ point }}</span>
+                  <a class="cursor-default hover:bg-base-300/50 text-sm leading-relaxed py-3 whitespace-normal flex items-start w-full">
+                    <span :class="['badge badge-sm mr-2 flex-shrink-0 mt-0.5', entry.badgeColor]">{{ pointIndex + 1 }}</span>
+                    <span class="flex-1 text-left" style="max-width: calc(100% - 2.5rem);">{{ point }}</span>
                   </a>
                 </li>
               </ul>
