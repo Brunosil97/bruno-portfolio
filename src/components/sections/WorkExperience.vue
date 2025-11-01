@@ -139,7 +139,7 @@ const changelogEntries = computed(() => [
     <ul class="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
       <li v-for="(entry, index) in changelogEntries" :key="entry.version">
         <div class="timeline-middle">
-          <div :class="['rounded-full p-2', `bg-${entry.color}`, 'shadow-lg']">
+          <div :class="['rounded-full p-2 shadow-lg', entry.color === 'primary' ? 'bg-primary' : entry.color === 'accent' ? 'bg-accent' : entry.color === 'neutral' ? 'bg-neutral' : `bg-${entry.color}`]">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
@@ -155,7 +155,7 @@ const changelogEntries = computed(() => [
           </div>
         </div>
         <div :class="[index % 2 === 0 ? 'timeline-start md:text-end' : 'timeline-end', 'mb-10']">
-          <div :class="['card shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 border-2', `border-${entry.color}`, entry.cardBg]">
+          <div :class="['card shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 border-2', entry.color === 'primary' ? 'border-primary' : entry.color === 'accent' ? 'border-accent' : entry.color === 'neutral' ? 'border-neutral' : `border-${entry.color}`, entry.cardBg]">
             <div class="card-body">
               <div class="flex items-center gap-2 flex-wrap" :class="index % 2 === 0 ? 'md:flex-row-reverse' : ''">
                 <h2 class="card-title text-2xl">
@@ -166,13 +166,13 @@ const changelogEntries = computed(() => [
                 </div>
                 <div :class="['badge badge-md text-sm', entry.badgeColor]">{{ entry.status }}</div>
               </div>
-              <div :class="['divider my-2', `before:bg-${entry.color}`, `after:bg-${entry.color}`]"></div>
+              <div :class="['divider my-2', entry.color === 'primary' ? 'before:bg-primary after:bg-primary' : entry.color === 'accent' ? 'before:bg-accent after:bg-accent' : entry.color === 'neutral' ? 'before:bg-neutral after:bg-neutral' : `before:bg-${entry.color} after:bg-${entry.color}`]"></div>
               <p class="mt-2 text-base leading-relaxed">{{ entry.description }}</p>
-              <ul v-if="entry.points.length" :class="['menu menu-sm rounded-box mt-4 p-2', entry.cardBg === 'bg-base-200' ? 'bg-base-100' : 'bg-base-200/50']">
-                <li v-for="(point, pointIndex) in entry.points" :key="pointIndex">
-                  <a class="cursor-default hover:bg-base-300/50 text-sm leading-relaxed py-3">
-                    <span :class="['badge badge-sm mr-2', entry.badgeColor]">{{ pointIndex + 1 }}</span>
-                    {{ point }}
+              <ul v-if="entry.points.length" class="menu menu-sm bg-base-200/50 rounded-box mt-4 p-2 w-full">
+                <li v-for="(point, pointIndex) in entry.points" :key="pointIndex" class="w-full">
+                  <a class="cursor-default hover:bg-base-300/50 text-sm leading-relaxed py-3 whitespace-normal">
+                    <span :class="['badge badge-sm mr-2 flex-shrink-0', entry.badgeColor]">{{ pointIndex + 1 }}</span>
+                    <span class="flex-1">{{ point }}</span>
                   </a>
                 </li>
               </ul>
