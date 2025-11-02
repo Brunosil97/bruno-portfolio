@@ -154,19 +154,19 @@ const changelogEntries = computed(() => [
             </svg>
           </div>
         </div>
-        <div :class="[index % 2 === 0 ? 'timeline-start md:text-end' : 'timeline-end', 'mb-10']">
+        <div :class="[index % 2 === 0 ? 'timeline-start md:text-end md:me-6' : 'timeline-end md:ms-6', 'mb-10']">
           <div :class="['card shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 border-2', entry.color === 'primary' ? 'border-primary' : entry.color === 'accent' ? 'border-accent' : entry.color === 'neutral' ? 'border-neutral' : `border-${entry.color}`, entry.cardBg]">
             <div class="card-body">
               <div class="flex items-center gap-2 flex-wrap" :class="index % 2 === 0 ? 'md:flex-row-reverse' : ''">
                 <h2 class="card-title text-2xl">
                   {{ entry.version }}
                 </h2>
-                <div v-if="index === 0" :class="['badge badge-lg animate-pulse text-sm', entry.badgeColor]">
+                <div v-if="index === 0" :class="['badge badge-md animate-pulse text-sm', entry.badgeColor]">
                   {{ t('common.now') }}
                 </div>
                 <div :class="['badge badge-md text-sm', entry.badgeColor]">{{ entry.status }}</div>
               </div>
-              <div :class="['divider my-2', entry.color === 'primary' ? 'before:bg-primary after:bg-primary' : entry.color === 'accent' ? 'before:bg-accent after:bg-accent' : entry.color === 'neutral' ? 'before:bg-neutral after:bg-neutral' : `before:bg-${entry.color} after:bg-${entry.color}`]"></div>
+              <div class="divider my-2"></div>
               <p class="mt-2 text-base leading-relaxed">{{ entry.description }}</p>
               <ul v-if="entry.points.length" class="menu menu-sm bg-base-200/50 rounded-box mt-4 p-2 w-full">
                 <li v-for="(point, pointIndex) in entry.points" :key="pointIndex" class="w-full">
