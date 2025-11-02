@@ -27,6 +27,8 @@ coverage
 *.sln
 *.sw?
 
+script.sh
+
 .env
 *.tsbuildinfo
 # Yarn Zero Installs
