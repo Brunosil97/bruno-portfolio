@@ -17,7 +17,10 @@ const changelogEntries = computed(() => [
       t('work-experience.v3-2-0-point-5'),
       t('work-experience.v3-2-0-point-6')
     ],
-    borderColor: "border-blue-500"
+    color: "primary",
+    badgeColor: "badge-primary",
+    iconColor: "text-primary",
+    cardBg: "bg-gradient-to-br from-primary/10 to-secondary/10"
   },
   {
     version: t('work-experience.v3-1-0'),
@@ -30,7 +33,10 @@ const changelogEntries = computed(() => [
       t('work-experience.v3-1-0-point-4'),
       t('work-experience.v3-1-0-point-5')
     ],
-    borderColor: "border-blue-500"
+    color: "primary",
+    badgeColor: "badge-primary",
+    iconColor: "text-primary",
+    cardBg: "bg-gradient-to-br from-primary/10 to-secondary/10"
   },
   {
     version: t('work-experience.v3-0-0'),
@@ -41,7 +47,10 @@ const changelogEntries = computed(() => [
       t('work-experience.v3-0-0-point-2'),
       t('work-experience.v3-0-0-point-3')
     ],
-    borderColor: "border-blue-500"
+    color: "primary",
+    badgeColor: "badge-primary",
+    iconColor: "text-primary",
+    cardBg: "bg-gradient-to-br from-primary/10 to-secondary/10"
   },
   {
     version: t('work-experience.v2-0-0'),
@@ -52,7 +61,10 @@ const changelogEntries = computed(() => [
       t('work-experience.v2-0-0-point-2'),
       t('work-experience.v2-0-0-point-3')
     ],
-    borderColor: "border-blue-500"
+    color: "accent",
+    badgeColor: "badge-accent",
+    iconColor: "text-accent",
+    cardBg: "bg-gradient-to-br from-accent/10 to-accent/5"
   },
   {
     version: t('work-experience.v1-0-0'),
@@ -63,86 +75,111 @@ const changelogEntries = computed(() => [
       t('work-experience.v1-0-0-point-2'),
       t('work-experience.v1-0-0-point-3')
     ],
-    borderColor: "border-blue-500"
+    color: "accent",
+    badgeColor: "badge-accent",
+    iconColor: "text-accent",
+    cardBg: "bg-gradient-to-br from-accent/10 to-accent/5"
   },
   {
     version: t('work-experience.v0-5-0'),
     status: t('work-experience.v0-5-0-status'),
     description: t('work-experience.v0-5-0-description'),
     points: [],
-    borderColor: "border-gray-400"
+    color: "neutral",
+    badgeColor: "badge-neutral",
+    iconColor: "text-neutral",
+    cardBg: "bg-base-200"
   },
   {
     version: t('work-experience.v0-4-0'),
     status: t('work-experience.v0-4-0-status'),
     description: t('work-experience.v0-4-0-description'),
     points: [],
-    borderColor: "border-gray-400"
+    color: "neutral",
+    badgeColor: "badge-neutral",
+    iconColor: "text-neutral",
+    cardBg: "bg-base-200"
   },
   {
     version: t('work-experience.v0-3-0'),
     status: t('work-experience.v0-3-0-status'),
     description: t('work-experience.v0-3-0-description'),
     points: [ t('work-experience.v0-3-0-point-1') ],
-    borderColor: "border-gray-400"
+    color: "neutral",
+    badgeColor: "badge-neutral",
+    iconColor: "text-neutral",
+    cardBg: "bg-base-200"
   },
   {
     version: t('work-experience.v0-2-0'),
     status: t('work-experience.v0-2-0-status'),
     description: t('work-experience.v0-2-0-description'),
     points: [],
-    borderColor: "border-gray-400"
+    color: "neutral",
+    badgeColor: "badge-neutral",
+    iconColor: "text-neutral",
+    cardBg: "bg-base-200"
   },
   {
     version: t('work-experience.v0-1-0'),
     status: t('work-experience.v0-1-0-status'),
     description: t('work-experience.v0-1-0-description'),
     points: [],
-    borderColor: "border-gray-400"
+    color: "neutral",
+    badgeColor: "badge-neutral",
+    iconColor: "text-neutral",
+    cardBg: "bg-base-200"
   }
 ]);
 </script>
 
 <template>
   <div class="container mx-auto p-4">
-    <h1 class="text-4xl font-bold mb-8">{{ t('work-experience.title') }}</h1>
+    <h1 class="text-4xl font-bold mb-8 text-center">{{ t('work-experience.title') }}</h1>
     <ul class="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
       <li v-for="(entry, index) in changelogEntries" :key="entry.version">
         <div class="timeline-middle">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 20 20"
-            fill="currentColor"
-            :class="['w-5 h-5', index === 0 ? 'text-primary' : entry.borderColor === 'border-blue-500' ? 'text-blue-500' : 'text-gray-400']"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-              clip-rule="evenodd"
-            />
-          </svg>
+          <div :class="['rounded-full p-2', `bg-${entry.color}`, 'shadow-lg']">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              class="w-5 h-5 text-base-100"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </div>
         </div>
         <div :class="[index % 2 === 0 ? 'timeline-start md:text-end' : 'timeline-end', 'mb-10']">
-          <div class="card bg-base-200 shadow-xl hover:shadow-2xl transition-shadow">
+          <div :class="['card shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 border-2', `border-${entry.color}`, entry.cardBg]">
             <div class="card-body">
-              <div class="flex items-center gap-2" :class="index % 2 === 0 ? 'md:flex-row-reverse' : ''">
-                <h2 class="card-title text-xl">
+              <div class="flex items-center gap-2 flex-wrap" :class="index % 2 === 0 ? 'md:flex-row-reverse' : ''">
+                <h2 class="card-title text-2xl">
                   {{ entry.version }}
                 </h2>
-                <div v-if="index === 0" class="badge badge-primary badge-lg">{{ t('common.now') }}</div>
+                <div v-if="index === 0" :class="['badge badge-lg animate-pulse text-sm', entry.badgeColor]">
+                  {{ t('common.now') }}
+                </div>
+                <div :class="['badge badge-md text-sm', entry.badgeColor]">{{ entry.status }}</div>
               </div>
-              <div class="divider my-1"></div>
-              <p class="text-sm opacity-70 font-semibold">{{ entry.status }}</p>
-              <p class="mt-2">{{ entry.description }}</p>
-              <ul v-if="entry.points.length" class="menu menu-xs bg-base-100 rounded-box mt-3 p-2">
+              <div :class="['divider my-2', `before:bg-${entry.color}`, `after:bg-${entry.color}`]"></div>
+              <p class="mt-2 text-base leading-relaxed">{{ entry.description }}</p>
+              <ul v-if="entry.points.length" :class="['menu menu-sm rounded-box mt-4 p-2', entry.cardBg === 'bg-base-200' ? 'bg-base-100' : 'bg-base-200/50']">
                 <li v-for="(point, pointIndex) in entry.points" :key="pointIndex">
-                  <a class="cursor-default hover:bg-base-200">{{ point }}</a>
+                  <a class="cursor-default hover:bg-base-300/50 text-sm leading-relaxed py-3">
+                    <span :class="['badge badge-sm mr-2', entry.badgeColor]">{{ pointIndex + 1 }}</span>
+                    {{ point }}
+                  </a>
                 </li>
               </ul>
             </div>
           </div>
         </div>
-        <hr v-if="index < changelogEntries.length - 1" />
+        <hr v-if="index < changelogEntries.length - 1" :class="entry.iconColor" />
       </li>
     </ul>
   </div>
