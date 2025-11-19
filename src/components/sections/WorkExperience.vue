@@ -134,17 +134,17 @@ const changelogEntries = computed(() => [
 </script>
 
 <template>
-  <div class="container mx-auto p-4">
-    <h1 class="text-4xl font-bold mb-8 text-center">{{ t('work-experience.title') }}</h1>
+  <div class="container mx-auto p-2 sm:p-4">
+    <h1 class="text-2xl sm:text-4xl font-bold mb-4 sm:mb-8 text-center">{{ t('work-experience.title') }}</h1>
     <ul class="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
       <li v-for="(entry, index) in changelogEntries" :key="entry.version">
         <div class="timeline-middle">
-          <div :class="['rounded-full p-2 shadow-lg', entry.color === 'primary' ? 'bg-primary' : entry.color === 'accent' ? 'bg-accent' : entry.color === 'neutral' ? 'bg-neutral' : `bg-${entry.color}`]">
+          <div :class="['rounded-full p-1.5 sm:p-2 shadow-lg', entry.color === 'primary' ? 'bg-primary' : entry.color === 'accent' ? 'bg-accent' : entry.color === 'neutral' ? 'bg-neutral' : `bg-${entry.color}`]">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
               fill="currentColor"
-              class="w-5 h-5 text-base-100"
+              class="w-4 h-4 sm:w-5 sm:h-5 text-base-100"
             >
               <path
                 fill-rule="evenodd"
@@ -154,25 +154,25 @@ const changelogEntries = computed(() => [
             </svg>
           </div>
         </div>
-        <div :class="[index % 2 === 0 ? 'timeline-start md:text-end md:me-6' : 'timeline-end md:ms-6', 'mb-10 w-full md:max-w-2xl']">
-          <div :class="['card shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 border-2 w-full', entry.color === 'primary' ? 'border-primary' : entry.color === 'accent' ? 'border-accent' : entry.color === 'neutral' ? 'border-neutral' : `border-${entry.color}`, entry.cardBg]">
-            <div class="card-body">
-              <div class="flex items-center gap-2 flex-wrap" :class="index % 2 === 0 ? 'md:flex-row-reverse' : ''">
-                <h2 class="card-title text-2xl">
+        <div :class="[index % 2 === 0 ? 'timeline-start md:text-end md:me-6' : 'timeline-end md:ms-6', 'mb-6 sm:mb-10 w-full md:max-w-2xl']">
+          <div :class="['card shadow-xl hover:shadow-2xl transition-all duration-300 sm:hover:scale-105 border-2 w-full', entry.color === 'primary' ? 'border-primary' : entry.color === 'accent' ? 'border-accent' : entry.color === 'neutral' ? 'border-neutral' : `border-${entry.color}`, entry.cardBg]">
+            <div class="card-body p-3 sm:p-6">
+              <div class="flex items-center gap-1.5 sm:gap-2 flex-wrap" :class="index % 2 === 0 ? 'md:flex-row-reverse' : ''">
+                <h2 class="card-title text-base sm:text-2xl">
                   {{ entry.version }}
                 </h2>
-                <div v-if="index === 0" :class="['badge badge-md animate-pulse text-sm', entry.badgeColor]">
+                <div v-if="index === 0" :class="['badge badge-xs sm:badge-md animate-pulse text-xs sm:text-sm', entry.badgeColor]">
                   {{ t('common.now') }}
                 </div>
-                <div :class="['badge badge-md text-sm', entry.badgeColor]">{{ entry.status }}</div>
+                <div :class="['badge badge-xs sm:badge-md text-xs sm:text-sm', entry.badgeColor]">{{ entry.status }}</div>
               </div>
-              <div class="divider my-2"></div>
-              <p class="mt-2 text-base leading-relaxed">{{ entry.description }}</p>
-              <ul v-if="entry.points.length" class="menu menu-sm bg-base-200/50 rounded-box mt-4 p-2 w-full">
+              <div class="divider my-1 sm:my-2"></div>
+              <p class="mt-1 sm:mt-2 text-xs sm:text-base leading-relaxed">{{ entry.description }}</p>
+              <ul v-if="entry.points.length" class="menu menu-xs sm:menu-sm bg-base-200/50 rounded-box mt-2 sm:mt-4 p-1.5 sm:p-2 w-full">
                 <li v-for="(point, pointIndex) in entry.points" :key="pointIndex" class="w-full">
-                  <a class="cursor-default hover:bg-base-300/50 text-sm leading-relaxed py-3 whitespace-normal flex items-start w-full">
-                    <span :class="['badge badge-sm mr-2 flex-shrink-0 mt-0.5', entry.badgeColor]">{{ pointIndex + 1 }}</span>
-                    <span class="flex-1 text-left" style="max-width: calc(100% - 2.5rem);">{{ point }}</span>
+                  <a class="cursor-default hover:bg-base-300/50 text-xs sm:text-sm leading-relaxed py-2 sm:py-3 whitespace-normal flex items-start w-full">
+                    <span :class="['badge badge-xs sm:badge-sm mr-1.5 sm:mr-2 flex-shrink-0 mt-0.5', entry.badgeColor]">{{ pointIndex + 1 }}</span>
+                    <span class="flex-1 text-left" style="max-width: calc(100% - 2rem);">{{ point }}</span>
                   </a>
                 </li>
               </ul>
